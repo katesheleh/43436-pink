@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Pink Form</title>
+</head>
+<body>
+    <header class="interior-header">
+        <div class="header-top">
+            <div class="page-wrapper">
+                <div class="inner-page-wrapper">
+                    <h1 class="logo-main">
+                        <a href="#">Pink</a>
+                    </h1>
+                    <nav class="nav-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Информация</a>
+                            </li>
+                            <li>
+                                <a href="#">Возможности</a>
+                            </li>
+                            <li>
+                                <a href="#">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="#">Стоимость</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <p class="header-body">Конкурс на самое безбашенное путешествие с Пинк</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <p class="main-body">
+            Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+        </p>
+        <form action="#" class="contact-form">
+            <fieldset class="form-fieldset">
+                <label for="form-name" class="form-title">Имя*</label>
+                <input type="text" class="text-input" id="form-name" name="user-name" placeholder="Введите ваше имя" required autofocus>
+                <label for="form-surname" class="form-title">Фамилия*</label>
+                <input type="text" class="text-input" id="form-surname" name="user-surname" placeholder="Укажите фамилию" required>
+                <label for="form-patronymic" class="form-title">Отчество*</label>
+                <input type="text" class="text-input" id="form-patronymic" name="user-patronymic" placeholder="Ну и отчество тоже" required></fieldset>
+            <fieldset class="form-fieldset bg-block-wrap">
+                <legend class="form-title">С каким приложением вы путешествовали?*</legend>
+                <input type="radio" class="choose-app" id="option1" name="user-app1" value="IOS" checked>
+                <label for="option1">Pink на IOS</label>
+                <input type="radio" class="choose-app" id="option2" name="user-app2" value="Android">
+                <label for="option2">Pink на Android</label>
+                <input type="radio" class="choose-app" id="option3" name="user-app3" value="Windows">
+                <label for="option3">Windows Phone</label>
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <legend class="form-title">Когда вы путешествовали?*</legend>
+                <input type="date" name="start-trip" class="time-input" id="start-date" required>
+                <label for="start-date" class="form-title">Дата выезда</label>
+                <input type="number" min="1" step="1" name="duration-trip" class="time-input" id="duration-day" required>
+                <label for="duration-day" class="form-title">Продолжительность</label>
+                <input type="date" name="finish-trip" class="time-input" id="back-date" required>
+                <label for="back-date" class="form-title">Дата выезда</label>
+            </fieldset>
+            <fieldset class="form-fieldset bg-block-wrap">
+                <label for="traveler-number" class="form-title">Количество попутчиков*</label>
+                <input type="number" class="friends-input text-input" name="friends-number" id="traveler-number" min="1" step="1" placeholder="2 чел" required>
+                <span class="form-title">&#8470;</span>
+                <label for="traveler-name1" class="form-title">Имя*</label>
+                <span class="count-person">1</span>
+                <input type="text" class="text-input" name="name-friend" id="traveler-name1" placeholder="Введите ваше имя">
+                <label for="traveler-nickname1" class="form-title">Прозвище:</label>
+                <input type="text" class="text-input" name="nickname-friend1" id="traveler-nickname1" placeholder="Ну а как же без этого!">
+                <span class="form-title">&#8470;</span>
+                <label for="traveler-name2" class="form-title">Имя*</label>
+                <span class="count-person">2</span>
+                <input type="text" class="text-input" name="name-friend" id="traveler-name2" placeholder="Введите ваше имя">
+                <label for="traveler-nickname2" class="form-title">Прозвище:</label>
+                <input type="text" class="text-input" name="nickname-friend2" id="traveler-nickname2" placeholder="Ну а как же без этого!"></fieldset>
+            <fieldset class="form-fieldset">
+                <legend class="form-title">Ваши безбашенные достижения в путешествии</legend>
+                <input type="checkbox" class="choose-progress" id="progress1" name="check-progress1" checked>
+                <label for="progress1" class="checkbox-set" >Сделал селфи с акулой</label>
+                <input type="checkbox" class="choose-progress" id="progress2" name="check-progress2" checked>
+                <label for="progress2" class="checkbox-set">Обгорел на пляже</label>
+                <input type="checkbox" class="choose-progress" id="progress3" name="check-progress3">
+                <label for="progress3" class="checkbox-set">Видел Чака Норриса</label>
+                <input type="checkbox" class="choose-progress" id="progress4" name="check-progress4">
+                <label for="progress4" class="checkbox-set">Накупил сувениров</label>
+                <input type="checkbox" class="choose-progress" id="progress5" name="check-progress5" checked>
+                <label for="progress5" class="checkbox-set">Удержал башню</label>
+                <input type="checkbox" class="choose-progress" id="progress6" name="check-progress6">
+                <label for="progress6" class="checkbox-set">Разгромил отель</label>
+            </fieldset>
+            <fieldset class="form-fieldset bg-block-wrap">
+            <legend class="form-title">Ваши фотографии из поездки*</legend>
+            <label class="file-input">загрузить фото<input type="file" class="file-field" name="file-upload"></label>
+            <!--
+            <ul class="pic-list">
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+            </ul>
+            -->
+        </fieldset>
+        <input type="submit" value="отправить форму">
+        </form>
+        <p class="detail-form"><span>*</span>&mdash; обязательные поля</p>
+    </main>
+    <footer class="interior-footer">
+        <div class="page-wrapper">
+            <div class="logo-block">
+                <h2 class="logo-main logo-footer">
+                    <a href="#" target="_blank">Pink</a>
+                </h2>
+            </div>
+            <div class="social-buttons">
+                <a href="http://twitter.com" class="btn-social icon-twitter" target="_blank">
+                    <span>Twitter</span>
+                </a>
+                <a href="" class="btn-social icon-facebook" target="_blank">
+                    <span>Facebook</span>
+                </a>
+                <a href="" class="btn-social icon-youtube" target="_blank">
+                    <span>YouTube</span>
+                </a>
+            </div>
+            <p class="сopyright">
+                Разработано
+                <a href="http://htmlacademy.ru" class="logo-copyright" target="_blank">
+                    <span>HTML Academy</span>
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
