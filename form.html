@@ -7,11 +7,9 @@
 <body>
     <header class="interior-header">
         <div class="header-top">
-            <div class="page-wrapper">
-                <div class="inner-page-wrapper">
-                    <h1 class="logo-main">
-                        <a href="#">Pink</a>
-                    </h1>
+            <div class="container">
+                <div class="inner-container">
+                    <a href="../43436-pink/index.html" class="logo-main" target="_blank">Pink</a>
                     <nav class="nav-menu">
                         <ul>
                             <li>
@@ -29,7 +27,7 @@
                         </ul>
                     </nav>
                 </div>
-                <p class="header-body">Конкурс на самое безбашенное путешествие с Пинк</p>
+                <h1 class="header-body">Конкурс на самое безбашенное путешествие с Пинк</h1>
             </div>
         </div>
     </header>
@@ -47,25 +45,33 @@
                 <input type="text" class="text-input" id="form-patronymic" name="user-patronymic" placeholder="Ну и отчество тоже" required></fieldset>
             <fieldset class="form-fieldset bg-block-wrap">
                 <legend class="form-title">С каким приложением вы путешествовали?*</legend>
-                <input type="radio" class="choose-app" id="option1" name="user-app1" value="IOS" checked>
+                <input type="radio" class="choose-app" id="option1" name="user-app" value="IOS" checked>
                 <label for="option1">Pink на IOS</label>
-                <input type="radio" class="choose-app" id="option2" name="user-app2" value="Android">
+                <input type="radio" class="choose-app" id="option2" name="user-app" value="Android">
                 <label for="option2">Pink на Android</label>
-                <input type="radio" class="choose-app" id="option3" name="user-app3" value="Windows">
+                <input type="radio" class="choose-app" id="option3" name="user-app" value="Windows">
                 <label for="option3">Windows Phone</label>
             </fieldset>
             <fieldset class="form-fieldset">
                 <legend class="form-title">Когда вы путешествовали?*</legend>
                 <input type="date" name="start-trip" class="time-input" id="start-date" required>
                 <label for="start-date" class="form-title">Дата выезда</label>
-                <input type="number" min="1" step="1" name="duration-trip" class="time-input" id="duration-day" required>
+                <div class="duration-block">
+                <span class="counter-minus" id="minus-days">-</span>
+                <input type="text" name="duration-trip" class="time-input" id="duration-day" required>
+                <span class="counter-plus" id="plus-days">+</span>
+                </div>
                 <label for="duration-day" class="form-title">Продолжительность</label>
                 <input type="date" name="finish-trip" class="time-input" id="back-date" required>
                 <label for="back-date" class="form-title">Дата выезда</label>
             </fieldset>
             <fieldset class="form-fieldset bg-block-wrap">
                 <label for="traveler-number" class="form-title">Количество попутчиков*</label>
-                <input type="number" class="friends-input text-input" name="friends-number" id="traveler-number" min="1" step="1" placeholder="2 чел" required>
+                <div class="traveler-block">
+                <span class="counter-minus" id="minus-friends">-</span>
+                <input type="text" class="friends-input text-input" name="friends-number" id="traveler-number" required>
+                <span class="counter-plus" id="plus-friends">+</span>
+                </div>
                 <span class="form-title">&#8470;</span>
                 <label for="traveler-name1" class="form-title">Имя*</label>
                 <span class="count-person">1</span>
@@ -114,21 +120,19 @@
         <p class="detail-form"><span>*</span>&mdash; обязательные поля</p>
     </main>
     <footer class="interior-footer">
-        <div class="page-wrapper">
+        <div class="container">
             <div class="logo-block">
-                <h2 class="logo-main logo-footer">
-                    <a href="#" target="_blank">Pink</a>
-                </h2>
+                    <a href="../43436-pink/index.html" class="logo-main logo-footer" target="_blank">Pink</a>
             </div>
             <div class="social-buttons">
                 <a href="http://twitter.com" class="btn-social icon-twitter" target="_blank">
-                    <span>Twitter</span>
+                    Twitter
                 </a>
-                <a href="" class="btn-social icon-facebook" target="_blank">
-                    <span>Facebook</span>
+                <a href="http://facebook.com" class="btn-social icon-facebook" target="_blank">
+                   Facebook
                 </a>
-                <a href="" class="btn-social icon-youtube" target="_blank">
-                    <span>YouTube</span>
+                <a href="http://youtube.com" class="btn-social icon-youtube" target="_blank">
+                    YouTube
                 </a>
             </div>
             <p class="сopyright">
