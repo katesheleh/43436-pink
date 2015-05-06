@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Pink Form</title>
-    <link rel="stylesheet" href="./global/type.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -16,97 +15,109 @@
                         <nav class="nav-menu">
                             <ul class="nav-menu__list">
                                 <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link large-bold">Информация</a>
-                                </li class="nav-menu__item">
-                                <li>
-                                    <a href="#" class="nav-menu__link large-bold">Возможности</a>
+                                    <a href="#" class="nav-menu__link">Информация</a>
+                                </li>
+                                <li  class="nav-menu__item">
+                                    <a href="#" class="nav-menu__link">Возможности</a>
                                 </li>
                                 <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link large-bold">Отзывы</a>
+                                    <a href="#" class="nav-menu__link">Отзывы</a>
                                 </li>
                                 <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link large-bold">Стоимость</a>
+                                    <a href="#" class="nav-menu__link">Стоимость</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="container">
-                    <h1 class="page-header__title huge">Конкурс на самое безбашенное путешествие с Пинк</h1>
+                    <h1 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
                 </div>
             </div>
         </header>
         <main class="page-content">
-            <p class="page-main__promo promo middle">
+            <p class="page-content__promo promo">
                 Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
             </p>
             <form action="#" method="get" class="form">
                 <fieldset class="form-fieldset">
-                    <label for="form-name" class="form-fieldset__question middle-up">Имя*</label>
+                    <label for="form-name" class="form-fieldset__question">Имя*</label>
                     <input type="text" class="form-fieldset__input" id="form-name" name="user-name" placeholder="Введите ваше имя" required autofocus>
-                    <label for="form-surname" class="form-fieldset__question middle-up">Фамилия*</label>
+                    <label for="form-surname" class="form-fieldset__question">Фамилия*</label>
                     <input type="text" class="form-fieldset__input" id="form-surname" name="user-surname" placeholder="Укажите фамилию" required>
-                    <label for="form-patronymic" class="form-fieldset__question middle-up">Отчество*</label>
+                    <label for="form-patronymic" class="form-fieldset__question">Отчество*</label>
                     <input type="text" class="form-fieldset__input" id="form-patronymic" name="user-patronymic" placeholder="Ну и отчество тоже" required></fieldset>
-                <fieldset class="form-fieldset box box-gray">
-                    <legend class="form-fieldset__title middle-up">С каким приложением вы путешествовали?*</legend>
+                <fieldset class="form-fieldset box-background">
+                    <legend class="form-fieldset__title">С каким приложением вы путешествовали?*</legend>
                     <input type="radio" class="form-fieldset__radio" id="option1" name="user-app" value="IOS" checked>
-                    <label for="option1" class="form-fieldset__option large">Pink на IOS</label>
+                    <label for="option1" class="form-fieldset__option">Pink на IOS</label>
                     <input type="radio" class="form-fieldset__radio" id="option2" name="user-app" value="Android">
-                    <label for="option2" class="form-fieldset__option large">Pink на Android</label>
+                    <label for="option2" class="form-fieldset__option">Pink на Android</label>
                     <input type="radio" class="form-fieldset__radio" id="option3" name="user-app" value="Windows">
-                    <label for="option3" class="form-fieldset__option large">Windows Phone</label>
+                    <label for="option3" class="form-fieldset__option">Windows Phone</label>
                 </fieldset>
                 <fieldset class="form-fieldset">
-                    <legend class="form__title middle-up">Когда вы путешествовали?*</legend>
+                    <legend class="form__title">Когда вы путешествовали?*</legend>
                     <input type="date" name="start-trip" class="form-fieldset__input" id="start-date" required>
-                    <label for="start-date" class="form-fieldset__question middle-up">Дата выезда</label>
+                    <label for="start-date" class="form-fieldset__question">Дата выезда</label>
                     <div class="form-counter">
                         <span class="form-counter__minus" id="minus-days">-</span>
                         <input type="text" name="duration-trip" class="form-counter__field" id="duration-day" required>
                         <span class="form-counter__plus" id="plus-days">+</span>
                     </div>
-                    <label for="duration-day" class="form-fieldset__question middle-up">Продолжительность</label>
+                    <label for="duration-day" class="form-fieldset__question">Продолжительность</label>
                     <input type="date" name="finish-trip" class="form-fieldset__input" id="back-date" required>
-                    <label for="back-date" class="form-fieldset__question middle-up">Дата выезда</label>
+                    <label for="back-date" class="form-fieldset__question">Дата выезда</label>
                 </fieldset>
-                <fieldset class="form-fieldset box box-gray">
-                    <label for="traveler-number" class="form-fieldset__question middle-up">Количество попутчиков*</label>
+                <fieldset class="form-fieldset box-background">
+                    <label for="traveler-number" class="form-fieldset__question">Количество попутчиков*</label>
                     <div class="form-counter">
                         <span class="form-counter__minus" id="minus-friends">-</span>
                         <input type="text" class="form-counter__field" name="friends-number" id="traveler-number" required>
                         <span class="form-counter__plus" id="plus-friends">+</span>
                     </div>
-                    <span class="form-fieldset__symbol middle-up">&#8470;</span>
-                    <label for="traveler-name1" class="form-fieldset__question middle-up">Имя*</label>
+                    <span class="form-fieldset__symbol">&#8470;</span>
+                    <label for="traveler-name1" class="form-fieldset__question">Имя*</label>
                     <span class="form-fieldset__number">1</span>
                     <input type="text" class="form-fieldset__input" name="name-friend" id="traveler-name1" placeholder="Введите ваше имя">
-                    <label for="traveler-nickname1" class="form-fieldset__question middle-up">Прозвище:</label>
+                    <label for="traveler-nickname1" class="form-fieldset__question">Прозвище:</label>
                     <input type="text" class="form-fieldset__input" name="nickname-friend1" id="traveler-nickname1" placeholder="Ну а как же без этого!">
-                    <span class="form-fieldset__symbol middle-up">&#8470;</span>
-                    <label for="traveler-name2" class="form-fieldset__question middle-up">Имя*</label>
+                    <span class="form-fieldset__symbol">&#8470;</span>
+                    <label for="traveler-name2" class="form-fieldset__question">Имя*</label>
                     <span class="form-fieldset__number">2</span>
                     <input type="text" class="form-fieldset__input" name="name-friend" id="traveler-name2" placeholder="Введите ваше имя">
-                    <label for="traveler-nickname2" class="form-fieldset__question middle-up">Прозвище:</label>
+                    <label for="traveler-nickname2" class="form-fieldset__question">Прозвище:</label>
                     <input type="text" class="form-fieldset__input" name="nickname-friend2" id="traveler-nickname2" placeholder="Ну а как же без этого!"></fieldset>
-                <fieldset class="form-fieldset checkbox">
-                    <legend class="form-fieldset__title middle-up">Ваши безбашенные достижения в путешествии</legend>
-                    <input type="checkbox" class="checkbox__input" id="progress1" name="check-progress1" checked>
-                    <label for="progress1" class="checkbox__label large">Сделал селфи с акулой</label>
-                    <input type="checkbox" class="checkbox__input" id="progress2" name="check-progress2" checked>
-                    <label for="progress2" class="checkbox__label large">Обгорел на пляже</label>
-                    <input type="checkbox" class="checkbox__input" id="progress3" name="check-progress3">
-                    <label for="progress3" class="checkbox__label large">Видел Чака Норриса</label>
-                    <input type="checkbox" class="checkbox__input" id="progress4" name="check-progress4">
-                    <label for="progress4" class="checkbox__label large">Накупил сувениров</label>
-                    <input type="checkbox" class="checkbox__input" id="progress5" name="check-progress5" checked>
-                    <label for="progress5" class="checkbox__label large">Удержал башню</label>
-                    <input type="checkbox" class="checkbox__input" id="progress6" name="check-progress6">
-                    <label for="progress6" class="checkbox__label large">Разгромил отель</label>
+                <fieldset class="form-fieldset">
+                    <legend class="form-fieldset__title">Ваши безбашенные достижения в путешествии</legend>
+                    <div class="checkbox">
+                        <input type="checkbox" class="checkbox__input" id="progress1" name="check-progress1" checked>
+                        <label for="progress1" class="checkbox__label">Сделал селфи с акулой</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" class="checkbox__input" id="progress2" name="check-progress2" checked>
+                        <label for="progress2" class="checkbox__label">Обгорел на пляже</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" class="checkbox__input" id="progress3" name="check-progress3">
+                        <label for="progress3" class="checkbox__label">Видел Чака Норриса</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" class="checkbox__input" id="progress4" name="check-progress4">
+                        <label for="progress4" class="checkbox__label">Накупил сувениров</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" class="checkbox__input" id="progress5" name="check-progress5" checked>
+                        <label for="progress5" class="checkbox__label">Удержал башню</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" class="checkbox__input" id="progress6" name="check-progress6">
+                        <label for="progress6" class="checkbox__label">Разгромил отель</label>
+                    </div>
                 </fieldset>
-                <fieldset class="form-fieldset file-fieldset box box-gray">
-                    <legend class="form-fieldset__title middle-up">Ваши фотографии из поездки*</legend>
-                    <label class="file-fieldset__label large-bold">
+                <fieldset class="form-fieldset file-fieldset box-background">
+                    <legend class="form-fieldset__title">Ваши фотографии из поездки*</legend>
+                    <label class="file-fieldset__label">
                         Загрузить фото
                         <input type="file" class="file-fieldset__input" name="file-upload"></label>
                 </fieldset>
@@ -153,8 +164,8 @@
                     </li>
                 </ul>
                 <input type="submit" class="submit-button" value="отправить форму"></form>
-            <p class="form__subtitle middle">
-                <span class="pink">*</span>
+            <p class="form__subtitle">
+                <span>*</span>
                 &mdash; обязательные поля
             </p>
         </main>
@@ -164,9 +175,9 @@
                 <div class="social">
                     <a href="http://twitter.com" class="social__btn icon-twitter" target="_blank">Twitter</a>
                     <a href="http://facebook.com" class="social__btn icon-facebook" target="_blank">Facebook</a>
-                    <a href="http://youtube.com" class="social__btn icon-outube" target="_blank">YouTube</a>
+                    <a href="http://youtube.com" class="social__btn icon-youtube" target="_blank">YouTube</a>
                 </div>
-                <p class="сopyright middle">
+                <p class="сopyright">
                     Разработано
                     <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
                 </p>

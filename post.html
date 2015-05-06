@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Pink Post</title>
-    <link rel="stylesheet" href="./global/type.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -16,32 +15,32 @@
                         <nav class="nav-menu">
                             <ul class="nav-menu__list">
                                 <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link large-bold">Информация</a>
-                                </li class="nav-menu__item">
-                                <li>
-                                    <a href="#" class="nav-menu__link large-bold">Возможности</a>
+                                    <a href="#" class="nav-menu__link">Информация</a>
+                                </li>
+                                <li  class="nav-menu__item">
+                                    <a href="#" class="nav-menu__link">Возможности</a>
                                 </li>
                                 <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link large-bold">Отзывы</a>
+                                    <a href="#" class="nav-menu__link">Отзывы</a>
                                 </li>
                                 <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link large-bold">Стоимость</a>
+                                    <a href="#" class="nav-menu__link">Стоимость</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="container">
-                    <h1 class="page-header__title huge">Блог путешественников, пользователей Пинк</h1>
+                    <h1 class="page-header__title">Блог путешественников, пользователей Пинк</h1>
                 </div>
             </div>
         </header>
-        <main>
+        <main class="page-content">
             <div class="container">
                 <article class="article">
                     <section class="section-preview">
-                        <h1 class="section-preview__title extra-huge">Антон и Надя в Тайланде</h1>
-                        <span class="section-preview__date small pink">
+                        <h1 class="section-preview__title">Антон и Надя в Тайланде</h1>
+                        <span class="section-preview__date">
                             Опубликовано:
                             <time datetime="2014-12">6 месяцев назад</time>
                         </span>
@@ -50,60 +49,66 @@
                         </p>
                     </section>
                     <section class="section">
-                        <h3 class="section__title large-bold">Предыстория</h3>
-                        <p class="section__text middle">
+                        <h3 class="section__title">Предыстория</h3>
+                        <p class="section__text">
                             В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на
-                            <a href="http://skyscanner.ru" class="article__link pink" target="_blank">skyscanner.ru</a>
+                            <a href="http://skyscanner.ru" class="article__link" target="_blank">skyscanner.ru</a>
                             мы все-таки решились
                         </p>
                     </section>
                     <section class="section">
-                        <h3 class="section__title large-bold">Выбор отеля</h3>
-                        <p class="section__text middle">
+                        <h3 class="section__title">Выбор отеля</h3>
+                        <p class="section__text">
                             В Тайланде огромный разбром по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:
                         </p>
                         <ul class="section__list">
-                            <li class="pink"><span class="middle">Point Yamu by Como (Пхукет)</span></li>
-                            <li class="pink"><span class="middle">Amari Vogue Hotel (Краби)</span></li>
-                            <li class="pink"><span class="middle">Photo Hotel (Пхукет)</span></li>
+                            <li>
+                                <span>Point Yamu by Como (Пхукет)</span>
+                            </li>
+                            <li>
+                                <span>Amari Vogue Hotel (Краби)</span>
+                            </li>
+                            <li>
+                                <span>Photo Hotel (Пхукет)</span>
+                            </li>
                         </ul>
-                        <p class="section__text middle">
+                        <p class="section__text">
                             В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот что пишут люди про Point Yamu:
                         </p>
                         <blockquote class="feedback">
-                            <p class="feedback__text middle">
+                            <p class="feedback__text">
                                 Замечательное место в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный, еда-потрясающая! Отель расположен в тихом и уединенном месте-в чем вся прелесть. СПА отличный. Потрясающие виды.
                             </p>
-                            <cite class="feedback__author small">Олег, г.Москва</cite>
+                            <cite class="feedback__author">Олег, г.Москва</cite>
                         </blockquote>
                     </section>
                     <section class="section">
-                        <h3 class="section__title large-bold">Местная еда</h3>
-                        <p class="section__text middle">
+                        <h3 class="section__title">Местная еда</h3>
+                        <p class="section__text">
                             Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему &mdash; просто попросите сделать ваше блюдо "not spicy". Желающие могут попробовать жаренных тараканчиков. Мы не рискнули.
                         </p>
                     </section>
                 </article>
-                <ul class="pagination-post">
+                <ul class="pagination">
                     <li>
-                        <a href="#" class="large-bold">пред.</a>
+                        <a href="#" class="pagination__link">пред.</a>
                     </li>
                     <li>
-                        <a href="#" class="large-bold">след.</a>
+                        <a href="#" class="pagination__link">след.</a>
                     </li>
                 </ul>
-                <a href="#" class="back-link large-bold">назад к списку</a>
+                <a href="#" class="return-link">назад к списку</a>
             </div>
         </main>
         <footer class="page-footer">
             <div class="container">
-                <a href="./index.html" class="page-footer__logo logo-link" target="_blank">Pink</a>
+                <a href="./index.html" class="page-footer__logo" target="_blank">Pink</a>
                 <div class="social">
                     <a href="http://twitter.com" class="social__btn icon-twitter" target="_blank">Twitter</a>
                     <a href="http://facebook.com" class="social__btn icon-facebook" target="_blank">Facebook</a>
-                    <a href="http://youtube.com" class="social__btn icon-outube" target="_blank">YouTube</a>
+                    <a href="http://youtube.com" class="social__btn icon-youtube" target="_blank">YouTube</a>
                 </div>
-                <p class="сopyright middle">
+                <p class="сopyright">
                     Разработано
                     <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
                 </p>
