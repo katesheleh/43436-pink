@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Pink Form</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'></head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+</head>
 <body>
     <div class="page-wrapper">
         <header class="page-header">
@@ -39,42 +40,44 @@
                 Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
             </p>
             <form action="#" method="get" class="form">
-                <label for="form-name" class="form__question">Имя*</label>
-                <input type="text" class="form__input" id="form-name" name="user-name" placeholder="Введите ваше имя" required autofocus>
-                <label for="form-surname" class="form__question">Фамилия*</label>
-                <input type="text" class="form__input" id="form-surname" name="user-surname" placeholder="Укажите фамилию" required>
-                <label for="form-patronymic" class="form__question">Отчество*</label>
-                <input type="text" class="form__input" id="form-patronymic" name="user-patronymic" placeholder="Ну и отчество тоже" required>
-                <div class="box box-gray">
+                <fieldset class="form__fieldset">
+                    <label for="form-name" class="form__question">Имя*</label>
+                    <input type="text" class="form__input" id="form-name" name="user-name" placeholder="Введите ваше имя" required autofocus>
+                    <label for="form-surname" class="form__question">Фамилия*</label>
+                    <input type="text" class="form__input" id="form-surname" name="user-surname" placeholder="Укажите фамилию" required>
+                    <label for="form-patronymic" class="form__question">Отчество*</label>
+                    <input type="text" class="form__input" id="form-patronymic" name="user-patronymic" placeholder="Ну и отчество тоже" required>
+                </fieldset>
+                <fieldset class="form__fieldset box box--gray">
                     <legend class="form__title">С каким приложением вы путешествовали?*</legend>
-                    <div class="form__radio">
-                        <div class="radio">
-                            <input type="radio" class="radio__input" id="option1" name="user-app" value="IOS" checked>
-                            <label for="option1" class="radio__label">Pink на IOS</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" class="radio__input" id="option2" name="user-app" value="Android">
-                            <label for="option2" class="radio__label">Pink на Android</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" class="radio__input" id="option3" name="user-app" value="Windows">
-                            <label for="option3" class="radio__label">Windows Phone</label>
-                        </div>
+                    <div class="radio">
+                        <input type="radio" class="radio__input" id="option1" name="user-app" value="IOS" checked>
+                        <label for="option1" class="radio__label">Pink на IOS</label>
                     </div>
-                </div>
-                <legend class="form__title">Когда вы путешествовали?*</legend>
-                <input type="date" name="start-trip" class="form__input" id="start-date" required>
-                <label for="start-date" class="form__question">Дата выезда</label>
-                <div class="form-counter">
-                    <span class="form-counter__minus" id="minus-days">-</span>
-                    <input type="text" name="duration-trip" class="form-counter__field" id="duration-day" required>
-                    <span class="form-counter__plus" id="plus-days">+</span>
-                </div>
-                <label for="duration-day" class="form__question">Продолжительность</label>
-                <input type="date" name="finish-trip" class="form__input" id="back-date" required>
-                <label for="back-date" class="form__question">Дата выезда</label>
-                <div class="box box-gray">
-                    <label for="traveler-number" class="form__question">Количество попутчиков*</label>
+                    <div class="radio">
+                        <input type="radio" class="radio__input" id="option2" name="user-app" value="Android">
+                        <label for="option2" class="radio__label">Pink на Android</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" class="radio__input" id="option3" name="user-app" value="Windows">
+                        <label for="option3" class="radio__label">Windows Phone</label>
+                    </div>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <legend class="form__title">Когда вы путешествовали?*</legend>
+                    <input type="date" name="start-trip" class="form__input" id="start-date" required>
+                    <label for="start-date" class="form__question">Дата выезда</label>
+                    <div class="form-counter">
+                        <span class="form-counter__minus" id="minus-days">-</span>
+                        <input type="text" name="duration-trip" class="form-counter__field" id="duration-day" required>
+                        <span class="form-counter__plus" id="plus-days">+</span>
+                    </div>
+                    <label for="duration-day" class="form__question">Продолжительность</label>
+                    <input type="date" name="finish-trip" class="form__input" id="back-date" required>
+                    <label for="back-date" class="form__question">Дата выезда</label>
+                </fieldset>
+                <fieldset class="form__fieldset box box--gray">
+                    <label for="traveler-number" class="form__title">Количество попутчиков*</label>
                     <div class="form-counter">
                         <span class="form-counter__minus" id="minus-friends">-</span>
                         <input type="text" class="form-counter__field" name="friends-number" id="traveler-number" required>
@@ -96,9 +99,9 @@
                         <label for="traveler-nickname2" class="quiz__question">Прозвище:</label>
                         <input type="text" class="quiz__input" name="nickname-friend2" id="traveler-nickname2" placeholder="Ну а как же без этого!">
                     </div>
-                </div>
-                <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
-                <div class="form__checkbox">
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
                     <div class="checkbox">
                         <input type="checkbox" class="checkbox__input" id="progress1" name="check-progress1" checked>
                         <label for="progress1" class="checkbox__label">Сделал селфи с акулой</label>
@@ -123,13 +126,13 @@
                         <input type="checkbox" class="checkbox__input" id="progress6" name="check-progress6">
                         <label for="progress6" class="checkbox__label">Разгромил отель</label>
                     </div>
-                </div>
-                <div class="box box-gray">
+                </fieldset>
+                <fieldset class="form__fieldset box box--gray">
                     <legend class="form__title">Ваши фотографии из поездки*</legend>
                     <div class="upload">
                         <label class="upload__label">
-                        Загрузить фото
-                        <input type="file" class="upload__input" name="file-upload"></label>
+                            Загрузить фото
+                            <input type="file" class="upload__input" name="file-upload"></label>
                     </div>
                     <ul class="pic-list">
                         <li class="pic-list__item">
@@ -173,9 +176,9 @@
                             <span class="pic-list__name">pic-small-user8.jpg</span>
                         </li>
                     </ul>
-                </div>
-                <input type="submit" class="button" value="отправить форму">
-                </form>
+                </fieldset>
+                <input type="submit" class="form__button" value="отправить форму">
+            </form>
             <p class="form__subtitle">
                 <span>*</span>
                 &mdash; обязательные поля
