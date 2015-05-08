@@ -6,14 +6,51 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
+  require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
 
     less: {
       style: {
         files: {
           'css/style.css': 'less/style.less'
+        }
+      }
+    },
+
+
+    watch: {
+      styles: {
+        files: ['less/**/*.less'],
+        tasks: ['less','notify:less'],
+        options: {
+            spawn: false,
+            livereload: true
+        }
+      },
+      livereload: {
+        files: ['*.html'],
+        tasks: ['notify:html'],
+        options: {
+          livereload: true
+        }
+      }
+    },
+
+
+    notify: {
+      less: {
+        options: {
+          title: 'Ура!',  // optional
+          message: 'LESS героически скомпилирован', //required
+        }
+      },
+      html: {
+        options: {
+          title: 'Ура-Ура!',  // optional
+          message: 'HTML обновлен!', //required
         }
       }
     },
@@ -25,6 +62,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
 
     lintspaces: {
       test: {
@@ -39,6 +77,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
 
     githooks: {
       test: {
