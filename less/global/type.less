@@ -1,81 +1,454 @@
-@color: #fff;
-@bg-color: #000;
-@wrap-width: 300px;
+@color-base: #283645;
+@color-decor: #d22856;
+@color-light: #fff;
+@color-dark: #000101;
+@color-shade: #485461;
+@color-success: #2aab6d;
+@bg-decor: #f2f2f2;
+@bg-header: #1d2631;
+@border-color: #e5e5e5;
+@ff-base: "Open Sans", sans-serif;
+@fz-base: 14px;
+@lh-base: 24px;
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: @bg-color;
-  color: @color;
-}
-
-.page-header {
-  &__logo-wrap {
-    width: @wrap-width;
-    height: @wrap-width/2;
-    margin: @wrap-width/4 auto 0;
-    text-align: center;
-  }
-
-  &__logo-link {
-    color: @color;
-    font-size: 28px;
-    font-weight: bold;
-  }
+.hide-text() {
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
 }
 
-@base-color: #283645;
-@decor-color: #d22856;
-@base-bg: #fff;
+.small(@fz: 12px; @lh: 27px;) {
+    font-size: @fz;
+    line-height: @lh;
+}
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
+.middle(@tt: uppercase; @fw: 100; @lh: 30px) {
+    text-transform: @tt;
+    font-weight: @fw;
+    line-height: @lh;
 }
-.small() {
-    font-size: 12px;
-    line-height: 27px;
+
+.large(@fz: 18px; @fw: 900; @fstyle: normal; @tt: none; @lh: 30px;) {
+    font-size: @fz;
+    font-weight: @fw;
+    font-style: @fstyle;
+    text-transform: @tt;
+    line-height: 30px;
 }
-.middle() {
-    font-size: 14px;
-    color: #283645;
+
+.huge(@fz: 24px; @lh: 28px; @fw: 100; @tt: none) {
+    font-size: @fz;
+    line-height: @lh;
+    font-weight: @fw;
+    text-transform: @tt;
 }
-.middle-up() {
-    font-size: 14px;
-    text-transform: uppercase;
-}
-.large-bold() {
-    font-size: 18px;
-    font-weight: 900;
-    font-style: normal;
-}
-.large() {
-    font-size: 18px;
-    font-style: normal;
-}
-.huge() {
-    font-size: 24px;
-    font-weight: 100;
-}
+
 .extra-huge() {
     font-size: 30px;
     font-weight: 900;
 }
-.placeholder() {
+
+.input() {
     font-size: 18px;
     line-height: 30px;
+    font-family: @ff-base;
     font-weight: 500;
-    color: @base-color;
+    color: @color-base;
+}
+
+.border (@w:2px; @s:solid; @bc:@border-color) {
+    border-width: @w;
+    border-style: @s;
+    border-color: @bc;
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.box-sizing(@sizing: border-box) {
+  -ms-box-sizing: @sizing;
+  -moz-box-sizing: @sizing;
+  -webkit-box-sizing: @sizing;
+  box-sizing: @sizing;
 }
 
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+dd,
+dt {
+    margin: 0;
+    padding: 0;
+}
+
+
+* {
+        .box-sizing;
+    &:before {
+        .box-sizing;
+    }
+    &:after {
+        .box-sizing;
+    }
+}
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: @ff-base;
+  font-size: @fz-base;
+  line-height: @lh-base;
+  font-weight: 500;
+  color: @color-base;
+  background-color: @color-light;
+}
+
+
+.page-header {
+            background-color: @bg-header;
+            background: url(../img/pic-bg.jpg), no-repeat;
+            background-size: 100% 100%;
+
+        &__container-top {
+
+        }
+    &__title {
+        .huge (@fw: 500);
+        color: @color-light;
+    }
+    &__pic {
+        vertical-align:bottom;
+    }
+}
+
+
+.headline {
+        min-height: 1px;
+        margin-bottom: 31px;
+        background-color: rgba(0, 0, 0, .3);
+
+    &__logo {
+        display: block;
+        padding: 21px 0;
+        text-align: left;
+    }
+}
+
+.nav-menu {
+        background-color: @color-base;
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        min-height: 1px;
+        padding: 26px 0 25px 0;
+        border-top: 1px solid @color-dark;
+        border-bottom: 1px solid @color-shade;
+    }
+    &__link {
+        .large(@lh: 32px);
+        text-transform: uppercase;
+        text-decoration: none;
+        color: @color-light;
+    }
+}
+
+
+.download {
+        background-color: @bg-header;
+        padding: 28px 0 37px 0;
+    &__btn {
+         display: block;
+         margin: 0 auto 31px auto;
+         width: 280px;
+         min-height: 1px;
+         padding: 23px 36px 22px 36px;
+         .border(@w: 3px; @bc: @color-light);
+         .border-radius(50px);
+        .large(@lh: 18px);
+        color: @color-light;
+        text-decoration: none;
+    }
+    &__text {
+        .middle(@tt:none; @lh: 24px);
+        color: @color-light;
+    }
+    &__icon {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 31px;
+    }
+}
+
+
+.box {
+    &--gray {
+     background-color: @bg-decor;
+    }
+}
+
+
+.page-wrapper {
+    text-align: center;
+}
+
+
+.text-label {
+    .huge;
+}
+
+
+.page-content {
+    padding: 51px 0 51px 0;
+    &__text {
+         padding-bottom: 45px;
+    }
+}
+
+
+.benefits {
+    &__item {
+
+    }
+    &__title {
+        .large;
+    }
+    &__text {
+
+    }
+    &__picture {
+
+    }
+}
+
+
+.context {
+
+    &__header {
+        .large;
+    }
+    &__text {
+
+    }
+}
+
+
+.table-offer {
+        .border;
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 100%;
+    &__header {
+        color: @color-light;
+        background-color: @bg-header;
+        th {
+            .border;
+        }
+    }
+    &__title {
+        .large(@tt: uppercase);
+    }
+    &__price {
+        display: block;
+        .huge(@tt: uppercase);
+    }
+    &__body {
+        text-align: left;
+        line-height: 30px;
+        text-transform: uppercase;
+        td {
+            width: 75%;
+            .border;
+        }
+    }
+    &__status {
+        width: 25%;
+       .hide-text;
+    }
+}
+
+
+.page-footer {
+    &__text {
+
+    }
+}
+
+
+.contacts {
+    &__title {
+        .large(@lh: 32px);
+    }
+    &__text {
+        .huge(@lh: 29px);
+        color: @color-decor;
+    }
+    &__link {
+         .huge(@lh: 29px);
+        color: @color-decor;
+        text-decoration: none;
+    }
+}
+
+
+.form {
+    &__fieldset {
+        border: none;
+    }
+    &__title {
+        .middle(@lh: 18px; @fw: 500);
+        color: @color-decor;
+    }
+    &__subtitle {
+        line-height: 30px;
+        text-transform: uppercase;
+        & span {
+            color: @color-decor;
+        }
+    }
+    &__question {
+        .middle(@fw: 500);
+        color: @color-decor;
+    }
+    &__input {
+        min-height: 1px;
+        display: block;
+        margin: 0 auto;
+        padding: 28px 24px 25px 24px;
+        .border;
+        .border-radius(5px);
+        .input;
+        &::-webkit-input-placeholder {
+            .input;
+        }
+         &:-moz-placeholder {
+            .input;
+         }
+    }
+    &__submit {
+        display: block;
+        width: 100%;
+        padding: 25px 0;
+        margin: 0 auto;
+        .large(@tt: uppercase);
+        background-color: @color-success;
+        color: @color-light;
+    }
+}
+
+.quiz {
+    &__symbol {
+        .middle(@fw: 500);
+        color: @color-decor;
+    }
+    &__question {
+        .middle(@fw: 500);
+        color: @color-decor;
+    }
+    &__number {
+        .middle(@fw: 500);
+        color: @color-base;
+    }
+    &__input {
+        min-height: 1px;
+        display: block;
+        margin: 0 auto;
+        padding: 28px 24px 25px 24px;
+        .border;
+        .border-radius(5px);
+        .input;
+            &::-webkit-input-placeholder {
+                .input;
+        }
+            &:-moz-placeholder {
+                .input;
+         }
+    }
+}
+
+
+.radio {
+    .large(@fw: 500);
+    &__input {
+
+    }
+    &__label {
+
+    }
+}
+
+.checkbox {
+    .large(@fw: 500);
+    &__input {
+
+    }
+    &__label {
+
+    }
+}
+
+
+.form-counter {
+    &__minus {
+
+    }
+    &__field {
+
+    }
+    &__plus {
+
+    }
+}
+
+
+.upload {
+    &__label {
+        display: block;
+        width: 100%;
+        padding: 25px 0;
+        margin: 0 auto;
+        .large(@tt: uppercase);
+        background-color: @color-light;
+    }
+    &__input {
+
+    }
+}
+
+
+.pic-list {
+    &__item {
+
+    }
+    &__img {
+
+    }
+    &__close {
+
+    }
+    &__name {
+        .small(@lh: 18px);
+    }
+}
+
+
+.сopyright {
+    &__link {
+        line-height: 18px;
+    }
+}
 
 
