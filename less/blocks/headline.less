@@ -1,0 +1,24 @@
+.headline {
+        width: 100%;
+        min-height: 1px;
+        margin-bottom: 31px;
+        background-color: rgba(0, 0, 0, .3);
+
+    &__logo {
+            position: relative;
+            display: block;
+            width: 50%;
+            height: 66px;
+            padding: 21px 0;
+            .hide-text;
+        &::before {
+            position: absolute;
+            top: 35%;
+            left: 19px;
+            content: " ";
+            width: 100px;
+            height: 40px;
+            background: url(../img/icon-logo-white.png) no-repeat;
+        }
+    }
+}

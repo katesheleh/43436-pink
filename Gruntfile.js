@@ -1,19 +1,58 @@
 module.exports = function(grunt) {
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-githooks');
-  grunt.loadNpmTasks('grunt-lintspaces');
+   grunt.loadNpmTasks('grunt-contrib-copy');
+   grunt.loadNpmTasks('grunt-contrib-clean');
+   grunt.loadNpmTasks('grunt-contrib-less');
+   grunt.loadNpmTasks('grunt-sass');
+   grunt.loadNpmTasks('grunt-githooks');
+   grunt.loadNpmTasks('grunt-lintspaces');
+   grunt.loadNpmTasks('grunt-notify');
+   grunt.loadNpmTasks('grunt-contrib-watch');
+  // require('load-grunt-tasks')(grunt, {scope: 'dependencies'});
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
 
     less: {
       style: {
         files: {
           'css/style.css': 'less/style.less'
+        }
+      }
+    },
+
+
+    watch: {
+      styles: {
+        files: ['less/**/*.less'],
+        tasks: ['less','notify:less'],
+        options: {
+            spawn: false,
+            livereload: true
+        }
+      },
+      livereload: {
+        files: ['*.html'],
+        tasks: ['notify:html'],
+        options: {
+          livereload: true
+        }
+      }
+    },
+
+
+    notify: {
+      less: {
+        options: {
+          title: 'Ура!',  // optional
+          message: 'LESS героически скомпилирован', //required
+        }
+      },
+      html: {
+        options: {
+          title: 'Ура-Ура!',  // optional
+          message: 'HTML обновлен!', //required
         }
       }
     },
@@ -25,6 +64,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
 
     lintspaces: {
       test: {
@@ -39,6 +79,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
 
     githooks: {
       test: {

@@ -5,4 +5,5 @@ Thumbs.db
 prepros.cfg
 *.sublime*
 *.map
-css/*
+draft.less
+
