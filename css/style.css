@@ -49,7 +49,7 @@ body {
 .page-header {
   background-color: #1d2631;
   background: url(../img/pic-bg.jpg), no-repeat;
-  background-size: 50% 50%;
+  background-size: 100% 100%;
 }
 .page-header__title {
   color: #ffffff;
@@ -92,7 +92,15 @@ body {
 .nav-menu {
   background-color: #283645;
 }
+.nav-menu.opened {
+  width: 100%;
+  height: 65px;
+  border-bottom: 1px solid #485461;
+  background-color: #283645;
+}
 .nav-menu.opened .nav-menu__list {
+  position: absolute;
+  top: 66px;
   max-height: 500px;
   width: 100%;
 }
@@ -119,7 +127,6 @@ body {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  transition-duration: .3s;
 }
 .nav-menu__item {
   display: block;
