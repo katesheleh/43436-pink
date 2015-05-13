@@ -5,5 +5,10 @@ Thumbs.db
 prepros.cfg
 *.sublime*
 *.map
-draft.less
-
+_assets
+icon-apple.png
+icon-android.png
+icon-microsoft.png
+icon-no.png
+icon-yes.png
+ribbon.png

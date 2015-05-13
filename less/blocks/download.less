@@ -1,25 +1,62 @@
 .download {
         background-color: @bg-header;
-        padding: 28px 0 37px 0;
+        padding: 28px 0 16px 0;
+
+
+
+
+
     &__btn {
          display: block;
          width: 100%;
-         margin: 0 auto 31px auto;
-         min-height: 1px;
-         padding: 23px 22px 22px 22px;
-         .border(@w: 3px; @bc: @color-light);
-         .border-radius(50px);
+         height: 55px;
+         margin: 0 auto 40px auto;
+         border: 3px solid @color-light;
+         padding: 14px 22px 17px 22px;
+         .large-text(@line-height: 18px);
+         text-decoration: none;
+         letter-spacing: 1px;
+         border-radius: 50px;
          color: @color-light;
     }
+
+
+
+
+
     &__text {
-        .middle(@tt:none; @lh: 24px);
+        line-height: 24px;
+        font-weight: 100;
         color: @color-light;
     }
+
+
+
+
+
     &__icon {
-        display: block;
-        max-height: 1px;
-        margin: 0 auto 31px 0;
-        padding-bottom: 50px;
+        display: table;
+        height: 55px;
+        margin-bottom: 15px;
+        padding: 0;
+    }
+
+
+
+
+    &__item {
+        display: table-cell;
+        width: auto;
+        height: 55px;
+        padding-left: 0px;
+        vertical-align: bottom;
+        text-align: center;
+        i {
+            display: table-cell;
+            height: 55px;
+            width: 280px;
+            vertical-align: middle;
+        }
     }
 }
 

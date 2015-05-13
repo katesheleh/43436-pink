@@ -1,204 +1,42 @@
+
+
 @ff-base: "Open Sans", sans-serif;
 @fz-base: 14px;
 @lh-base: 30px;
 
-.middle(@tt: uppercase; @fw: 100; @lh: 24px) {
-    text-transform: @tt;
-    font-weight: @fw;
-    line-height: @lh;
-}
 
-.large(@fz: 18px; @fw: 900; @fstyle: normal; @tt: none) {
-    font-size: @fz;
-    font-weight: @fw;
+
+
+.large-text(@fsize: 18px; @fweight: 900; @fstyle: normal; @ttransform: none; @line-height: 30px) {
+    font-size: @fsize;
+    font-weight: @fweight;
     font-style: @fstyle;
-    text-transform: @tt;
-    line-height: 30px;
-}
-
-.huge(@fz: 24px; @lh: 28px; @fw: 100; @tt: none) {
-    font-size: @fz;
-    line-height: @lh;
-    font-weight: @fw;
-    text-transform: @tt;
+    text-transform: @ttransform;
+    line-height: @line-height;
 }
 
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: @ff-base;
-  font-size: @fz-base;
-  line-height: @lh-base;
-  font-weight: 500;
-  color: @color-base;
-  background-color: @color-light;
+
+
+
+
+.huge-text(@fsize: 24px; @fweight: 100; @fs: normal; @ttransform: none; @line-height: 28px) {
+    font-size: @fsize;
+    font-weight: @fweight;
+    font-style: @fs;
+    text-transform: @ttransform;
+    line-height: @line-height;
 }
 
 
-.page-header {
-        &__container-top {
-
-        }
-    &__title {
-        .huge (@fw: 500);
-    }
-    &__pic {
-
-    }
-}
 
 
-.nav-menu {
-
-    &__list {
-
-    }
-    &__item {
-
-    }
-    &__link {
-        .large;
-        line-height: 32px;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
-}
 
 
-.download {
-
-    &__btn {
-        .large;
-        line-height: 18px;
-        text-decoration: none;
-    }
-    &__text {
-        .middle(@tt:none);
-        color: @color-light;
-    }
-    &__icon {
-
-    }
-}
 
 
-.text-label {
-    .huge;
-}
 
 
-.benefits {
-    &__item {
-
-    }
-    &__title {
-        .large;
-    }
-    &__text {
-
-    }
-    &__picture {
-
-    }
-}
 
 
-.context {
 
-    &__header {
-        .large;
-    }
-    &__text {
-
-    }
-}
-
-
-.table-offer {
-    &__header {
-        th {
-        }
-    }
-    &__title {
-        .large(@tt: uppercase);
-    }
-    &__price {
-        .huge(@tt: uppercase);
-    }
-    &__body {
-        line-height: 30px;
-        text-transform: uppercase;
-
-        td {
-
-        }
-    }
-    &__status {
-
-    }
-}
-
-
-.contacts {
-    &__title {
-        .large;
-        line-height: 32px;
-    }
-    &__text {
-        .huge(@lh: 29px);
-
-    }
-    &__link {
-         .huge(@lh: 29px);
-        text-decoration: none;
-    }
-}
-
-
-.form {
-    &__fieldset {
-        border: none;
-    }
-    &__title {
-        .middle(@lh: 18px; @fw: 500);
-        color: @color-decor;
-    }
-    &__subtitle {
-        line-height: 30px;
-        text-transform: uppercase;
-        & span {
-            color: @color-decor;
-        }
-    }
-    &__question {
-        .middle(@fw: 500);
-        color: @color-decor;
-    }
-    &__input {
-        min-height: 1px;
-        display: block;
-        margin: 0 auto;
-        padding: 28px 24px 25px 24px;
-        .border;
-        .border-radius(5px);
-        .input;
-        &::-webkit-input-placeholder {
-            .input;
-        }
-         &:-moz-placeholder {
-            .input;
-         }
-    }
-    &__submit {
-        display: block;
-        width: 100%;
-        padding: 25px 0;
-        margin: 0 auto;
-        .large(@tt: uppercase);
-        background-color: @color-success;
-        color: @color-light;
-    }
-}

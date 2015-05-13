@@ -1,38 +1,68 @@
 .table-offer {
-            width: 100%;
+            width: 280px;
             .border;
             border-collapse: collapse;
-            margin: 0 auto;
-            width: 100%;
+            margin: 43px auto 41px auto;
+
+
+
+
+
+
     &__header {
-            min-height: 1px;
+            height: 98px;
             color: @color-light;
             background-color: @bg-header;
         th {
-            min-height: 1px;
-            padding: 25px 0;
+            padding: 7px 0 13px 0;
             .border;
             border-top-color:  @bg-header;
         }
     }
+
+
+
+
+
+
     &__title {
             display: block;
-            padding-bottom: 16px;
+            padding-bottom: 2px;
+            .large-text(@ttransform: uppercase);
     }
+
+
+
+
+
+
     &__price {
         display: block;
+        .huge-text(@ttransform: uppercase);
     }
-    &__body {
-            min-height: 1px;
-            text-align: left;
 
+
+
+
+
+
+    &__body {
+            height: 60px;
+            text-align: left;
+            line-height: 30px;
+            text-transform: uppercase;
         td {
-            min-height: 1px;
             width: 75%;
-            padding: 25px 24px 25px 24px;
+            padding: 0 22px;
             .border;
         }
     }
+
+
+
+
+
+
     &__status {
             width: 25%;
            .hide-text;

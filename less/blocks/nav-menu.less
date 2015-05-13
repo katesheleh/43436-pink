@@ -1,18 +1,129 @@
+
 .nav-menu {
-        background-color: @color-base;
+    background-color: @color-base;
+
+
+
+    &.opened {
+        .nav-menu__list {
+            max-height: 500px;
+            width: 100%;
+        }
+
+
+
+
+
+        .js-menu-control__hamburger {
+                background-color: transparent;
+                &::before {
+                    top: 0;
+                    left: 25px;
+                    transform: rotate(45deg);
+                    height: 2px;
+                    width: 30px;
+                }
+                &::after {
+                    top: 0;
+                    left: 25px;
+                    transform: rotate(-45deg);
+                    height: 2px;
+                    width: 30px;
+                }
+            }
+    }
+
+
+
     &__list {
+        max-height: 0;
         margin: 0;
         padding: 0;
         list-style: none;
+        overflow: hidden;
+        transition-duration: .3s;
     }
+
+
+
+
+
     &__item {
-        min-height: 1px;
-        padding: 26px 0 25px 0;
+        display: block;
+        text-align: center;
+        padding: 15px 0 15px 0;
         border-top: 1px solid @color-dark;
         border-bottom: 1px solid @color-shade;
+        background-color: @color-base;
     }
+
+
+
+
+
     &__link {
+        display: block;
+        .large-text(@ttransform: uppercase; @line-height: 32px);
+        text-decoration: none;
         color: @color-light;
+        background-color: @color-base;
     }
-}
+
+
+
+
+
+    &__btn {
+          .js-menu-control__hamburger {
+          cursor: pointer;
+          height: 5px;
+          width: 50px;
+          background: @color-light;
+          position: absolute;
+          display: block;
+          top: 28px;
+          right: 534px;
+          transition: all 500ms ease-in-out;
+
+
+
+
+
+         &::before {
+              cursor: pointer;
+              height: 5px;
+              width: 50px;
+              background: @color-light;
+              position: absolute;
+              display: block;
+              content: "";
+              bottom: 10px;
+              left: 0;
+              transition: all 500ms ease-in-out;
+            }
+
+
+
+
+
+            &::after {
+              cursor: pointer;
+              height: 5px;
+              width: 50px;
+              background: @color-light;
+              position: absolute;
+              display: block;
+              content: "";
+              top: 10px;
+              left: 0;
+              transition: all 500ms ease-in-out;
+            }
+
+        }
+    }
+  }
+
+
+
+
 
