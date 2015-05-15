@@ -1,0 +1,98 @@
+.quiz {
+    min-height: 1px;
+    margin-bottom: 20px;
+
+
+
+
+
+
+label[for="traveler-nickname1"] {
+    float: right;
+}
+
+
+
+
+
+label[for="traveler-nickname2"] {
+    float: right;
+}
+
+
+
+
+input[name="nickname-friend"] {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+
+
+
+
+    &__symbol {
+        display: block;
+        width: 22%;
+        margin-top: 5px;
+        float: left;
+        color: @color-decor;
+    }
+
+
+
+
+
+    &__question {
+        display: block;
+        float: left;
+        width: 78%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        padding-left: 22px;
+        color: @color-decor;
+        .small-title;
+        text-align: left;
+    }
+
+
+
+
+
+    &__number {
+        display: block;
+        height: 64px;
+        width: 22%;
+        float: left;
+        padding: 15px;
+        color: @color-base;
+        .large-text(@fweight: 400);
+        .border;
+        border-right: none;
+         border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+
+
+
+
+    &__input {
+        width: 78%;
+        height: 64px;
+        display: block;
+        margin: 0 0 10px auto;
+        padding: 25px 5px 25px 19px;
+        .border;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        .placeholder;
+            &::-webkit-input-placeholder {
+                .placeholder;
+        }
+            &:-moz-placeholder {
+                .placeholder;
+         }
+    }
+
+}
