@@ -7,5 +7,6 @@ var menuControl = document.querySelector(".js-menu-control"),
 
 menuControl.addEventListener("click", function(ev){
     ev.preventDefault();
-    menu.classList.toggle("opened");
+    //menu.classList.toggle("opened");
+    document.body.classList.toggle("mobile-menu-opened");
 }, false);

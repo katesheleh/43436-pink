@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Pink Blog</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="page-wrapper">
@@ -12,23 +13,26 @@
                 <div class="headline">
                     <div class="container">
                         <a href="#" class="headline__logo">pink</a>
-                        <nav class="nav-menu">
-                            <ul class="nav-menu__list">
-                                <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link">Информация</a>
-                                </li>
-                                <li  class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link">Возможности</a>
-                                </li>
-                                <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link">Отзывы</a>
-                                </li>
-                                <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link">Стоимость</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
+                    <nav class="nav-menu js-menu">
+                        <a class="nav-menu__btn js-menu-control" href="#">
+                            <span class="js-menu-control__hamburger"></span>
+                        </a>
+                        <ul class="nav-menu__list">
+                            <li class="nav-menu__item">
+                                <a href="#" class="nav-menu__link">Информация</a>
+                            </li>
+                            <li  class="nav-menu__item">
+                                <a href="#" class="nav-menu__link">Возможности</a>
+                            </li>
+                            <li class="nav-menu__item">
+                                <a href="#" class="nav-menu__link">Отзывы</a>
+                            </li>
+                            <li class="nav-menu__item">
+                                <a href="#" class="nav-menu__link">Стоимость</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="container">
                     <h1 class="page-header__title">Блог путешественников, пользователей Пинк</h1>
@@ -114,5 +118,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

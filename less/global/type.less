@@ -1,12 +1,4 @@
 
-
-@ff-base: "Open Sans", sans-serif;
-@fz-base: 14px;
-@lh-base: 30px;
-
-
-
-
 .large-text(@fsize: 18px; @fweight: 900; @fstyle: normal; @ttransform: none; @line-height: 30px) {
     font-size: @fsize;
     font-weight: @fweight;
@@ -20,12 +12,31 @@
 
 
 
-.huge-text(@fsize: 24px; @fweight: 100; @fs: normal; @ttransform: none; @line-height: 28px) {
+.huge-text(@fsize: 24px; @fweight: 100; @fstyle: normal; @ttransform: none; @line-height: 28px) {
     font-size: @fsize;
     font-weight: @fweight;
-    font-style: @fs;
+    font-style: @fstyle;
     text-transform: @ttransform;
     line-height: @line-height;
+}
+
+
+
+.small-title(@fweight: 400; @lheight: @lh-base; @transform: uppercase) {
+    font-weight: @fweight;
+    line-height: @lheight;
+    text-transform: @transform;
+}
+
+
+
+
+.placeholder() {
+    font-size: 18px;
+    line-height: 30px;
+    font-family: @ff-base;
+    font-weight: 400;
+    color: @color-base;
 }
 
 
