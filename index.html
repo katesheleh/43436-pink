@@ -4,22 +4,7 @@
     <meta charset="UTF-8">
     <title>Pink</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="_assets/jquery.js"></script>
-    <script src="_assets/jquery.pixlayout.js"></script>
-    <script>
-    $(function(){
-      $.pixlayout({
-        src: "_assets/pink-index-mobile.jpg",
-        opacity: 0.4,
-        top: -2,
-        center: true,
-        clip: true,
-        show: true,
-      })
-    });
-  </script>
-</head>
+    <link rel="stylesheet" href="css/style.css"></head>
 <body>
     <div class="page-wrapper">
         <header class="page-header">
@@ -27,7 +12,9 @@
                 <div class="headline">
                     <div class="container">
                         <a href="#" class="headline__logo">pink</a>
-                        <a class="nav-menu__btn js-menu-control" href="#">меню</a>
+                        <a class="nav-menu__btn js-menu-control" href="#">
+                            <span>меню</span>
+                        </a>
                     </div>
                     <nav class="nav-menu js-menu">
                         <ul class="nav-menu__list">
@@ -248,5 +235,19 @@
 </footer>
 </div>
 <script src="js/scripts.js"></script>
+<script src="_assets/jquery.js"></script>
+<script src="_assets/jquery.pixlayout.js"></script>
+<script>
+    $(function(){
+      $.pixlayout({
+        src: "_assets/pink-index-mobile.jpg",
+        opacity: 0.4,
+        top: -2,
+        center: true,
+        clip: true,
+        show: true,
+      })
+    });
+  </script>
 </body>
 </html>

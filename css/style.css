@@ -534,6 +534,13 @@ html {
 }
 .nav-menu__btn {
   position: relative;
+  display: block;
+  float: right;
+  width: 48px;
+  height: 66px;
+}
+.nav-menu__btn span {
+  position: absolute;
   content: " ";
   top: 0;
   left: 0;
@@ -541,29 +548,26 @@ html {
   height: 4px;
   width: 48px;
   margin: 31px 0;
-  float: right;
   background: #ffffff;
   font: 0/0 serif;
   text-shadow: none;
   color: transparent;
 }
-.nav-menu__btn:before {
+.nav-menu__btn span:before {
   height: 4px;
   width: 48px;
   background: #ffffff;
   position: absolute;
-  display: block;
   content: " ";
   top: 10px;
   left: 0;
   transition: all 200ms ease-in-out;
 }
-.nav-menu__btn::after {
+.nav-menu__btn span::after {
   height: 4px;
   width: 48px;
   background: #ffffff;
   position: absolute;
-  display: block;
   content: "";
   bottom: 10px;
   left: 0;
@@ -573,16 +577,16 @@ html {
   background-color: #283645;
   border-bottom: 1px solid #485461;
 }
-.mobile-menu-opened .nav-menu__btn {
+.mobile-menu-opened .nav-menu__btn span {
   background-color: transparent;
 }
-.mobile-menu-opened .nav-menu__btn::before {
+.mobile-menu-opened .nav-menu__btn span::before {
   top: 0;
   left: 0;
   width: 40px;
   transform: rotate(45deg);
 }
-.mobile-menu-opened .nav-menu__btn::after {
+.mobile-menu-opened .nav-menu__btn span::after {
   top: 0;
   left: 0;
   width: 40px;
@@ -593,6 +597,7 @@ html {
   top: 66px;
   max-height: 500px;
   width: 100%;
+  transition: all 200ms ease-in-out;
 }
 .download {
   background-color: #1d2631;
@@ -878,14 +883,15 @@ html {
 }
 .map {
   position: relative;
-  width: 100%;
+  width: 320px;
   height: 200px;
+  margin: 0 auto;
   background: #ffffff url("../img/map.jpg") no-repeat 50% 50%;
 }
 .map__map-pin {
-  position: absolute;
-  top: 115px;
-  left: 656px;
+  position: relative;
+  top: 112px;
+  left: 144px;
   width: 35px;
   height: 35px;
   background: #d22856;
