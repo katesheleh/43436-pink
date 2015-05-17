@@ -1,98 +1,49 @@
 .nav-menu {
+  background-color: @color-base;
+
+
+
+  &__list {
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+
+
+
+
+  &__item {
+    display: block;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    border-top: 1px solid @color-dark;
+    border-bottom: 1px solid @color-shade;
+    background-color: @color-base;
+  }
+
+
+
+
+
+  &__link {
+    .large-text(@ttransform: uppercase; @line-height: 32px);
+    text-decoration: none;
+    color: @color-light;
     background-color: @color-base;
 
-
-
-    &__list {
-      max-height: 0;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      overflow: hidden;
+    &:hover {
+      color: @color-decor;
+      // box-shadow: 0 5px 0 0 @color-base,
+      //             0 7px 0 0 @color-light;
+      transition: all .2s ease;
     }
-
-
-
-
-
-    &__item {
-      display: block;
-      text-align: center;
-      padding: 15px 0 15px 0;
-      border-top: 1px solid @color-dark;
-      border-bottom: 1px solid @color-shade;
-      background-color: @color-base;
-    }
-
-
-
-
-
-    &__link {
-      .large-text(@ttransform: uppercase; @line-height: 32px);
-      text-decoration: none;
-      color: @color-light;
-      background-color: @color-base;
-
-        &:hover {
-          color: @color-decor;
-           // box-shadow: 0 5px 0 0 @color-base,
-           //             0 7px 0 0 @color-light;
-          transition: all .2s ease;
-        }
-
-        &:active {
-          opacity: .3;
-         // box-shadow: none;
-          transition: all .2s ease;
-        }
-    }
-
-
-
-
-
-    &__btn {
-      position: relative;
-      display: block;
-      float: right;
-      width: 48px;
-      height: 66px;
-
-      span {
-        position: absolute;
-        content: " ";
-        top: 0;
-        left: 0;
-        display: block;
-        height: 4px;
-        width: 48px;
-        margin: 31px 0;
-        background: @color-light;
-        .hide-text;
-
-            &::before {
-              height: 4px;
-              width: 48px;
-              background: @color-light;
-              position: absolute;
-              content: " ";
-              top: 10px;
-              left: 0;
-              transition: all 200ms ease-in-out;
-            }
-
-             &::after {
-              height: 4px;
-              width: 48px;
-              background: @color-light;
-              position: absolute;
-              content: "";
-              bottom: 10px;
-              left: 0;
-              transition: all 200ms ease-in-out;
-            }
-      }
+    &:active {
+      opacity: .3;
+      // box-shadow: none;
+      transition: all .2s ease;
     }
   }
 
@@ -100,45 +51,90 @@
 
 
 
+  &__btn {
+    position: relative;
+    display: block;
+    float: right;
+    width: 48px;
+    height: 66px;
 
-.mobile-menu-opened {
+    span {
+      position: absolute;
+      content: " ";
+      top: 0;
+      left: 0;
+      display: block;
+       height: 4px;
+      width: 48px;
+      margin: 31px 0;
+      background: @color-light;
+      .hide-text;
 
-    .headline {
-        background-color: @color-base;
-        border-bottom: 1px solid @color-shade;
-    }
-
-    .nav-menu {
-
-      &__btn {
-
-        span {
-          background-color: transparent;
-
-          &::before {
-            top: 0;
-            left: 0;
-            width: 40px;
-            transform: rotate(45deg);
-          }
-
-          &::after {
-            top: 0;
-            left: 0;
-            width: 40px;
-            transform: rotate(-45deg);
-          }
-      }
-    }
-
-
-
-      &__list {
+      &::before {
+        height: 4px;
+        width: 48px;
+        background: @color-light;
         position: absolute;
-        top: 66px;
-        max-height: 500px;
-        width: 100%;
+        content: " ";
+        top: 10px;
+        left: 0;
+        transition: all 200ms ease-in-out;
+      }
+      &::after {
+        height: 4px;
+        width: 48px;
+        background: @color-light;
+        position: absolute;
+        content: "";
+        bottom: 10px;
+        left: 0;
         transition: all 200ms ease-in-out;
       }
     }
+  }
+}
+
+
+
+
+
+.mobile-menu-opened {
+
+  .headline {
+    background-color: @color-base;
+    border-bottom: 1px solid @color-shade;
+  }
+
+  .nav-menu {
+
+    &__btn {
+
+      span {
+        background-color: transparent;
+
+        &::before {
+          top: 0;
+          left: 0;
+          width: 40px;
+          transform: rotate(45deg);
+        }
+        &::after {
+          top: 0;
+          left: 0;
+          width: 40px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+
+
+    &__list {
+      position: absolute;
+      top: 66px;
+      max-height: 500px;
+      width: 100%;
+      transition: all 200ms ease-in-out;
+    }
+  }
 }

@@ -1,82 +1,74 @@
 .download {
-    background-color: @bg-header;
-    padding: 28px 0 16px 0;
-    .cf;
+  background-color: @bg-header;
+  padding: 28px 0 16px 0;
+  .cf;
 
 
 
 
-    &__btn {
-      display: block;
-      width: 100%;
-      height: 55px;
-      margin: 0 auto 40px auto;
-      border: 3px solid @color-light;
-      padding: 14px 22px 17px 22px;
-      .large-text(@line-height: 18px; @fweight: 100);
-      text-decoration: none;
-      letter-spacing: 1px;
-      border-radius: 50px;
-      color: @color-light;
+  &__btn {
+    display: block;
+    width: 100%;
+    height: 55px;
+    margin: 0 auto 40px auto;
+    border: 3px solid @color-light;
+    padding: 14px 22px 17px 22px;
+    .large-text(@line-height: 18px; @fweight: 100);
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    color: @color-light;
 
-         &:hover {
-            background-color: @color-light;
-            color: @color-decor;
-            transition: all .3s ease;
-         }
-
-         &:active {
-            background-color: @color-light;
-            color: rgba(210, 40, 86, .3);
-            transition: all .3s ease;
-         }
+    &:hover {
+      background-color: @color-light;
+      color: @color-decor;
+      transition: all .3s ease;
     }
 
-
-
-
-
-    &__text {
-      line-height: 24px;
-      font-weight: 100;
-      color: @color-light;
+    &:active {
+      background-color: @color-light;
+      color: rgba(210, 40, 86, .3);
+      transition: all .3s ease;
     }
+  }
 
 
 
 
 
-    &__icon {
-      display: table;
-      height: 55px;
-      margin-bottom: 15px;
-      padding: 0;
-    }
+  &__text {
+    line-height: 24px;
+    font-weight: 100;
+    color: @color-light;
+  }
 
 
 
 
-    &__item {
+
+  &__icon {
+    display: table;
+    height: 55px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+
+
+
+  &__item {
+    display: table-cell;
+    width: auto;
+    height: 55px;
+    padding-left: 0px;
+    vertical-align: bottom;
+    text-align: center;
+
+    i {
       display: table-cell;
-      width: auto;
       height: 55px;
-      padding-left: 0px;
-      vertical-align: bottom;
-      text-align: center;
-        i {
-          display: table-cell;
-          height: 55px;
-          width: 280px;
-          vertical-align: middle;
-        }
+      width: 280px;
+      vertical-align: middle;
     }
-}
-
-
-
-
-@media(max-width: 700px) {
-    .download {
-
-    }
+  }
 }

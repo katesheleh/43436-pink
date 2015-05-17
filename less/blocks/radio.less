@@ -1,53 +1,61 @@
 .radio {
-    .large-text(@fweight: 500);
-    text-align: left;
-    padding: 22px;
+  .large-text(@fweight: 500);
+  text-align: left;
+  padding: 22px;
 
 
 
 
 
 
-    &__input {
-        display: none;
+  &__input {
+    display: none;
+  }
+
+
+
+
+
+  &__label {
+    padding-left: 36px;
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: " ";
+      top: -5px;
+      left: -21px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: @color-light;
+      border: 10px solid @color-light;
+      box-shadow: 0 0 0 2px @border-color;
     }
+  }
 
 
 
 
 
-    &__label {
-        padding-left: 36px;
-        cursor: pointer;
-        position: relative;
-               &:before {
-            position: absolute;
-            content: " ";
-            top: -5px;
-            left: -21px;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background-color: @color-light;
-            border: 10px solid @color-light;
-            box-shadow: 0 0 0 2px @border-color;
-        }
-    }
+  &__input:checked + &__label:before {
+    position: absolute;
+    content: " ";
+    top: -5px;
+    left: -21px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: @color-decor;
+    border: 10px solid @color-light;
+    box-shadow: 0 0 0 2px @color-decor;
+  }
 
 
 
 
-
-    &__input:checked + &__label:before {
-        position: absolute;
-        content: " ";
-        top: -5px;
-        left: -21px;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: @color-decor;
-        border: 10px solid @color-light;
-        box-shadow: 0 0 0 2px @border-color;
-    }
+  &__input + &__label:hover:before {
+    box-shadow: 0 0 0 2px @color-base;
+  }
 }

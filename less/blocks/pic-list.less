@@ -1,64 +1,67 @@
 .pic-list {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+  margin-top: 40px;
+  padding-top: 35px;
+  border-top: 2px solid @border-color;
+  font-size: 0;
+  text-align: left;
+  vertical-align: bottom;
+
+
+
+
+  &__item {
+    display: inline-block;
+    width: 24%;
+    margin-right: 14%;
+
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+
+
+
+
+
+  &__img {
+    vertical-align: bottom;
+  }
+
+
+
+
+
+
+  &__close {
     position: relative;
-        list-style: none;
-        width: 100%;
-        padding-left: 0;
-        margin-top: 40px;
-        padding-top: 35px;
-        border-top: 2px solid @border-color;
-        font-size: 0;
-        text-align: left;
-        vertical-align: bottom;
+    font-size: 1px;
+    .hide-text;
 
-
-    &__item {
-        display: inline-block;
-
-
-        width: 24%;
-        margin-right: 14%;
-            &:nth-child(3n+3) {
-               margin-right: 0;
-           }
-        }
-
-
-
-
-
-    &__img {
-        vertical-align: bottom;
+    &:before {
+      position: absolute;
+      content: "";
+      bottom: 81px;
+      left: 50px;
+      width: 33px;
+      height: 33px;
+      background: url("../img/icon-close.png") no-repeat 100% 100%;
     }
+  }
 
 
 
 
 
-    &__close {
-           position: relative;
-            font-size: 1px;
-            .hide-text;
-        &:before {
-            position: absolute;
-            content: "";
-            bottom: 81px;
-            left: 50px;
-            width: 33px;
-            height: 33px;
-            background: url("../img/icon-close.png") no-repeat 100% 100%;
-        }
-    }
-
-
-
-
-
-    &__name {
-        display: block;
-        margin: 0;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-        text-align: left;
-    }
+  &__name {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    text-align: left;
+  }
 }
