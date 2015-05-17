@@ -1,13 +1,13 @@
 .contacts {
-        margin-bottom: 40px;
+    margin-bottom: 40px;
 
 
 
 
 
     &__title {
-        margin: 0;
-        .large-text;
+      margin: 0;
+      .large-text;
     }
 
 
@@ -16,9 +16,9 @@
 
 
     &__text {
-        margin: 0 0 16px 0;
-        color: @color-decor;
-        .huge-text(@line-height: 29px);
+      margin: 0 0 16px 0;
+      color: @color-decor;
+      .huge-text(@line-height: 29px);
     }
 
 
@@ -27,11 +27,23 @@
 
 
     &__link {
-        display: block;
-        margin-bottom: 21px;
-        color: @color-decor;
-        .huge-text(@line-height: 29px);
-        text-decoration: none;
+      margin-bottom: 21px;
+      color: @color-decor;
+      .huge-text(@line-height: 29px);
+      text-decoration: none;
+
+        &:hover {
+          color: @color-base;
+          box-shadow: 0 3px 0 0 @color-light, 0 5px 0 0 @color-base;
+          transition: all .2s ease;
+        }
+
+        &:active {
+          color: @color-base;
+          box-shadow: none;
+          opacity: .3;
+          transition: all .2s ease;
+        }
     }
 }
 

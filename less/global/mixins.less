@@ -1,35 +1,50 @@
 .hide-text() {
-    font: 0/0 serif;
-    text-shadow: none;
-    color: transparent;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
 }
 
 
 
 
 .border (@w:2px; @s:solid; @bc:@border-color) {
-    border-width: @w;
-    border-style: @s;
-    border-color: @bc;
+  border-width: @w;
+  border-style: @s;
+  border-color: @bc;
 }
 
 
 
 
 .img-sets() {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  vertical-align: bottom;
 }
 
 
 
 
 .input() {
-    display: block;
-    height: 64px;
-    width: 100%;
-    margin: 0 auto 15px auto;
-    border-radius: 5px;
+  display: block;
+  height: 64px;
+  width: 100%;
+  margin: 0 auto 15px auto;
+  border-radius: 5px;
+}
+
+
+
+
+.cf() {
+  &::before {
+    content: " ";
+    display: table;
+  }
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
 }
