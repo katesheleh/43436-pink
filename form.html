@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Pink Form</title>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css"></head>
 <body>
   <div class="page-wrapper">
@@ -34,7 +34,7 @@
           </nav>
         </div>
         <div class="container">
-          <h1 class="page-header__title page-header__title-form">Конкурс на самое безбашенное путешествие с Pink</h1>
+          <h1 class="page-header__title page-header__title-form">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </div>
     </header>
@@ -43,83 +43,121 @@
         <p class="page-content__promo promo">
           Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
         </p>
+        <p class="page-content--promo-mx-lx">Пожалуйста, заполните форму ниже:</p>
       </div>
       <form action="#" method="get" class="form">
-        <fieldset class="form__fieldset">
-          <div class="container">
+        <div class="container">
+          <fieldset class="form__fieldset form--fieldset">
             <label for="form-name" class="form__question">Имя: *</label>
             <input type="text" class="form__input" id="form-name" name="user-name" placeholder="Введите ваше имя" required autofocus>
             <label for="form-surname" class="form__question">Фамилия: *</label>
             <input type="text" class="form__input" id="form-surname" name="user-surname" placeholder="Укажите фамилию" required>
             <label for="form-patronymic" class="form__question">Отчество: *</label>
-            <input type="text" class="form__input" id="form-patronymic" name="user-patronymic" placeholder="Ну и отчество тоже" required></div>
-        </fieldset>
-        <fieldset class="form__fieldset box box--gray">
+            <input type="text" class="form__input" id="form-patronymic" name="user-patronymic" placeholder="Ну и отчество тоже" required></fieldset>
+        </div>
+        <div class="box box--gray">
           <div class="container">
-            <legend class="form__title">
-              С каким приложением
-              <span>путешествовали? *</span>
-            </legend>
-            <div class="radio">
-              <input type="radio" class="radio__input" id="option1" name="user-app" value="IOS" checked>
-              <label for="option1" class="radio__label">Pink для IOS</label>
-            </div>
-            <div class="radio">
-              <input type="radio" class="radio__input" id="option2" name="user-app" value="Android">
-              <label for="option2" class="radio__label">Pink на Android</label>
-            </div>
-            <div class="radio">
-              <input type="radio" class="radio__input" id="option3" name="user-app" value="Windows">
-              <label for="option3" class="radio__label">Windows Phone</label>
-            </div>
+            <fieldset class="form__fieldset">
+              <legend class="form__title--mx-lx">С каким приложением путешествовали? *</legend>
+              <p class="form__title">
+                С каким приложением
+                путешествовали? *
+              </p>
+              <div class="radio">
+                <input type="radio" class="radio__input" id="option1" name="user-app" value="IOS" checked>
+                <label for="option1" class="radio__label">Pink для IOS</label>
+              </div>
+              <div class="radio">
+                <input type="radio" class="radio__input" id="option2" name="user-app" value="Android">
+                <label for="option2" class="radio__label">Pink на Android</label>
+              </div>
+              <div class="radio">
+                <input type="radio" class="radio__input" id="option3" name="user-app" value="Windows">
+                <label for="option3" class="radio__label">Windows Phone</label>
+              </div>
+            </fieldset>
           </div>
-        </fieldset>
-        <fieldset class="form__fieldset form--trip-time">
-          <div class="container">
-            <legend class="form__title">Когда вы путешествовали? *</legend>
-            <input type="date" name="start-trip" class="form__input" id="start-date" required>
-            <label for="start-date" class="form__question">Дата выезда</label>
-            <div class="form-counter">
-              <span class="form-counter__minus" id="minus-days">-</span>
-              <input type="text" name="duration-trip" class="form-counter__field" id="duration-day" required>
-              <span class="form-counter__plus" id="plus-days">+</span>
+        </div>
+        <div class="container">
+          <fieldset class="form__fieldset form--trip-time">
+            <legend class="form__title--mx-lx">Когда вы путешествовали? *</legend>
+            <p class="form__title">Когда вы путешествовали? *</p>
+            <div class="form__info-dates">
+              <div class="form__items">
+                <input type="date" name="start-trip" class="form__input" id="start-date" required>
+                <label for="start-date" class="form__question">Дата выезда</label>
+              </div>
+              <div class="form__items">
+                <div class="form-counter">
+                  <span class="form-counter__minus" id="minus-days">-</span>
+                  <input type="text" name="duration-trip" class="form-counter__field" id="duration-day" required>
+                  <span class="form-counter__plus" id="plus-days">+</span>
+                </div>
+                <label for="duration-day" class="form__question">Продолжительность</label>
+              </div>
+              <div class="form__items">
+                <input type="date" name="finish-trip" class="form__input" id="back-date" required>
+                <label for="back-date" class="form__question">Дата возвращения</label>
+              </div>
             </div>
-            <label for="duration-day" class="form__question">Продолжительность</label>
-            <input type="date" name="finish-trip" class="form__input" id="back-date" required>
-            <label for="back-date" class="form__question">Дата возвращения</label>
+          </fieldset>
+        </div>
+        <div class="box box--gray">
+          <div class="container">
+            <fieldset class="form__fieldset form--friends">
+              <legend class="form__title--mx-lx">Количество попутчиков *</legend>
+              <p class="form__title">Количество попутчиков *</p>
+              <div class="form-counter form-counter--width">
+                <span class="form-counter__minus" id="minus-friends">-</span>
+                <input type="text" class="form-counter__field" name="friends-number" id="traveler-number" required>
+                <span class="form-counter__plus" id="plus-friends">+</span>
+              </div>
+              <div class="form__quiz">
+                <div class="quiz">
+                  <a href="#" class="quiz__delete-btn">удалить</a>
+                  <div class="quiz__item">
+                    <span class="quiz__symbol">&#8470;</span>
+                    <label for="traveler-name1" class="quiz__question">Имя *</label>
+                  </div>
+                  <div class="quiz__item">
+                    <span class="quiz__number">1</span>
+                    <input type="text" class="quiz__input" name="name-friend" id="traveler-name1" placeholder="Введите ваше имя"></div>
+                  <div class="quiz__item">
+                    <span class="quiz__symbol quiz__symbol-hide">&#8470;</span>
+                    <label for="traveler-nickname1" class="quiz__question">Прозвище:</label>
+                  </div>
+                  <div class="quiz__item">
+                    <span class="quiz__number quiz__number-hide">1</span>
+                    <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
+                </div>
+                <div class="quiz quiz--height">
+                  <a href="#" class="quiz__delete-btn">удалить</a>
+                  <div class="quiz__item">
+                    <span class="quiz__symbol">&#8470;</span>
+                    <label for="traveler-name2" class="quiz__question">Имя *</label>
+                  </div>
+                  <div class="quiz__item">
+                    <span class="quiz__number">2</span>
+                    <input type="text" class="quiz__input" name="name-friend" id="traveler-name2" placeholder="Введите ваше имя"></div>
+                  <div class="quiz__item">
+                    <span class="quiz__symbol quiz__symbol-hide">&#8470;</span>
+                    <label for="traveler-nickname2" class="quiz__question">Прозвище:</label>
+                  </div>
+                  <div class="quiz__item">
+                    <span class="quiz__number quiz__number-hide">2</span>
+                    <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname2" placeholder="Ну как же без этого!"></div>
+                </div>
+              </div>
+            </fieldset>
           </div>
-        </fieldset>
-        <fieldset class="form__fieldset box box--gray form--friends">
-          <div class="container">
-            <label for="traveler-number" class="form__title">Количество попутчиков *</label>
-            <div class="form-counter">
-              <span class="form-counter__minus" id="minus-friends">-</span>
-              <input type="text" class="form-counter__field" name="friends-number" id="traveler-number" required>
-              <span class="form-counter__plus" id="plus-friends">+</span>
-            </div>
-            <div class="form__quiz">
-              <div class="quiz">
-                <span class="quiz__symbol">&#8470;</span>
-                <label for="traveler-name1" class="quiz__question">Имя *</label>
-                <span class="quiz__number">1</span>
-                <input type="text" class="quiz__input" name="name-friend" id="traveler-name1" placeholder="Введите ваше имя">
-                <label for="traveler-nickname1" class="quiz__question">Прозвище:</label>
-                <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
-              <div class="quiz">
-                <span class="quiz__symbol">&#8470;</span>
-                <label for="traveler-name2" class="quiz__question">Имя *</label>
-                <span class="quiz__number">2</span>
-                <input type="text" class="quiz__input" name="name-friend" id="traveler-name2" placeholder="Введите ваше имя">
-                <label for="traveler-nickname2" class="quiz__question">Прозвище:</label>
-                <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname2" placeholder="Ну как же без этого!"></div>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="form__fieldset form--checkbox">
-          <div class="container">
-            <legend class="form__title">
+        </div>
+        <div class="container">
+          <fieldset class="form__fieldset form--checkbox">
+            <legend class="form__title--mx-lx">Ваши безбашенные достижения в путешествии</legend>
+            <p class="form__title">
               Ваши безбашенные
-              <br>достижения в путешествии</legend>
+              достижения в путешествии
+            </p>
             <div class="checkbox">
               <input type="checkbox" class="checkbox__input" id="progress1" name="check-progress1" checked>
               <label for="progress1" class="checkbox__label">Сделал селфи с акулой</label>
@@ -144,87 +182,94 @@
               <input type="checkbox" class="checkbox__input" id="progress6" name="check-progress6">
               <label for="progress6" class="checkbox__label">Разгромил отель</label>
             </div>
-          </div>
-        </fieldset>
-        <fieldset class="form__fieldset box box--gray form--upload">
+          </fieldset>
+        </div>
+        <div class="box box--gray">
           <div class="container">
-            <legend class="form__title">Ваши фотографии из поездки *</legend>
-            <div class="upload">
-              <label class="upload__label">
-                <span class="upload__btn">Загрузить фото</span>
-                <input type="file" class="upload__input" name="file-upload"></label>
-            </div>
-            <ul class="pic-list">
-              <li class="pic-list__item">
-                <img src="img/pic1-small.jpg" alt="pic-small-user1.jpg" class="pic-list__img">
-                <span class="pic-list__name">pic1.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-
-                <img src="img/pic2-small.jpg" alt="pic-small-user2.jpg" class="pic-list__img">
-                <span class="pic-list__name">pic2.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-
-                <img src="img/pic3-small.jpg" alt="pic-small-user3.jpg" class="pic-list__img">
-                <span class="pic-list__name">pic3.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-
-                <img src="img/pic4-small.jpg" alt="pic-small-user4.jpg" class="pic-list__img">
-                <span class="pic-list__name">pic4.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-
-                <img src="img/pic5-small.jpg" alt="pic-small-user5.jpg" class="pic-list__img">
-                <span class="pic-list__name">pic5.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-
-                <img src="img/pic6-small.jpg" alt="pic-small-user6.jpg" class="pic-list__img">
-                <span class="pic-list__name">pic6.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-
-                <img src="img/pic7-small.jpg" alt="pic-small-user7.jpg" class="pic-list__img">
-                <span class="pic-list__name">pic7.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-
-                <img src="img/pic8-small.jpg" alt="pic-small-user8.jpg" class="pic-list__img">
-                <span class="pic-list__name">pic8.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-            </ul>
+            <fieldset class="form__fieldset form--upload">
+              <legend class="form__title--mx-lx">Ваши фотографии из поездки*</legend>
+              <p class="form__title">Ваши фотографии из поездки*</p>
+              <div class="upload">
+                <label class="upload__label">
+                  <span class="upload__btn">Загрузить фото</span>
+                  <input type="file" class="upload__input" name="file-upload"></label>
+              </div>
+              <ul class="pic-list">
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic1-small.jpg" alt="pic-small-user1.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic1.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic2-small.jpg" alt="pic-small-user2.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic2.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic3-small.jpg" alt="pic-small-user3.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic3.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic4-small.jpg" alt="pic-small-user4.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic4.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic5-small.jpg" alt="pic-small-user5.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic5.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic6-small.jpg" alt="pic-small-user6.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic6.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic7-small.jpg" alt="pic-small-user7.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic7.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic8-small.jpg" alt="pic-small-user8.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic8.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+              </ul>
+            </fieldset>
           </div>
-        </fieldset>
+        </div>
         <div class="container">
-          <input type="submit" class="form__submit" value="отправить форму"></div>
+          <input type="submit" class="form__submit" value="отправить форму">
+          <p class="form__subtitle">
+            <span>*</span>
+            &mdash; обязательные поля
+          </p>
+        </div>
       </form>
-      <p class="form__subtitle">
-        <span>*</span>
-        &mdash; обязательные поля
-      </p>
     </main>
     <footer class="page-footer">
       <div class="container">
-        <a href="./index.html" class="page-footer__logo logo-link" target="_blank">pink</a>
-        <div class="social">
-          <a href="http://twitter.com" class="social__btn icon-twitter" target="_blank">Twitter</a>
-          <a href="http://facebook.com" class="social__btn icon-facebook" target="_blank">Facebook</a>
-          <a href="http://youtube.com" class="social__btn icon-youtube" target="_blank">YouTube</a>
+        <div class="page-footer__sum">
+          <a href="./index.html" class="page-footer__logo logo-link" target="_blank">pink</a>
+          <div class="social">
+            <a href="http://twitter.com" class="social__btn icon-twitter" target="_blank">Twitter</a>
+            <a href="http://facebook.com" class="social__btn icon-facebook" target="_blank">Facebook</a>
+            <a href="http://youtube.com" class="social__btn icon-youtube" target="_blank">YouTube</a>
+          </div>
+          <p class="copyright">
+            Разработано
+            <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
+          </p>
         </div>
-        <p class="copyright">
-          Разработано
-          <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
-        </p>
       </div>
     </footer>
   </div>

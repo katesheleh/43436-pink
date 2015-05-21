@@ -1,7 +1,7 @@
 .benefits {
-  padding-top: 65px;
-  height: 787px;
   overflow: hidden;
+  padding-top: 8px;
+
 
 
 
@@ -35,7 +35,7 @@
   &__picture-wrap {
     width: 160px;
     height: 278px;
-    margin: 40px auto 0 auto;
+    margin: 41px auto 0 auto;
     overflow: hidden;
 
 
@@ -44,6 +44,62 @@
     img {
       .img-sets;
 
+    }
+  }
+}
+
+
+
+
+@media(min-width: 700px) {
+  .benefits {
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    overflow: visible;
+    &:before {
+      position: absolute;
+      content: " ";
+      top: -52px;
+      left: 1px;
+      width: 300px;
+      height: 480px;
+      background: url(../img/iphone-tablet.png) no-repeat;
+    }
+
+
+
+
+
+
+
+    &__item {
+      width: 50%;
+      padding-right: 10px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+
+
+
+
+    &__picture-wrap {
+      display: none;
+    }
+
+
+
+
+
+    &__picture {
+      display: none;
     }
   }
 }

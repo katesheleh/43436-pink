@@ -6,6 +6,7 @@
 
 
   &__title {
+    display: block;
     margin: 0;
     .large-text;
   }
@@ -16,6 +17,7 @@
 
 
   &__text {
+    display: block;
     margin: 0 0 16px 0;
     color: @color-decor;
     .huge-text(@line-height: 29px);
@@ -43,6 +45,33 @@
       box-shadow: none;
       opacity: .3;
       transition: all .2s ease;
+    }
+  }
+}
+
+
+
+
+@media(min-width: 700px) {
+  .contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+
+
+
+
+    &__item {
+      width: 310px;
+      margin-bottom: 29px;
+
+      &:nth-of-type(3) {
+       width: 230px;
+       margin-bottom: 0;
+      }
     }
   }
 }

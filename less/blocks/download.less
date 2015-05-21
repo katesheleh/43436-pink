@@ -13,7 +13,7 @@
     margin: 0 auto 40px auto;
     border: 3px solid @color-light;
     padding: 14px 22px 17px 22px;
-    .large-text(@line-height: 18px; @fweight: 100);
+    .large-text(@line-height: 18px; @fweight: 300);
     text-decoration: none;
     letter-spacing: 1px;
     border-radius: 50px;
@@ -38,7 +38,7 @@
 
   &__text {
     line-height: 24px;
-    font-weight: 100;
+    font-weight: 300;
     color: @color-light;
   }
 
@@ -69,6 +69,59 @@
       height: 55px;
       width: 280px;
       vertical-align: middle;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+@media(min-width: 700px) {
+  .download {
+    background: none;
+    overflow: visible;
+    padding-top: 31px;
+    padding-bottom: 92px;
+
+
+
+
+    &__btn {
+      width: 280px;
+      margin-left: 0;
+      margin-bottom: 53px;
+      padding: 14px 37px;
+      display: flex;
+      flex-direction: row;
+    }
+
+
+
+
+
+    &__icon {
+      width: 280px;
+      margin-left: 10px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: row;
+    }
+
+
+
+
+
+     &__text {
+      width: 305px;
+      display: flex;
+      flex-direction: row;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 300;
     }
   }
 }

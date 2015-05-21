@@ -1,0 +1,39 @@
+.cf() {
+  &::before {
+    content: " ";
+    display: table;
+  }
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+
+.responsive-hide() {
+  display: none !important;
+}
+
+
+
+
+  .screen-mx-lx {
+    display: none;
+  }
+  @media(min-width: 700px) {
+    .screen-mx-lx {
+    display: block;
+    padding-top: 43px;
+    padding-bottom: 68px;
+    }
+  }
+
+
+
+  .svg-triangle{
+  width: 100%;
+  fill: @color-light;
+}

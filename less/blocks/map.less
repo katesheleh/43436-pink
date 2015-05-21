@@ -1,11 +1,10 @@
 .map {
+  width: 100%;
   position: relative;
-  width: 320px;
-  height: 200px;
+  height: 238px;
   margin: 0 auto;
-  background: #fff url("../img/map.jpg") no-repeat 50% 50%;
-
-
+  background: #fff url("../img/map.jpg") no-repeat 100% 100%;
+  background-size: 100%;
 
 
 
@@ -18,5 +17,15 @@
     background:  @color-decor;
     border: 10px solid @color-light;
     border-radius: 50%;
+  }
+}
+
+
+
+
+
+@media(min-width: 700px) {
+  .map {
+    height: 378px;
   }
 }

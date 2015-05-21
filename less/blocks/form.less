@@ -14,12 +14,7 @@
     margin-top: 31px;
     margin-bottom: 18px;
     margin-left: 49px;
-    text-align: left;
-
-    span {
-      display: block;
-      padding-left: 13px;
-    }
+    text-align: center;
   }
 
 
@@ -150,11 +145,172 @@
 
 
   &--upload {
-    padding-bottom: 9px;
+    padding-bottom: 5px;
 
     .form__title {
       margin-left: 13px;
       text-align: center;
     }
+  }
+
+
+
+
+  &__title--mx-lx {
+    display: none;
+  }
+}
+
+
+
+
+
+@media(min-width: 700px) {
+  .form {
+    display: block;
+
+
+    .box--gray {
+      background-color: @color-light;
+    }
+
+
+
+
+    &__title {
+      .responsive-hide
+    }
+
+
+
+
+
+    &__title--mx-lx {
+      display: inline-block;
+      padding: 0 20px 0 20px;
+      margin-bottom: 29px;
+      color: @color-decor;
+      text-transform: uppercase;
+    }
+
+
+
+
+
+    &__fieldset {
+    .border;
+      border-radius: 3px;
+      padding: 0 57px 30px 57px;
+      margin-bottom: 52px;
+    }
+
+
+
+
+
+    &--fieldset {
+      border: none;
+      padding: 0;
+      margin-bottom: 36px;
+    }
+
+
+
+    &__info-dates {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      width: 100%;
+    }
+
+
+
+
+    &__items {
+      width: 240px;
+      margin-bottom: 12px;
+      margin-right: 18px;
+
+
+
+
+      &:nth-child(2) {
+        .form__question {
+        text-align: center;
+        padding-left: 0;
+        }
+      }
+
+
+
+      .form__question {
+        text-align: left;
+        padding-left: 20px;
+      }
+    }
+
+
+
+
+    &--trip-time {
+      padding-right: 0;
+      padding-bottom: 6px;
+    }
+
+
+
+
+
+    &__quiz {
+      margin-top: 38px;
+      padding-top: 24px;
+    }
+
+
+
+
+    &--checkbox {
+      padding-bottom: 13px;
+    }
+
+
+
+
+    &__submit {
+      width: 300px;
+      float: left;
+      margin: 0;
+    }
+
+
+
+    &__subtitle {
+      width: 300px;
+      float: right;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+
+
+
+    &--upload {
+      padding-bottom: 0;
+      margin-bottom: 61px;
+    }
+
+
+
+
+
+&--friends {}
+
+&--checkbox {}
+
+
+
+ &__input {}
+    &__question {}
+
   }
 }

@@ -59,37 +59,98 @@
     padding-bottom: 25px;
 
     .pagination__item1 {
-      width: 130px;
-      margin-right: 20px;
+      width: 48%;
+      margin-right: 4%;
     }
 
 
-
-
     .pagination__item2 {
-      width: 130px;
+      width: 48%;
       margin-right: 0;
     }
 
 
-
-
     .pagination__item3 {
       margin-top: 20px;
-      width: 280px;
+      width: 100%;
     }
-
-
-
 
     .pagination__link {
-      width: 126px;
+      width: 100%;
+    }
+  }
+}
+
+
+@media(min-width: 700px) {
+  .pagination {
+    padding-left: 60px;
+    margin-top: 10px;
+
+
+
+
+
+    &--post {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 100%;
+      margin-top: 42px;
+      padding-left: 0;
+
+      li:last-child {
+        margin-right: 20px;
+      }
+
+
+
+
+
+      .pagination__item1 {
+        width: 140px;
+        order: 1;
+        flex: none;
+        margin: 0;
+      }
+
+
+
+
+
+      .pagination__item2 {
+        width: 140px;
+        order: 3;
+        flex: none;
+      }
+
+
+
+
+
+      .pagination__item3 {
+        order: 2;
+        grow: 1;
+        margin: 0 20px 0 20px;
+      }
     }
 
 
 
-    .return {
-      width: 276px;
+
+    &--blog {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "CTP.";
+        top: 16px;
+        left: -5px;
+        width: 50px;
+        height: 30px;
+        .large-text;
+        color: @color-base;
+      }
     }
   }
 }

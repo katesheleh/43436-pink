@@ -1,6 +1,6 @@
 .context {
   min-height: 1px;
-  margin: 0 0 32px 0;
+  margin: 10px 0 32px 0;
   padding: 0;
 
 
@@ -11,5 +11,36 @@
     display: block;
     margin-bottom: 4px;
     .large-text(@line-height: 27px);
+  }
+
+
+
+  &__subtitle {
+    display: none;
+  }
+}
+
+
+
+
+@media(min-width: 700px) {
+  .context {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    .context__header {
+      order: 2;
+      font-size: 20px;
+      color: @color-super-dark;
+    }
+    .context__subtitle {
+      display: inline-block;
+      order: 3;
+    }
+    .context__text {
+      order: 1;
+      margin-bottom: 37px;
+      .large-text(@fweight: 400);
+    }
   }
 }

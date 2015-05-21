@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Pink</title>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css"></head>
 <body>
   <div class="page-wrapper">
-    <header class="page-header">
+    <header class="page-header page-header--index">
       <div class="page-header__container-top">
         <div class="headline">
           <div class="container">
@@ -60,10 +60,15 @@
     </header>
     <main class="page-content">
       <div class="container">
-        <p class="text-label page-content__text">Устали от серости мегаполиса?</p>
-        <p class="text-label page-content__text">Нам есть, что вам предложить!</p>
+        <div class="page-content__text-block">
+          <p class="text-label page-content__text">Устали от серости мегаполиса?</p>
+          <p class="text-label page-content__text">Нам есть, что вам предложить!</p>
+        </div>
       </div>
       <div class="box box--gray">
+        <svg width="200" height="45" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 240 60" preserveAspectRatio="none" class="svg-triangle">
+          <polygon points="0,0 240,0 0,50" style="fill:white" />
+        </svg>
         <div class="container">
           <div class="benefits">
             <div class="benefits__item">
@@ -90,11 +95,27 @@
         </div>
       </div>
       <div class="container">
+        <div class="news">
+          <div class="news__picture-wrap">
+            <img src="img/diagram.png" alt="watch" class="news__pic"></div>
+          <div class="news__item">
+            <h4 class="news__title">
+              Эффект
+              <br>на 24 часа!</h4>
+            <p class="news__text">
+              Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+            </p>
+            <a href="#" class="news__details">Узнать больше об исследовании</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
         <div class="slider">
           <div class="slider__list">
             <div class="slider__item">
               <blockquote class="context">
                 <cite class="context__header">Николай Петров</cite>
+                <span class="context__subtitle">25 лет, водитель трамвая</span>
                 <p class="context__text">
                   "Это приложение перевернуло мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
                 </p>
@@ -122,8 +143,69 @@
       </div>
     </div>
     <div class="box box--gray">
-      <div class="slider">
-        <div class="slider__list">
+      <svg width="200" height="45" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 240 60" preserveAspectRatio="none" class="svg-triangle">
+        <polygon points="0,0 240,0 0,50" style="fill:white" />
+      </svg>
+      <div class="container">
+        <div class="slider slider--mobile">
+          <div class="slider__list">
+            <div class="slider__item">
+              <table class="table-offer ribbon">
+                <tr class="table-offer__header">
+                  <th colspan="2">
+                    <span class="table-offer__title">Стандарт</span>
+                    <span class="table-offer__price">3,99 USD</span>
+                  </th>
+                </tr>
+                <tr class="table-offer__body">
+                  <td>Розовый фильтр</td>
+                  <td class="table-offer__status">
+                    <span class="icon icon-success">поддерживается</span>
+                  </td>
+                </tr>
+                <tr class="table-offer__body">
+                  <td>Смайлики</td>
+                  <td class="table-offer__status">
+                    <span class="icon icon-success">поддерживается</span>
+                  </td>
+                </tr>
+                <tr class="table-offer__body">
+                  <td>Комментарии</td>
+                  <td class="table-offer__status">
+                    <span class="icon icon-not-success">не поддерживается</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- Временно закомментировано для удобства контроля верстки на соответствиe с макетом.
+                        <div class="slider__item">
+            <table class="table-offer ribbon">
+              <tr class="table-offer__header">
+                <th colspan="2">
+                  <span class="table-offer__title">Стандарт</span>
+                  <span class="table-offer__price">3,99 USD</span>
+                </th>
+              </tr>
+              <tr class="table-offer__body">
+                <td>Розовый фильтр</td>
+                <td class="table-offer__status">
+                  <span class="icon icon-success">поддерживается</span>
+                </td>
+              </tr>
+              <tr class="table-offer__body">
+                <td>Смайлики</td>
+                <td class="table-offer__status">
+                  <span class="icon icon-success">поддерживается</span>
+                </td>
+              </tr>
+              <tr class="table-offer__body">
+                <td>Комментарии</td>
+                <td class="table-offer__status">
+                  <span class="icon icon-not-success">не поддерживается</span>
+                </td>
+              </tr>
+            </table>
+          </div>
           <div class="slider__item">
             <table class="table-offer ribbon">
               <tr class="table-offer__header">
@@ -152,84 +234,110 @@
               </tr>
             </table>
           </div>
-          <!-- Временно закомментировано для удобства контроля верстки на соответствиe с макетом.
-                        <div class="slider__item">
-          <table class="table-offer ribbon">
-            <tr class="table-offer__header">
-              <th colspan="2">
-                <span class="table-offer__title">Стандарт</span>
-                <span class="table-offer__price">3,99 USD</span>
-              </th>
-            </tr>
-            <tr class="table-offer__body">
-              <td>Розовый фильтр</td>
-              <td class="table-offer__status">
-                <span class="icon icon-success">поддерживается</span>
-              </td>
-            </tr>
-            <tr class="table-offer__body">
-              <td>Смайлики</td>
-              <td class="table-offer__status">
-                <span class="icon icon-success">поддерживается</span>
-              </td>
-            </tr>
-            <tr class="table-offer__body">
-              <td>Комментарии</td>
-              <td class="table-offer__status">
-                <span class="icon icon-not-success">не поддерживается</span>
-              </td>
-            </tr>
-          </table>
+          -->
         </div>
-        <div class="slider__item">
-          <table class="table-offer ribbon">
-            <tr class="table-offer__header">
-              <th colspan="2">
-                <span class="table-offer__title">Стандарт</span>
-                <span class="table-offer__price">3,99 USD</span>
-              </th>
-            </tr>
-            <tr class="table-offer__body">
-              <td>Розовый фильтр</td>
-              <td class="table-offer__status">
-                <span class="icon icon-success">поддерживается</span>
-              </td>
-            </tr>
-            <tr class="table-offer__body">
-              <td>Смайлики</td>
-              <td class="table-offer__status">
-                <span class="icon icon-success">поддерживается</span>
-              </td>
-            </tr>
-            <tr class="table-offer__body">
-              <td>Комментарии</td>
-              <td class="table-offer__status">
-                <span class="icon icon-not-success">не поддерживается</span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        -->
+      </div>
+    </div>
+    <div class="container">
+      <div class="screen-mx-lx">
+        <table class="table-offer--mx-lx">
+          <tr class="table-offer__header">
+            <th class="table-offer__delete"></th>
+            <th>
+              <span class="table-offer__title">База</span>
+              <span class="table-offer__price">1,99 USD</span>
+            </th>
+            <th class="ribbon">
+              <span class="table-offer__title">Стандарт</span>
+              <span class="table-offer__price">3,99 USD</span>
+            </th>
+            <th>
+              <span class="table-offer__title">Анлим</span>
+              <span class="table-offer__price">9,99 USD</span>
+            </th>
+          </tr>
+          <tr class="table-offer__body">
+            <td class="table-offer__name">Розовый фильтр</td>
+            <td class="table-offer__status">
+              <span class="icon icon-success">поддерживается</span>
+            </td>
+            <td class="table-offer__status">
+              <span class="icon icon-success">поддерживается</span>
+            </td>
+            <td class="table-offer__status">
+              <span class="icon icon-success">поддерживается</span>
+            </td>
+          </tr>
+          <tr class="table-offer__body">
+            <td class="table-offer__name">Смайлики</td>
+            <td class="table-offer__status">
+              <span class="icon icon-not-success">не поддерживается</span>
+            </td>
+            <td class="table-offer__status">
+              <span class="icon icon-not-success">не поддерживается</span>
+            </td>
+            <td class="table-offer__status">
+              <span class="icon icon-success">поддерживается</span>
+            </td>
+          </tr>
+          <tr class="table-offer__body">
+            <td class="table-offer__name">Комментарии</td>
+            <td class="table-offer__status">
+              <span class="icon icon-not-success">не поддерживается</span>
+            </td>
+            <td class="table-offer__status">
+              <span class="icon icon-not-success">не поддерживается</span>
+            </td>
+            <td class="table-offer__status">
+              <span class="icon icon-not-success">не поддерживается</span>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
 </main>
 <footer class="page-footer">
   <div class="container">
-    <p class="text-label page-footer__text">Остались вопросы? Свяжитесь с нами!</p>
-    <dl class="contacts">
-      <dt class="contacts__title">Звоните:</dt>
-      <dd class="contacts__text">+7 (812) 555-66-66</dd>
-      <dt class="contacts__title">Пишите:</dt>
-      <dd class="contacts__text">
-        <a href="mailto:mail@htmlacademy.ru" class="contacts__link" target="_blank">mail@htmlacademy.ru</a>
-      </dd>
-      <dt class="contacts__title">Приезжайте в гости:</dt>
-      <dd class="contacts__text">ул. Большая Конюшенная, 19/8</dd>
-    </dl>
+    <p class="text-label page-footer__text">
+      Остались вопросы?
+      <br>Свяжитесь с нами!</p>
+    <div class="contacts">
+      <div class="contacts__item">
+        <span class="contacts__title">Звоните:</span>
+        <span class="contacts__text">+7 (812) 555-66-66</span>
+      </div>
+      <div class="contacts__item">
+        <span class="contacts__title">Пишите:</span>
+        <span class="contacts__text">
+          <a href="mailto:mail@htmlacademy.ru" class="contacts__link" target="_blank">mail@htmlacademy.ru</a>
+        </span>
+      </div>
+      <div class="contacts__item">
+        <span class="contacts__title">Приезжайте в гости:</span>
+        <span class="contacts__text">ул. Большая Конюшенная, 19/8</span>
+      </div>
+    </div>
   </div>
   <div class="map">
+    <svg width="200" height="45" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 45"  class="svg-triangle" preserveAspectRatio="none">
+      <polygon points="0,0 200,0 100,45" style="fill:white" />
+    </svg>
     <div class="map__map-pin" id="online-map"></div>
+  </div>
+  <div class="container">
+    <div class="page-footer__sum">
+      <a href="./index.html" class="page-footer__logo logo-link" target="_blank">pink</a>
+      <div class="social">
+        <a href="http://twitter.com" class="social__btn icon-twitter" target="_blank">Twitter</a>
+        <a href="http://facebook.com" class="social__btn icon-facebook" target="_blank">Facebook</a>
+        <a href="http://youtube.com" class="social__btn icon-youtube" target="_blank">YouTube</a>
+      </div>
+      <p class="copyright">
+        Разработано
+        <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
+      </p>
+    </div>
   </div>
 </footer>
 </div>

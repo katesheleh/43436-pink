@@ -20,4 +20,55 @@
   &--interior {
     padding-top: 10px;
   }
+
+
+
+
+  &--promo-mx-lx {
+    display: none;
+  }
+}
+
+
+
+
+@media(min-width: 700px) {
+  .page-content {
+
+    &__text-block {
+      padding-top: 35px;
+      padding-bottom: 47px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      p {
+        margin: 0;
+        line-height: 43px;
+      }
+
+      p:nth-child(2) {
+        width: 350px;
+      }
+    }
+    &__promo {
+      width: 500px;
+      margin: 75px auto 0 auto;
+      .large-text(@fweight: 400);
+    }
+    &--promo-mx-lx {
+      display: inline-block;
+      margin: 0 0 36px 0;
+      .large-text(@fweight: 400);
+    }
+
+
+
+
+      &--interior {
+      padding-top: 58px;
+    }
+  }
 }

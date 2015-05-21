@@ -1,16 +1,8 @@
 .quiz {
   min-height: 1px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   .cf;
 
-
-  label[for="traveler-nickname1"] {
-     float: right;
-  }
-
-  label[for="traveler-nickname2"] {
-      float: right;
-  }
 
   input[name="nickname-friend"] {
       border-bottom-left-radius: 5px;
@@ -23,10 +15,17 @@
 
   &__symbol {
     display: block;
-    width: 22%;
+    width: 63px;
     margin-top: 5px;
     float: left;
     color: @color-decor;
+  }
+
+
+
+
+  &__symbol-hide {
+    opacity: 0;
   }
 
 
@@ -36,7 +35,6 @@
   &__question {
     display: block;
     float: left;
-    width: 78%;
     margin-bottom: 5px;
     margin-top: 5px;
     padding-left: 22px;
@@ -48,12 +46,19 @@
 
 
 
+ &__item {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+
+
 
   &__number {
-    display: block;
-    height: 64px;
-    width: 22%;
-    float: left;
+    width: 63px;
+    flex: none;
+    height: 63px;
     padding: 15px;
     color: @color-base;
     .large-text(@fweight: 400);
@@ -66,11 +71,18 @@
 
 
 
+  &__number-hide {
+    opacity: 0;
+  }
+
+
+
+
 
   &__input {
-    width: 78%;
-    height: 64px;
-    display: block;
+    flex-grow: 1;
+    height: 63px;
+    display: flex;
     margin: 0 0 10px auto;
     padding: 25px 5px 25px 19px;
     .border;
@@ -83,6 +95,76 @@
     }
     &:-moz-placeholder {
       .placeholder;
+    }
+  }
+  &__delete-btn {
+    display: none;
+  }
+}
+
+
+
+
+
+@media(min-width: 700px) {
+  .quiz {
+    margin-bottom: 24px;
+    width: 100%;
+
+
+
+
+
+    &__item {
+      width: 77%;
+    }
+
+
+
+
+
+     &__question {
+      padding-left: 42px;
+    }
+
+
+
+
+
+    &__number {
+      margin-right: 20px;
+      border-right: 2px solid @border-color;
+    }
+
+
+
+
+
+    &__input {
+    }
+
+
+
+    &__delete-btn {
+      display: block;
+      float: right;
+      width: 13%;
+      height: 30px;
+      margin: 58px auto 0 auto;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: 400;
+      color: @color-base;
+    }
+
+
+
+
+
+    &--height {
+      margin-bottom: 14px;
     }
   }
 }

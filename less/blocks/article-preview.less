@@ -61,3 +61,69 @@
     border-bottom: none;
   }
 }
+
+
+
+
+@media(min-width: 700px) {
+.article-preview {
+  position: relative;
+  margin-left: 60px;
+  padding-bottom: 25px;
+  margin-bottom: 10px;
+  border-bottom: 2px dotted @border-color;
+  :before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: -56px;
+    background-color: red;
+    width: 30px;
+    height: 25px;
+  }
+
+
+
+
+    &__title {
+      margin-top: 11px;
+      margin-bottom: 4px;
+    }
+
+
+
+
+
+    &__link {
+      font-size: 27px;
+      font-weight: 800;
+    }
+
+
+
+
+
+    &__date {
+      font-size: 14px;
+    }
+
+
+
+
+
+    &__text {
+      margin-top: 21px;
+      .large-text(@fweight: 400)
+    }
+
+
+
+
+
+    &--indent {
+      .article-preview__text {
+        padding-bottom: 32px;
+      }
+    }
+  }
+}
