@@ -8,6 +8,9 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-lintspaces');
    grunt.loadNpmTasks('grunt-notify');
    grunt.loadNpmTasks('grunt-contrib-watch');
+   grunt.loadNpmTasks('grunt-grunticon');
+   grunt.loadNpmTasks( 'grunt-svgmin' );
+   require('load-grunt-tasks')(grunt);
   // require('load-grunt-tasks')(grunt, {scope: 'dependencies'});
 
   grunt.initConfig({
@@ -21,6 +24,8 @@ module.exports = function(grunt) {
         }
       }
     },
+
+
 
 
     watch: {
@@ -42,6 +47,8 @@ module.exports = function(grunt) {
     },
 
 
+
+
     notify: {
       less: {
         options: {
@@ -49,6 +56,10 @@ module.exports = function(grunt) {
           message: 'LESS героически скомпилирован', //required
         }
       },
+
+
+
+
       html: {
         options: {
           title: 'Ура-Ура!',  // optional
@@ -56,6 +67,8 @@ module.exports = function(grunt) {
         }
       }
     },
+
+
 
     sass: {
       style: {
@@ -79,6 +92,8 @@ module.exports = function(grunt) {
         }
       }
     },
+
+
 
 
     githooks: {
@@ -107,10 +122,64 @@ module.exports = function(grunt) {
         'gosha/img/README',
         'gosha/js/README'
       ]
-    }
+    },
+
+
+
+
+    svgmin: {
+      options: {
+        plugins: [
+          {
+            removeDesc: true
+          }
+        ]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '_svg/origin',
+          src: ['!!ai','*.svg'],
+          dest: '_svg/svgmin'
+        }]
+      }
+    },
+
+    grunticon: {
+    mysvg: {
+        files: [{
+            expand: true,
+            cwd: '_svg/origin',
+            src: ['*.svg', '*.png'],
+            dest: "_svg/result"
+        }],
+        options: {
+          enhanceSVG   : true,
+          datasvgcss   : 'css/icons.data.svg.css',
+          datapngcss   : 'css/icons.data.png.css',
+          urlpngcss    : 'css/icons.fallback.css',
+          previewhtml  : 'icon-preview.html',
+          pngfolder    : 'img/svg/png-grunticon',
+          pngpath      : '../img/svg/png-grunticon',
+          template     : '_svg/template.hbs',
+          defaultWidth : '200px',
+          defaultHeight: '200px',
+          cssprefix    : 'icon-'
+        }
+      }
+    },
   });
 
+
+grunt.registerTask('svg', [
+    'clean:svg',
+    'svgmin',
+    'grunticon',
+    'notify:svg'
+  ]);
+
   grunt.registerTask('test', ['lintspaces:test']);
+
 
   if (grunt.file.exists(__dirname, 'less', 'style.less')) {
     grunt.registerTask('gosha', ['less:style', 'copy:gosha', 'clean:gosha']);
