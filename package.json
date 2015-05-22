@@ -33,6 +33,6 @@
   },
   "devDependencies": {
     "grunt-grunticon": "^2.1.6",
-    "grunt-svgmin": "^2.0.1"
+    "grunt-svgmin": "^2.0.1",
   }
 }

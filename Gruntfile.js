@@ -10,8 +10,8 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-contrib-watch');
    grunt.loadNpmTasks('grunt-grunticon');
    grunt.loadNpmTasks( 'grunt-svgmin' );
-   require('load-grunt-tasks')(grunt);
-  // require('load-grunt-tasks')(grunt, {scope: 'dependencies'});
+
+  require('load-grunt-tasks')(grunt, {scope: ['devDependencies', 'dependencies']});
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -155,13 +155,13 @@ module.exports = function(grunt) {
         }],
         options: {
           enhanceSVG   : true,
-          datasvgcss   : 'css/icons.data.svg.css',
-          datapngcss   : 'css/icons.data.png.css',
-          urlpngcss    : 'css/icons.fallback.css',
+          datasvgcss   : 'icons.data.svg.css',
+          datapngcss   : 'icons.data.png.css',
+          urlpngcss    : 'icons.fallback.css',
           previewhtml  : 'icon-preview.html',
-          pngfolder    : 'img/svg/png-grunticon',
-          pngpath      : '../img/svg/png-grunticon',
-          template     : '_svg/template.hbs',
+          pngfolder    : 'png',
+          pngpath      : '../png',
+          template     : 'template.hbs',
           defaultWidth : '200px',
           defaultHeight: '200px',
           cssprefix    : 'icon-'

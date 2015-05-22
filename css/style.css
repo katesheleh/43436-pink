@@ -451,12 +451,14 @@ body {
   .container {
     min-width: 660px;
     padding: 0 20px;
+    outline: 1px dashed blue;
   }
 }
 @media (min-width: 1200px) {
   .container {
     width: 960px;
     padding: 0 20px;
+    outline: 1px dashed red;
   }
 }
 html {
@@ -596,12 +598,14 @@ html {
 .nav-menu__item {
   display: block;
   text-align: center;
-  padding: 15px 0 15px 0;
   border-top: 1px solid #000101;
   border-bottom: 1px solid #485461;
   background-color: #283645;
 }
 .nav-menu__link {
+  display: block;
+  width: 100%;
+  padding: 15px 0 15px 0;
   font-size: 18px;
   font-weight: 800;
   font-style: normal;
@@ -1224,24 +1228,15 @@ html {
 .map {
   width: 100%;
   position: relative;
-  height: 238px;
+  height: 92px;
   margin: 0 auto;
-  background: #ffffff url("../img/map.jpg") no-repeat 100% 100%;
+  background: #ffffff url("../img/map-sm.jpg") no-repeat 50% 50%;
   background-size: 100%;
-}
-.map__map-pin {
-  position: relative;
-  top: 112px;
-  left: 144px;
-  width: 35px;
-  height: 35px;
-  background: #d22856;
-  border: 10px solid #ffffff;
-  border-radius: 50%;
 }
 @media (min-width: 700px) {
   .map {
     height: 378px;
+    background-image: url("../img/map-mx-lx.jpg");
   }
 }
 .slider {

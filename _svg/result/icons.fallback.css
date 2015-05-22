@@ -2,7 +2,7 @@
 icon-android-logo {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/android-logo.png');
+  background-image: url('../png/android-logo.png');
   background-repeat: no-repeat;
   width: 42px;
   height: 47px;
@@ -13,7 +13,7 @@ icon-android-logo {
 icon-apple-logo {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/apple-logo.png');
+  background-image: url('../png/apple-logo.png');
   background-repeat: no-repeat;
   width: 46px;
   height: 57px;
@@ -24,7 +24,7 @@ icon-apple-logo {
 icon-blog-post-icon {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/blog-post-icon.png');
+  background-image: url('../png/blog-post-icon.png');
   background-repeat: no-repeat;
   width: 28px;
   height: 26px;
@@ -35,7 +35,7 @@ icon-blog-post-icon {
 icon-facebook {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/facebook.png');
+  background-image: url('../png/facebook.png');
   background-repeat: no-repeat;
   width: 9px;
   height: 19px;
@@ -46,7 +46,7 @@ icon-facebook {
 icon-htmlacademy {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/htmlacademy.png');
+  background-image: url('../png/htmlacademy.png');
   background-repeat: no-repeat;
   width: 27px;
   height: 34px;
@@ -57,7 +57,7 @@ icon-htmlacademy {
 icon-logotype-blue-desktop {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/logotype-blue-desktop.png');
+  background-image: url('../png/logotype-blue-desktop.png');
   background-repeat: no-repeat;
   width: 146px;
   height: 40px;
@@ -68,7 +68,7 @@ icon-logotype-blue-desktop {
 icon-logotype-blue-tablet {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/logotype-blue-tablet.png');
+  background-image: url('../png/logotype-blue-tablet.png');
   background-repeat: no-repeat;
   width: 146px;
   height: 40px;
@@ -79,7 +79,7 @@ icon-logotype-blue-tablet {
 icon-logotype-white-desktop {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/logotype-white-desktop.png');
+  background-image: url('../png/logotype-white-desktop.png');
   background-repeat: no-repeat;
   width: 146px;
   height: 40px;
@@ -90,7 +90,7 @@ icon-logotype-white-desktop {
 icon-logotype-white-mobile {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/logotype-white-mobile.png');
+  background-image: url('../png/logotype-white-mobile.png');
   background-repeat: no-repeat;
   width: 74px;
   height: 23px;
@@ -101,7 +101,7 @@ icon-logotype-white-mobile {
 icon-logotype-white-tablet {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/logotype-white-tablet.png');
+  background-image: url('../png/logotype-white-tablet.png');
   background-repeat: no-repeat;
   width: 146px;
   height: 40px;
@@ -112,7 +112,7 @@ icon-logotype-white-tablet {
 icon-map-marker {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/map-marker.png');
+  background-image: url('../png/map-marker.png');
   background-repeat: no-repeat;
   width: 36px;
   height: 36px;
@@ -123,7 +123,7 @@ icon-map-marker {
 icon-menu-burger {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/menu-burger.png');
+  background-image: url('../png/menu-burger.png');
   background-repeat: no-repeat;
   width: 50px;
   height: 24px;
@@ -134,7 +134,7 @@ icon-menu-burger {
 icon-menu-cross {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/menu-cross.png');
+  background-image: url('../png/menu-cross.png');
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
@@ -145,7 +145,7 @@ icon-menu-cross {
 icon-microsoft-logo {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/microsoft-logo.png');
+  background-image: url('../png/microsoft-logo.png');
   background-repeat: no-repeat;
   width: 44px;
   height: 42px;
@@ -156,7 +156,7 @@ icon-microsoft-logo {
 icon-no {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/no.png');
+  background-image: url('../png/no.png');
   background-repeat: no-repeat;
   width: 27px;
   height: 27px;
@@ -167,7 +167,7 @@ icon-no {
 icon-quotes {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/quotes.png');
+  background-image: url('../png/quotes.png');
   background-repeat: no-repeat;
   width: 79px;
   height: 64px;
@@ -178,7 +178,7 @@ icon-quotes {
 icon-review-arrow-left {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/review-arrow-left.png');
+  background-image: url('../png/review-arrow-left.png');
   background-repeat: no-repeat;
   width: 22px;
   height: 42px;
@@ -189,7 +189,7 @@ icon-review-arrow-left {
 icon-review-arrow-right {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/review-arrow-right.png');
+  background-image: url('../png/review-arrow-right.png');
   background-repeat: no-repeat;
   width: 22px;
   height: 42px;
@@ -200,7 +200,7 @@ icon-review-arrow-right {
 icon-timer {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/timer.png');
+  background-image: url('../png/timer.png');
   background-repeat: no-repeat;
   width: 298px;
   height: 345px;
@@ -211,7 +211,7 @@ icon-timer {
 icon-triangle-white-footer {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/triangle-white-footer.png');
+  background-image: url('../png/triangle-white-footer.png');
   background-repeat: no-repeat;
   width: 100px;
   height: 62px;
@@ -222,7 +222,7 @@ icon-triangle-white-footer {
 icon-triangle-white {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/triangle-white.png');
+  background-image: url('../png/triangle-white.png');
   background-repeat: no-repeat;
   width: 100px;
   height: 94px;
@@ -233,7 +233,7 @@ icon-triangle-white {
 icon-twitter {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/twitter.png');
+  background-image: url('../png/twitter.png');
   background-repeat: no-repeat;
   width: 18px;
   height: 15px;
@@ -244,7 +244,7 @@ icon-twitter {
 icon-yes {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/yes.png');
+  background-image: url('../png/yes.png');
   background-repeat: no-repeat;
   width: 30px;
   height: 22px;
@@ -255,7 +255,7 @@ icon-yes {
 icon-youtube {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/svg/png-grunticon/youtube.png');
+  background-image: url('../png/youtube.png');
   background-repeat: no-repeat;
   width: 15px;
   height: 14px;
