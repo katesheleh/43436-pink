@@ -8,16 +8,25 @@
 
 
   &__minus {
+    position: relative;
     flex: none;
     width: 63px;
     height: 63px;
     border: 2px solid @border-color;
     .hide-text;
-    background: url(../img/icon-minus.png) no-repeat 50% 50%;
     cursor: pointer;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     background-color: @color-light;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 29px;
+      left: 16px;
+      width: 27px;
+      height: 3px;
+      background-color: @color-base;
+    }
   }
 
 
@@ -39,16 +48,37 @@
 
 
   &__plus {
+    position: relative;
     flex: none;
     width: 63px;
     height: 63px;
     .border;
     .hide-text;
-    background: url(../img/icon-plus.png) no-repeat 50% 50%;
     cursor: pointer;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     background-color: @color-light;
+
+    &::before {
+       position: absolute;
+      content: "";
+      top: 29px;
+      left: 16px;
+      width: 27px;
+      height: 3px;
+      background-color: @color-base;
+    }
+
+    &::after {
+       position: absolute;
+      content: "";
+      top: 29px;
+      left: 16px;
+      width: 27px;
+      height: 3px;
+      background-color: @color-base;
+      transform: rotate(90deg);
+    }
   }
 }
 
@@ -59,14 +89,23 @@
 @media(min-width: 700px) {
   .form-counter {
     width: 240px;
+
     &__label {
       text-align: center;
       padding-left: 0;
     }
 
+
+
+
+
     &__field {
       background-color: @color-light;
     }
+
+
+
+
     &--width {
       width: 252px;
       margin-bottom: 0;
@@ -75,6 +114,19 @@
         border-top: transparent;
         border-bottom: transparent;
       }
+    }
+  }
+}
+
+
+
+
+@media(min-width: 960px) {
+  .form-counter {
+    width: 252px;
+
+    &--width {
+      margin-left: 50px;
     }
   }
 }

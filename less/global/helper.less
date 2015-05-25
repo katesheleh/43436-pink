@@ -20,20 +20,27 @@
 
 
 
+.screen-mx-lx {
+  display: none;
+}
+@media(min-width: 700px) {
   .screen-mx-lx {
-    display: none;
-  }
-  @media(min-width: 700px) {
-    .screen-mx-lx {
     display: block;
     padding-top: 43px;
     padding-bottom: 68px;
-    }
   }
+}
+@media(min-width: 960px) {
+  .screen-mx-lx {
+    padding-top: 74px;
+  }
+}
 
 
 
-  .svg-triangle{
+
+
+.svg-triangle{
   width: 100%;
   fill: @color-light;
 }

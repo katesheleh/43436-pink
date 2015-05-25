@@ -5,8 +5,8 @@
   <title>Pink</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
-
-  </head>
+  <link rel="stylesheet" href="css/icons.data.png.css">
+  <link rel="stylesheet" href="css/icons.data.svg.css"></head>
 <body>
   <div class="page-wrapper">
     <header class="page-header page-header--index">
@@ -41,17 +41,17 @@
           Взгляните на жизнь
           <br>иначе!</p>
       </div>
-      <img src="img/pic-phone-hand.png" alt="phone" class="page-header__pic">
+      <img src="img/iphone-hand-mobile.png" alt="phone" class="page-header__pic">
       <div class="download">
         <div class="container">
           <a href="#" class="download__btn">Скачать приложение</a>
           <ul class="download__icon">
-            <li class="download__item"> <i class="icon icon-apple">apple</i>
+            <li class="download__item"> <i class="icon icon-apple-logo">apple</i>
             </li>
-            <li class="download__item"> <i class="icon icon-android">android</i>
+            <li class="download__item"> <i class="icon icon-android-logo">android</i>
             </li>
             <li class="download__item">
-              <i class="icon icon-windows">windows</i>
+              <i class="icon icon-microsoft-logo">windows</i>
             </li>
           </ul>
           <p class="download__text">
@@ -74,40 +74,49 @@
         <div class="container">
           <div class="benefits">
             <div class="benefits__item">
+              <div class="benefits__picture-wrap-lx">
+                <img src="img/iphone-screen-desktop-1@1x.png" srcset="iphone-screen-desktop-1@2x.png 2x" widht="184px" alt="smile" class="benefits__picture"></div>
               <h2 class="benefits__title">Поднимает настроение</h2>
               <p class="benefits__text">
                 Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
               </p>
             </div>
             <div class="benefits__item">
+              <div class="benefits__picture-wrap-lx">
+                <img src="img/iphone-screen-desktop-2@1x.png" srcset="iphone-screen-desktop-2@2x.png 2x" widht="184px" alt="smile" class="benefits__picture"></div>
               <h2 class="benefits__title">Меняет мир вокруг</h2>
               <p class="benefits__text">
                 Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
               </p>
             </div>
             <div class="benefits__item">
+              <div class="benefits__picture-wrap-lx">
+                <img src="img/iphone-screen-desktop-3@1x.png" srcset="iphone-screen-desktop-3@2x.png 2x" widht="184px" alt="smile" class="benefits__picture"></div>
               <h2 class="benefits__title">Заводит новых друзей</h2>
               <p class="benefits__text">
                 Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
               </p>
             </div>
             <div class="benefits__picture-wrap">
-              <img src="img/pic-phone-smile-cut.png" alt="smile" class="benefits__picture"></div>
+              <img src="img/pic-phone-smile-cut.png" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x,png 2x" alt="smile" class="benefits__picture"></div>
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="news">
-          <div class="news__picture-wrap">
-            <img src="img/diagram.png" alt="watch" class="news__pic"></div>
-          <div class="news__item">
-            <h4 class="news__title">
-              Эффект
-              <br>на 24 часа!</h4>
-            <p class="news__text">
-              Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-            </p>
-            <a href="#" class="news__details">Узнать больше об исследовании</a>
+      <div class="box box--gray-lx">
+        <div class="container">
+          <div class="news">
+            <div class="news__picture-wrap">
+              <img src="img/diagram.png" srcset="img/diagram-desktop 2px" alt="watch" class="news__pic"></div>
+            <div class="news__item">
+              <h4 class="news__title">
+                Эффект
+                <span>на 24 часа!</span>
+              </h4>
+              <p class="news__text">
+                Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+              </p>
+              <a href="#" class="news__details">Узнать больше об исследовании</a>
+            </div>
           </div>
         </div>
       </div>
@@ -162,19 +171,19 @@
                 <tr class="table-offer__body">
                   <td>Розовый фильтр</td>
                   <td class="table-offer__status">
-                    <span class="icon icon-success">поддерживается</span>
+                    <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
                   </td>
                 </tr>
                 <tr class="table-offer__body">
                   <td>Смайлики</td>
                   <td class="table-offer__status">
-                    <span class="icon icon-success">поддерживается</span>
+                    <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
                   </td>
                 </tr>
                 <tr class="table-offer__body">
                   <td>Комментарии</td>
                   <td class="table-offer__status">
-                    <span class="icon icon-not-success">не поддерживается</span>
+                    <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
                   </td>
                 </tr>
               </table>
@@ -191,19 +200,19 @@
               <tr class="table-offer__body">
                 <td>Розовый фильтр</td>
                 <td class="table-offer__status">
-                  <span class="icon icon-success">поддерживается</span>
+                  <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
                 </td>
               </tr>
               <tr class="table-offer__body">
                 <td>Смайлики</td>
                 <td class="table-offer__status">
-                  <span class="icon icon-success">поддерживается</span>
+                  <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
                 </td>
               </tr>
               <tr class="table-offer__body">
                 <td>Комментарии</td>
                 <td class="table-offer__status">
-                  <span class="icon icon-not-success">не поддерживается</span>
+                  <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
                 </td>
               </tr>
             </table>
@@ -219,19 +228,19 @@
               <tr class="table-offer__body">
                 <td>Розовый фильтр</td>
                 <td class="table-offer__status">
-                  <span class="icon icon-success">поддерживается</span>
+                  <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
                 </td>
               </tr>
               <tr class="table-offer__body">
                 <td>Смайлики</td>
                 <td class="table-offer__status">
-                  <span class="icon icon-success">поддерживается</span>
+                  <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
                 </td>
               </tr>
               <tr class="table-offer__body">
                 <td>Комментарии</td>
                 <td class="table-offer__status">
-                  <span class="icon icon-not-success">не поддерживается</span>
+                  <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
                 </td>
               </tr>
             </table>
@@ -261,37 +270,37 @@
           <tr class="table-offer__body">
             <td class="table-offer__name">Розовый фильтр</td>
             <td class="table-offer__status">
-              <span class="icon icon-success">поддерживается</span>
+              <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
             </td>
             <td class="table-offer__status">
-              <span class="icon icon-success">поддерживается</span>
+              <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
             </td>
             <td class="table-offer__status">
-              <span class="icon icon-success">поддерживается</span>
+              <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
             </td>
           </tr>
           <tr class="table-offer__body">
             <td class="table-offer__name">Смайлики</td>
             <td class="table-offer__status">
-              <span class="icon icon-not-success">не поддерживается</span>
+              <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
             </td>
             <td class="table-offer__status">
-              <span class="icon icon-not-success">не поддерживается</span>
+              <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
             </td>
             <td class="table-offer__status">
-              <span class="icon icon-success">поддерживается</span>
+              <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
             </td>
           </tr>
           <tr class="table-offer__body">
             <td class="table-offer__name">Комментарии</td>
             <td class="table-offer__status">
-              <span class="icon icon-not-success">не поддерживается</span>
+              <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
             </td>
             <td class="table-offer__status">
-              <span class="icon icon-not-success">не поддерживается</span>
+              <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
             </td>
             <td class="table-offer__status">
-              <span class="icon icon-not-success">не поддерживается</span>
+              <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
             </td>
           </tr>
         </table>
@@ -322,34 +331,39 @@
     </div>
   </div>
   <div class="map">
-    <svg width="200" height="45" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 45"  class="svg-triangle" preserveAspectRatio="none">
-      <polygon points="0,0 200,0 100,45" style="fill:white" />
+    <svg width="200" height="55" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 55"  class="svg-triangle" preserveAspectRatio="none">
+      <polygon points="0,0 200,0 100,55" style="fill:white" />
     </svg>
     <div class="map__map-pin" id="online-map"></div>
   </div>
-  <div class="container">
-    <div class="page-footer__sum">
-      <a href="./index.html" class="page-footer__logo logo-link" target="_blank">pink</a>
-      <div class="social">
-        <a href="http://twitter.com" class="social__btn icon-twitter" target="_blank">Twitter</a>
-        <a href="http://facebook.com" class="social__btn icon-facebook" target="_blank">Facebook</a>
-        <a href="http://youtube.com" class="social__btn icon-youtube" target="_blank">YouTube</a>
+  <div class="page-footer--hide">
+    <div class="container">
+      <div class="page-footer__sum">
+        <a href="./index.html" class="page-footer__logo icon-logotype-white-desktop" data-grunticon-embed target="_blank">pink</a>
+        <div class="social">
+          <a href="http://twitter.com" class="social__btn icon-twitter" data-grunticon-embed target="_blank">Twitter</a>
+          <a href="http://facebook.com" class="social__btn icon-facebook" data-grunticon-embed target="_blank">Facebook</a>
+          <a href="http://youtube.com" class="social__btn icon-youtube" data-grunticon-embed target="_blank">YouTube</a>
+        </div>
+        <p class="copyright">
+          Разработано
+          <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
+        </p>
       </div>
-      <p class="copyright">
-        Разработано
-        <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
-      </p>
     </div>
   </div>
 </footer>
 </div>
+<script src="js/grunticon.loader.js" grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"]);></script>
+<noscript>
+<link href="css/icons.fallback.css" rel="stylesheet"></noscript>
 <script src="js/scripts.js"></script>
-<script src="_assets/jquery.js"></script>
+<script src="_assets/jquery-1.11.1.min.js"></script>
 <script src="_assets/jquery.pixlayout.js"></script>
 <script>
     $(function(){
       $.pixlayout({
-        src: "_assets/pink-index-mobile.jpg",
+        src: "_assets/pink-index-tablet.jpg",
         opacity: 0.4,
         top: -2,
         center: true,

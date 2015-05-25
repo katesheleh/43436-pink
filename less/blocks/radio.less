@@ -55,9 +55,9 @@
 
 
 
-  &__input + &__label:hover:before {
-    box-shadow: 0 0 0 2px @color-base;
-  }
+ // &__input + &__label:hover:before {
+   // box-shadow: 0 0 0 2px @color-base;
+ // }
 }
 
 
@@ -66,7 +66,18 @@
 @media(min-width: 700px) {
   .radio {
     padding: 13px 0 30px 22px;
-    &__input {}
-    &__label {}
+  }
+}
+
+
+
+
+@media(min-width: 960px) {
+  .radio {
+    width: 310px;
+    padding-left: 0;
+    margin-bottom: 0;
+    float: left;
+    text-align: center;
   }
 }

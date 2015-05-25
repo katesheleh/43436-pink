@@ -1,17 +1,18 @@
 module.exports = function(grunt) {
 
-   grunt.loadNpmTasks('grunt-contrib-copy');
-   grunt.loadNpmTasks('grunt-contrib-clean');
-   grunt.loadNpmTasks('grunt-contrib-less');
-   grunt.loadNpmTasks('grunt-sass');
-   grunt.loadNpmTasks('grunt-githooks');
-   grunt.loadNpmTasks('grunt-lintspaces');
-   grunt.loadNpmTasks('grunt-notify');
-   grunt.loadNpmTasks('grunt-contrib-watch');
-   grunt.loadNpmTasks('grunt-grunticon');
-   grunt.loadNpmTasks( 'grunt-svgmin' );
+   //grunt.loadNpmTasks('grunt-contrib-copy');
+   //grunt.loadNpmTasks('grunt-contrib-clean');
+   //grunt.loadNpmTasks('grunt-contrib-less');
+   //grunt.loadNpmTasks('grunt-sass');
+   //grunt.loadNpmTasks('grunt-githooks');
+   //grunt.loadNpmTasks('grunt-lintspaces');
+   //grunt.loadNpmTasks('grunt-notify');
+   //grunt.loadNpmTasks('grunt-contrib-watch');
+   //grunt.loadNpmTasks('grunt-grunticon');
+   //grunt.loadNpmTasks( 'grunt-svgmin' );
 
-  require('load-grunt-tasks')(grunt, {scope: ['devDependencies', 'dependencies']});
+require('load-grunt-tasks')(grunt);
+//require('load-grunt-tasks')(grunt, {scope: ['devDependencies', 'dependencies']});
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -28,6 +29,7 @@ module.exports = function(grunt) {
 
 
 
+
     watch: {
       styles: {
         files: ['less/**/*.less'],
@@ -37,6 +39,10 @@ module.exports = function(grunt) {
             livereload: true
         }
       },
+
+
+
+
       livereload: {
         files: ['*.html'],
         tasks: ['notify:html'],
@@ -64,6 +70,15 @@ module.exports = function(grunt) {
         options: {
           title: 'Ура-Ура!',  // optional
           message: 'HTML обновлен!', //required
+        }
+      },
+
+
+
+      svg: {
+        options: {
+          title: '!',  // optional
+          message: 'Все ок!', //required
         }
       }
     },
@@ -121,6 +136,13 @@ module.exports = function(grunt) {
       gosha: [
         'gosha/img/README',
         'gosha/js/README'
+      ],
+      svg: [
+        'css/icons.data.png.css',
+        'css/icons.data.svg.css',
+        'css/icons.fallback.css',
+        'img/png-grunticon',
+        '_svg/svgmin'
       ]
     },
 
@@ -149,29 +171,29 @@ module.exports = function(grunt) {
     mysvg: {
         files: [{
             expand: true,
-            cwd: '_svg/origin',
+            cwd: '_svg/svgmin',
             src: ['*.svg', '*.png'],
-            dest: "_svg/result"
+            dest: "./"
         }],
         options: {
           enhanceSVG   : true,
-          datasvgcss   : 'icons.data.svg.css',
-          datapngcss   : 'icons.data.png.css',
-          urlpngcss    : 'icons.fallback.css',
+          datasvgcss   : 'css/icons.data.svg.css',
+          datapngcss   : 'css/icons.data.png.css',
+          urlpngcss    : 'css/icons.fallback.css',
+          loadersnippet: 'js/grunticon.loader.js',
           previewhtml  : 'icon-preview.html',
-          pngfolder    : 'png',
-          pngpath      : '../png',
-          template     : 'template.hbs',
+          pngfolder    : 'img/png-grunticon',
+          pngpath      : '../img/spng-grunticon',
+          template     : '_svg/template.hbs',
           defaultWidth : '200px',
-          defaultHeight: '200px',
-          cssprefix    : 'icon-'
+          defaultHeight: '200px'
         }
       }
-    },
+    }
   });
 
 
-grunt.registerTask('svg', [
+  grunt.registerTask('svg', [
     'clean:svg',
     'svgmin',
     'grunticon',

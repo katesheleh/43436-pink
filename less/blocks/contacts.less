@@ -67,11 +67,51 @@
     &__item {
       width: 310px;
       margin-bottom: 29px;
+    }
+  }
+}
 
-      &:nth-of-type(3) {
-       width: 230px;
-       margin-bottom: 0;
-      }
+
+
+
+@media(min-width: 960px) {
+  .contacts {
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 54px;
+    margin-bottom: 0;
+
+
+
+
+    &__item {
+      width: 313px;
+      margin-bottom: 29px;
+    }
+
+
+
+
+    &__item:nth-child(1) {
+      order: 1;
+    }
+
+
+     &__item:nth-child(2) {
+      order: 3;
+    }
+
+
+     &__item:nth-child(3) {
+      padding: 0 30px;
+      order: 2;
+    }
+
+
+
+
+    &__title {
+      margin-bottom: 20px;
     }
   }
 }

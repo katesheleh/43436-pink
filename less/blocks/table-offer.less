@@ -76,6 +76,12 @@
     .hide-text;
     .border;
     border-left: none;
+    span {
+      display: block;
+      margin: 0 auto;
+      width: 30px;
+      height: 27px;
+    }
   }
 }
 
@@ -156,3 +162,55 @@
     }
   }
 }
+
+
+
+
+@media(min-width: 960px) {
+
+  .table-offer--mx-lx {
+
+    .table-offer__header {
+
+      th {
+        padding-top: 14px;
+        padding-bottom: 21px;
+      }
+    }
+
+
+
+
+    .table-offer__title {
+      .large-text(@ttransform: uppercase);
+    }
+
+
+
+
+
+    .table-offer__price {
+      .huge-text(@ttransform: uppercase; @line-height: 30px);
+    }
+
+
+
+
+
+    .table-offer__body {
+      height: 60px;
+
+      td:first-child {
+        padding:0 0 0 20px;
+      }
+    }
+
+
+
+
+    .table-offer__name {
+      .large-text(@fweight: 400; @ttransform: uppercase);
+    }
+  }
+}
+

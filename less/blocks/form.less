@@ -24,7 +24,7 @@
   &__subtitle {
     text-transform: uppercase;
 
-    & span {
+    & span:first-child {
       color: @color-decor;
     }
   }
@@ -159,6 +159,12 @@
   &__title--mx-lx {
     display: none;
   }
+
+
+
+  &--word-lx {
+    display: none;
+  }
 }
 
 
@@ -189,6 +195,8 @@
       display: inline-block;
       padding: 0 20px 0 20px;
       margin-bottom: 29px;
+      margin-left: 0;
+      margin-right: 0;
       color: @color-decor;
       text-transform: uppercase;
     }
@@ -235,6 +243,7 @@
 
 
       &:nth-child(2) {
+
         .form__question {
         text-align: center;
         padding-left: 0;
@@ -298,19 +307,160 @@
       padding-bottom: 0;
       margin-bottom: 61px;
     }
+  }
+}
 
 
 
 
 
-&--friends {}
+@media(min-width: 960px) {
+  .form {
+    &__fieldset {
+      margin-bottom: 51px;
+      padding-left: 0;
+      padding-right: 0;
+    }
 
-&--checkbox {}
+
+    [class^="form__column-"] {
+      width: 300px;
+      float: left;
+    }
+
+    &__column-1,
+    &__column-2 {
+      margin-right: 17px;
+    }
+
+    &__column-3 {
+      margin-right: 0;
+    }
 
 
 
- &__input {}
-    &__question {}
+    &__question {
+        margin-left: 0;
+        padding-left: 20px;
+    }
 
+
+
+
+    &__input {
+      margin-bottom: 0;
+
+      &[name="user-surname"] {
+        margin-bottom: 0;
+      }
+    }
+
+
+
+
+    &__title--mx-lx {
+      margin-bottom: 28px;
+    }
+
+
+
+
+
+    &--trip-time {
+      .form__question {
+        margin-bottom: 8px;
+      }
+    }
+
+
+
+    &__info-dates {
+      padding-left: 60px;
+      padding-right: 60px;
+      justify-content: space-between;
+
+      div:nth-child(2) {
+        width: 252px;
+      }
+    }
+
+
+
+
+
+    &__items {
+      width: 240px;
+      margin-right: 0;
+      margin-bottom: 0;
+
+      .form__form-question {
+        margin-bottom: 8px;
+      }
+    }
+
+
+
+
+
+    &--friends {
+      width: 940px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 42px;
+    }
+
+
+
+
+
+    &__quiz {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+
+
+
+
+    &--checkbox {
+      width: 940px;
+      padding-bottom: 21px;
+    }
+
+
+
+
+
+    &__submit {
+      margin-top: 13px;
+    }
+
+
+
+
+
+    &__subtitle {
+      width: 350px;
+      margin-top: 31px;
+    }
+
+
+
+
+
+
+
+    &--word-lx {
+      display: inline;
+      color: @color-base;
+    }
+
+
+
+
+
+    input[name="finish-trip"] {
+      background-color: @bg-decor;
+    }
   }
 }

@@ -29,10 +29,10 @@
     "normalize.less": "^1.0.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-notify": "^0.4.1",
-    "load-grunt-tasks": "^3.1.0"
+    "load-grunt-tasks": "^3.1.0",
+    "grunt-svgmin": "^2.0.1"
   },
   "devDependencies": {
-    "grunt-grunticon": "^2.1.6",
-    "grunt-svgmin": "^2.0.1",
+    "grunt-grunticon": "^2.1.6"
   }
 }

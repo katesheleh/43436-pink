@@ -108,8 +108,8 @@
   }
 
   .nav-menu {
-
     &__btn {
+      background-color: tansparent;
 
       span {
         background-color: transparent;
@@ -146,10 +146,96 @@
 
 @media(min-width: 700px) {
   .mobile-menu-opened {
+
     .nav-menu {
       &__list {
         top: 110px;
       }
+
+
+
+
+
+      &__link {
+        height: 110px;
+        padding: 0 30px;
+      }
     }
   }
 }
+
+
+
+
+@media(min-width: 960px) {
+  .nav-menu {
+      width: 640px;
+      float: left;
+      background-color: transparent;
+    &__list {
+      width: 640px;
+      display: table;
+      display: table;
+      margin: 0;
+      padding: 0;
+
+      li:first-child  {
+        a {
+          text-align: left;
+        }
+      }
+    }
+
+
+
+
+
+    &__item {
+      float: left;
+      width: 160px;
+      height: 110px;
+      vertical-align: bottom;
+      border-bottom: none;
+      background-color: transparent;
+    }
+
+
+
+
+
+    &__link {
+      width: 160px;
+      height: 110px;
+      vertical-align: middle;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 400;
+      background-color: transparent;
+      text-transform: none;
+      text-align: right;
+      padding: 40px 0;
+    }
+
+
+
+
+
+    &__btn {
+      display: none;
+    }
+  }
+
+
+
+
+    .js-menu-control {
+    display: none;
+  }
+
+
+
+  .mobile-menu-opened {
+    display: none;
+  }
+}
+

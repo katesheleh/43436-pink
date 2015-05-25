@@ -5,14 +5,15 @@
   <title>Pink Form</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
-  </head>
+  <link rel="stylesheet" href="css/icons.data.png.css">
+  <link rel="stylesheet" href="css/icons.data.svg.css"></head>
 <body>
   <div class="page-wrapper">
     <header class="page-header">
       <div class="page-header__container-top page-header--container-form">
         <div class="headline">
           <div class="container">
-            <a href="#" class="headline__logo">pink</a>
+            <a href="./index.html" class="headline__logo" target="_blank">pink</a>
             <a class="nav-menu__btn js-menu-control" href="#">
               <span>меню</span>
             </a>
@@ -43,18 +44,22 @@
       <div class="container">
         <p class="page-content__promo promo">
           Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          <span>Пожалуйста, заполните форму ниже:</span>
         </p>
-        <p class="page-content--promo-mx-lx">Пожалуйста, заполните форму ниже:</p>
       </div>
       <form action="#" method="get" class="form">
         <div class="container">
           <fieldset class="form__fieldset form--fieldset">
-            <label for="form-name" class="form__question">Имя: *</label>
-            <input type="text" class="form__input" id="form-name" name="user-name" placeholder="Введите ваше имя" required autofocus>
-            <label for="form-surname" class="form__question">Фамилия: *</label>
-            <input type="text" class="form__input" id="form-surname" name="user-surname" placeholder="Укажите фамилию" required>
-            <label for="form-patronymic" class="form__question">Отчество: *</label>
-            <input type="text" class="form__input" id="form-patronymic" name="user-patronymic" placeholder="Ну и отчество тоже" required></fieldset>
+            <div class="form__column-1">
+              <label for="form-name" class="form__question">Имя: *</label>
+              <input type="text" class="form__input" id="form-name" name="user-name" placeholder="Введите ваше имя" required autofocus></div>
+            <div class="form__column-2">
+              <label for="form-surname" class="form__question">Фамилия: *</label>
+              <input type="text" class="form__input" id="form-surname" name="user-surname" placeholder="Укажите фамилию" required></div>
+            <div class="form__column-3">
+              <label for="form-patronymic" class="form__question">Отчество: *</label>
+              <input type="text" class="form__input" id="form-patronymic" name="user-patronymic" placeholder="Ну и отчество тоже" required></div>
+          </fieldset>
         </div>
         <div class="box box--gray">
           <div class="container">
@@ -116,37 +121,45 @@
               <div class="form__quiz">
                 <div class="quiz">
                   <a href="#" class="quiz__delete-btn">удалить</a>
-                  <div class="quiz__item">
-                    <span class="quiz__symbol">&#8470;</span>
-                    <label for="traveler-name1" class="quiz__question">Имя *</label>
+                  <div class="quiz__column-1">
+                    <div class="quiz__item">
+                      <span class="quiz__symbol">&#8470;</span>
+                      <label for="traveler-name1" class="quiz__question">Имя *</label>
+                    </div>
+                    <div class="quiz__item">
+                      <span class="quiz__number">1</span>
+                      <input type="text" class="quiz__input" name="name-friend" id="traveler-name1" placeholder="Введите ваше имя"></div>
                   </div>
-                  <div class="quiz__item">
-                    <span class="quiz__number">1</span>
-                    <input type="text" class="quiz__input" name="name-friend" id="traveler-name1" placeholder="Введите ваше имя"></div>
-                  <div class="quiz__item">
-                    <span class="quiz__symbol quiz__symbol-hide">&#8470;</span>
-                    <label for="traveler-nickname1" class="quiz__question">Прозвище:</label>
+                  <div class="quiz__column-2">
+                    <div class="quiz__item">
+                      <span class="quiz__symbol quiz__symbol-hide">&#8470;</span>
+                      <label for="traveler-nickname1" class="quiz__question">Прозвище:</label>
+                    </div>
+                    <div class="quiz__item">
+                      <span class="quiz__number quiz__number-hide">1</span>
+                      <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
                   </div>
-                  <div class="quiz__item">
-                    <span class="quiz__number quiz__number-hide">1</span>
-                    <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
                 </div>
                 <div class="quiz quiz--height">
                   <a href="#" class="quiz__delete-btn">удалить</a>
-                  <div class="quiz__item">
-                    <span class="quiz__symbol">&#8470;</span>
-                    <label for="traveler-name2" class="quiz__question">Имя *</label>
+                  <div class="quiz__column-1">
+                    <div class="quiz__item">
+                      <span class="quiz__symbol">&#8470;</span>
+                      <label for="traveler-name2" class="quiz__question">Имя *</label>
+                    </div>
+                    <div class="quiz__item">
+                      <span class="quiz__number">2</span>
+                      <input type="text" class="quiz__input" name="name-friend" id="traveler-name2" placeholder="Введите ваше имя"></div>
                   </div>
-                  <div class="quiz__item">
-                    <span class="quiz__number">2</span>
-                    <input type="text" class="quiz__input" name="name-friend" id="traveler-name2" placeholder="Введите ваше имя"></div>
-                  <div class="quiz__item">
-                    <span class="quiz__symbol quiz__symbol-hide">&#8470;</span>
-                    <label for="traveler-nickname2" class="quiz__question">Прозвище:</label>
+                  <div class="quiz__column-2">
+                    <div class="quiz__item">
+                      <span class="quiz__symbol quiz__symbol-hide">&#8470;</span>
+                      <label for="traveler-nickname2" class="quiz__question">Прозвище:</label>
+                    </div>
+                    <div class="quiz__item">
+                      <span class="quiz__number quiz__number-hide">2</span>
+                      <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname2" placeholder="Ну как же без этого!"></div>
                   </div>
-                  <div class="quiz__item">
-                    <span class="quiz__number quiz__number-hide">2</span>
-                    <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname2" placeholder="Ну как же без этого!"></div>
                 </div>
               </div>
             </fieldset>
@@ -159,29 +172,35 @@
               Ваши безбашенные
               достижения в путешествии
             </p>
-            <div class="checkbox">
-              <input type="checkbox" class="checkbox__input" id="progress1" name="check-progress1" checked>
-              <label for="progress1" class="checkbox__label">Сделал селфи с акулой</label>
+            <div class="form__column-1">
+              <div class="checkbox">
+                <input type="checkbox" class="checkbox__input" id="progress1" name="check-progress1" checked>
+                <label for="progress1" class="checkbox__label">Сделал селфи с акулой</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" class="checkbox__input" id="progress2" name="check-progress2" checked>
+                <label for="progress2" class="checkbox__label">Обгорел на пляже</label>
+              </div>
             </div>
-            <div class="checkbox">
-              <input type="checkbox" class="checkbox__input" id="progress2" name="check-progress2" checked>
-              <label for="progress2" class="checkbox__label">Обгорел на пляже</label>
+            <div class="form__column-2">
+              <div class="checkbox">
+                <input type="checkbox" class="checkbox__input" id="progress3" name="check-progress3">
+                <label for="progress3" class="checkbox__label">Видел Чака Норриса</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" class="checkbox__input" id="progress4" name="check-progress4">
+                <label for="progress4" class="checkbox__label">Накупил сувениров</label>
+              </div>
             </div>
-            <div class="checkbox">
-              <input type="checkbox" class="checkbox__input" id="progress3" name="check-progress3">
-              <label for="progress3" class="checkbox__label">Видел Чака Норриса</label>
-            </div>
-            <div class="checkbox">
-              <input type="checkbox" class="checkbox__input" id="progress4" name="check-progress4">
-              <label for="progress4" class="checkbox__label">Накупил сувениров</label>
-            </div>
-            <div class="checkbox">
-              <input type="checkbox" class="checkbox__input" id="progress5" name="check-progress5" checked>
-              <label for="progress5" class="checkbox__label">Удержал башню</label>
-            </div>
-            <div class="checkbox">
-              <input type="checkbox" class="checkbox__input" id="progress6" name="check-progress6">
-              <label for="progress6" class="checkbox__label">Разгромил отель</label>
+            <div class="form__column-3">
+              <div class="checkbox">
+                <input type="checkbox" class="checkbox__input" id="progress5" name="check-progress5" checked>
+                <label for="progress5" class="checkbox__label">Удержал башню</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" class="checkbox__input" id="progress6" name="check-progress6">
+                <label for="progress6" class="checkbox__label">Разгромил отель</label>
+              </div>
             </div>
           </fieldset>
         </div>
@@ -252,7 +271,9 @@
           <input type="submit" class="form__submit" value="отправить форму">
           <p class="form__subtitle">
             <span>*</span>
-            &mdash; обязательные поля
+            &mdash; обязательные
+            <span class="form--word-lx">для заполнения</span>
+            поля
           </p>
         </div>
       </form>
@@ -274,6 +295,23 @@
       </div>
     </footer>
   </div>
+  <script src="js/grunticon.loader.js" grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"]);></script>
+  <noscript>
+    <link href="css/icons.fallback.css" rel="stylesheet"></noscript>
   <script src="js/scripts.js"></script>
+  <script src="_assets/jquery-1.11.1.min.js"></script>
+  <script src="_assets/jquery.pixlayout.js"></script>
+  <script>
+    $(function(){
+      $.pixlayout({
+        src: "_assets/pink-form-desktop.jpg",
+        opacity: 0.4,
+        top: -2,
+        center: true,
+        clip: true,
+        show: true,
+      })
+    });
+  </script>
 </body>
 </html>

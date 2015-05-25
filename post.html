@@ -5,7 +5,8 @@
   <title>Pink Post</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
-  </head>
+  <link rel="stylesheet" href="css/icons.data.png.css">
+  <link rel="stylesheet" href="css/icons.data.svg.css"></head>
 <body>
   <div class="page-wrapper">
     <header class="page-header">
@@ -100,19 +101,38 @@
     </main>
     <footer class="page-footer">
       <div class="container">
-        <a href="./index.html" class="page-footer__logo" target="_blank">Pink</a>
-        <div class="social">
-          <a href="http://twitter.com" class="social__btn icon-twitter" target="_blank">Twitter</a>
-          <a href="http://facebook.com" class="social__btn icon-facebook" target="_blank">Facebook</a>
-          <a href="http://youtube.com" class="social__btn icon-youtube" target="_blank">YouTube</a>
+        <div class="page-footer__sum">
+          <a href="./index.html" class="page-footer__logo" target="_blank">Pink</a>
+          <div class="social">
+            <a href="http://twitter.com" class="social__btn icon-twitter" target="_blank">Twitter</a>
+            <a href="http://facebook.com" class="social__btn icon-facebook" target="_blank">Facebook</a>
+            <a href="http://youtube.com" class="social__btn icon-youtube" target="_blank">YouTube</a>
+          </div>
+          <p class="сopyright">
+            Разработано
+            <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
+          </p>
         </div>
-        <p class="сopyright">
-          Разработано
-          <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
-        </p>
       </div>
     </footer>
   </div>
+  <script src="js/grunticon.loader.js" grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"]);></script>
+  <noscript>
+    <link href="css/icons.fallback.css" rel="stylesheet"></noscript>
   <script src="js/scripts.js"></script>
+  <script src="_assets/jquery-1.11.1.min.js"></script>
+  <script src="_assets/jquery.pixlayout.js"></script>
+  <script>
+    $(function(){
+      $.pixlayout({
+        src: "_assets/pink-post-desktop.jpg",
+        opacity: 0.4,
+        top: -2,
+        center: true,
+        clip: true,
+        show: true,
+      })
+    });
+  </script>
 </body>
 </html>

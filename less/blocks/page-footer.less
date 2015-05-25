@@ -8,26 +8,77 @@
   &__text {
     margin-bottom: 32px;
   }
+
+
+
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+  }
+
+
+
+
+  &__sum {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+
+
+
+  &--hide {
+    display: none;
+  }
 }
 
 
 
 
 @media(min-width: 700px) {
-.page-footer__sum {
-  padding-top: 20px;
-  width: 100%;
-  display: flex;
-  &__logo {
-    width: 150px;
-  }
-  .social {
-      flex-grow: 1;
-   }
-  .copyright {
-    width: 150px;
+  .page-footer {
+
+    &--hide {
+      display: block;
+    }
+
+
+
+
+
+
+    &__sum {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+      .social {
+        flex-grow: 1;
+      }
+    }
+
+
+
+
+
+    &__logo {
+      margin: 0;
+      text-align: left;
+    }
   }
 }
-.page-footer__logo {}
 
+
+
+@media(min-width: 960px) {
+  .page-footer {
+  margin-top: 92px;
+  }
 }

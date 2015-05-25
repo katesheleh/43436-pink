@@ -1,13 +1,17 @@
 .pic-list {
+  position: relative;
   list-style: none;
   width: 100%;
   padding-left: 0;
-  margin-top: 32px;
   padding-top: 35px;
+  margin-top: 32px;
+  margin-right: -10px;
   border-top: 2px solid @border-color;
   font-size: 0;
   text-align: left;
   vertical-align: bottom;
+  text-align: left;
+
 
 
 
@@ -16,8 +20,10 @@
   &__item {
     position: relative;
     display: inline-block;
+    vertical-align: bottom;
+    text-align: left;
     width: 67px;
-    margin: 0 9px 22px 9px;
+    margin: 0 9px 22px 10px;
   }
 
 
@@ -41,21 +47,37 @@
 
   &__close {
     position: absolute;
-    font-size: 10px;
-    top: -14px;
-    right: -12px;
-    width: 33px;
-    height: 33px;
+    display: block;
+    top: -12px;
+    left: 45px;
+    width: 32px;
+    height: 32px;
+    background-color: @color-light;
+    .border;
+    border-radius: 50%;
     .hide-text;
+
 
     &:before {
       position: absolute;
+      content:"";
+      width: 15px;
+      height: 2px;
+      top: 13px;
+      left: 7px;
+      background-color: @border-color;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      position: absolute;
       content: "";
-      bottom: 0;
-      left: 0;
-      width: 33px;
-      height: 33px;
-      background: url("../img/icon-close.png") no-repeat 100% 100%;
+      width: 15px;
+      height: 2px;
+      bottom: 13px;
+      left: 7px;
+      background-color: @border-color;
+      transform: rotate(-45deg);
     }
   }
 
@@ -79,17 +101,72 @@
   .pic-list {
     margin-top: 40px;
     padding-top: 65px;
+
     &__item {
       width: 120px;
       margin: 0 23px 45px 23px;
     }
+
+
+
+
+
     &__img-wrap {
       height: 120px;
-      outline: 1px dotted blue;
     }
+
+
+
+
+
     &__name {
       font-size: 14px;
       line-height: 26px;
+    }
+
+
+
+
+
+    &__close {
+      width: 55px;
+      height: 55px;
+      top: -18px;
+      left: 85px;
+
+      &::before {
+        width: 25px;
+        top: 24px;
+        left: 13px;
+      }
+
+       &::after {
+        width: 25px;
+        top: 24px;
+        left: 13px;
+      }
+    }
+  }
+}
+
+
+
+
+
+@media(min-width: 960px) {
+  .pic-list {
+    padding-left: 29px;
+    padding-right: 29px;
+    padding-bottom: 27px;
+
+
+
+
+
+    &__item {
+      margin-left: 26px;
+      margin-right: 26px;
+      margin-bottom: 24px;
     }
   }
 }

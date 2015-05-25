@@ -140,9 +140,6 @@
 
 
 
-    &__input {
-    }
-
 
 
     &__delete-btn {
@@ -165,6 +162,71 @@
 
     &--height {
       margin-bottom: 14px;
+    }
+  }
+}
+
+
+
+
+
+@media(min-width: 960px) {
+ .quiz {
+  display: flex;
+  margin-bottom: 7px;
+
+    &__delete-btn {
+      order: 3;
+      text-align: right;
+    }
+
+
+
+
+
+    &__item {
+      width: 100%;
+    }
+
+
+
+
+
+    &__column-1 {
+      margin-right: 20px;
+      width: 383px;
+    }
+
+
+
+
+
+    &__column-2 {
+      width: 300px;
+    }
+
+
+
+
+
+    &__input {
+      width: 300px;
+    }
+
+
+
+
+
+    &__symbol-hide {
+      display: none;
+    }
+
+
+
+
+
+    &__number-hide {
+      display: none;
     }
   }
 }
