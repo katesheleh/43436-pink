@@ -18,6 +18,7 @@
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     background-color: @color-light;
+
     &::before {
       position: absolute;
       content: "";
@@ -26,6 +27,16 @@
       width: 27px;
       height: 3px;
       background-color: @color-base;
+    }
+
+    &:active {
+      background-color: @color-base;
+      border-color: @color-base;
+      .transition;
+
+      &:before {
+        background-color: @color-light;
+      }
     }
   }
 
@@ -40,7 +51,10 @@
     border-right: transparent;
     border-left: transparent;
     background-color: @bg-decor;
-  }
+    .placeholder;
+    text-align: center;
+    }
+
 
 
 
@@ -78,6 +92,18 @@
       height: 3px;
       background-color: @color-base;
       transform: rotate(90deg);
+    }
+     &:active {
+      background-color: @color-base;
+      border-color: @color-base;
+      .transition;
+
+      &:before {
+        background-color: @color-light;
+      }
+       &:after {
+        background-color: @color-light;
+      }
     }
   }
 }
@@ -127,6 +153,25 @@
 
     &--width {
       margin-left: 50px;
+    }
+
+
+
+    &__minus {
+      &:hover {
+        border-color: @color-base;
+        .transition;
+      }
+    }
+
+
+
+
+    &__plus {
+      &:hover {
+        border-color: @color-base;
+        .transition;
+      }
     }
   }
 }

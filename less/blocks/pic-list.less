@@ -79,6 +79,20 @@
       background-color: @border-color;
       transform: rotate(-45deg);
     }
+
+    &:active {
+      border-color: @color-base;
+      background-color: @color-base;
+      .transition;
+    }
+    &:active:before {
+      background-color: @color-light;
+      .transition;
+    }
+    &:active:after {
+      background-color: @color-light;
+      .transition;
+    }
   }
 
 
@@ -156,7 +170,7 @@
 @media(min-width: 960px) {
   .pic-list {
     padding-left: 29px;
-    padding-right: 29px;
+    padding-right: 25px;
     padding-bottom: 27px;
 
 
@@ -165,8 +179,40 @@
 
     &__item {
       margin-left: 26px;
-      margin-right: 26px;
+      margin-right: 29px;
       margin-bottom: 24px;
+    }
+
+
+
+    &__close {
+      top: -27px;
+      left: 92px;
+      &:hover {
+        border-color: @color-base;
+        .transition;
+      }
+      &:hover:before {
+        background-color: @color-base;
+        .transition;
+      }
+      &:hover:after {
+        background-color: @color-base;
+        .transition;
+      }
+      &:active {
+        border-color: @color-base;
+         background-color: @color-base;
+        .transition;
+      }
+      &:active:before {
+        background-color: @color-light;
+        .transition;
+      }
+      &:active:after {
+        background-color: @color-light;
+        .transition;
+      }
     }
   }
 }

@@ -186,7 +186,12 @@ require('load-grunt-tasks')(grunt);
           pngpath      : '../img/spng-grunticon',
           template     : '_svg/template.hbs',
           defaultWidth : '200px',
-          defaultHeight: '200px'
+          defaultHeight: '200px',
+          customselectors: {
+                "twitter": [".social__btn--twitter:before"],
+                "facebook": [".social__btn--facebook:before"],
+                "youtube": [".social__btn--youtube:before"]
+          },
         }
       }
     }

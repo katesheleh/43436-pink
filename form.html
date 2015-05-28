@@ -5,35 +5,51 @@
   <title>Pink Form</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/icons.data.png.css">
-  <link rel="stylesheet" href="css/icons.data.svg.css"></head>
+  <script src="js/grunticon.loader.js"></script>
+  <script>
+      grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"], grunticon.svgLoadedCallback );
+  </script>
+  <noscript>
+    <link href="css/icons.fallback.css" rel="stylesheet"></noscript>
+</head>
 <body>
   <div class="page-wrapper">
     <header class="page-header">
       <div class="page-header__container-top page-header--container-form">
         <div class="headline">
-          <div class="container">
-            <a href="./index.html" class="headline__logo" target="_blank">pink</a>
-            <a class="nav-menu__btn js-menu-control" href="#">
-              <span>меню</span>
-            </a>
+          <div class="container headline--wrapper-lx">
+            <div class="container">
+              <a href="./index.html" class="headline__logo headline--logo-mobile" target="_blank">
+                pink <i class="icon-logotype-white-mobile" data-grunticon-embed></i>
+              </a>
+              <a href="./index.html" class="headline__logo headline--logo-mx" target="_blank">
+                pink <i class="icon-logotype-white-tablet" data-grunticon-embed></i>
+              </a>
+              <a href="./index.html" class="headline__logo headline--logo-lx" target="_blank">
+                pink
+                <i class="icon-logotype-white-desktop" data-grunticon-embed></i>
+              </a>
+              <a class="nav-menu__btn js-menu-control" href="#">
+                <span>меню</span>
+              </a>
+            </div>
+            <nav class="nav-menu js-menu">
+              <ul class="nav-menu__list">
+                <li class="nav-menu__item">
+                  <a href="#" class="nav-menu__link">Информация</a>
+                </li>
+                <li  class="nav-menu__item">
+                  <a href="#" class="nav-menu__link">Возможности</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a href="#" class="nav-menu__link">Отзывы</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a href="#" class="nav-menu__link">Стоимость</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav class="nav-menu js-menu">
-            <ul class="nav-menu__list">
-              <li class="nav-menu__item">
-                <a href="#" class="nav-menu__link">Информация</a>
-              </li>
-              <li  class="nav-menu__item">
-                <a href="#" class="nav-menu__link">Возможности</a>
-              </li>
-              <li class="nav-menu__item">
-                <a href="#" class="nav-menu__link">Отзывы</a>
-              </li>
-              <li class="nav-menu__item">
-                <a href="#" class="nav-menu__link">Стоимость</a>
-              </li>
-            </ul>
-          </nav>
         </div>
         <div class="container">
           <h1 class="page-header__title page-header__title-form">Конкурс на самое безбашенное путешествие с Пинк</h1>
@@ -90,19 +106,19 @@
             <p class="form__title">Когда вы путешествовали? *</p>
             <div class="form__info-dates">
               <div class="form__items">
-                <input type="date" name="start-trip" class="form__input" id="start-date" required>
+                <input type="date" name="start-trip" class="form__input" id="start-date">
                 <label for="start-date" class="form__question">Дата выезда</label>
               </div>
               <div class="form__items">
                 <div class="form-counter">
-                  <span class="form-counter__minus" id="minus-days">-</span>
-                  <input type="text" name="duration-trip" class="form-counter__field" id="duration-day" required>
-                  <span class="form-counter__plus" id="plus-days">+</span>
+                  <span class="form-counter__minus" id="minus-days" onclick="minus()">-</span>
+                  <input type="text" name="duration-trip" class="form-counter__field" id="duration-day" value="1 день">
+                  <span class="form-counter__plus" id="plus-days" onclick="plus()">+</span>
                 </div>
                 <label for="duration-day" class="form__question">Продолжительность</label>
               </div>
               <div class="form__items">
-                <input type="date" name="finish-trip" class="form__input" id="back-date" required>
+                <input type="date" name="finish-trip" class="form__input" id="back-date">
                 <label for="back-date" class="form__question">Дата возвращения</label>
               </div>
             </div>
@@ -114,9 +130,9 @@
               <legend class="form__title--mx-lx">Количество попутчиков *</legend>
               <p class="form__title">Количество попутчиков *</p>
               <div class="form-counter form-counter--width">
-                <span class="form-counter__minus" id="minus-friends">-</span>
-                <input type="text" class="form-counter__field" name="friends-number" id="traveler-number" required>
-                <span class="form-counter__plus" id="plus-friends">+</span>
+                <span class="form-counter__minus" id="minus-friends" onclick="minusPerson()">-</span>
+                <input type="text" class="form-counter__field" name="friends-number" id="traveler-number" value="1 чел">
+                <span class="form-counter__plus" id="plus-friends" onclick="plusPerson()">+</span>
               </div>
               <div class="form__quiz">
                 <div class="quiz">
@@ -128,7 +144,7 @@
                     </div>
                     <div class="quiz__item">
                       <span class="quiz__number">1</span>
-                      <input type="text" class="quiz__input" name="name-friend" id="traveler-name1" placeholder="Введите ваше имя"></div>
+                      <input type="text" class="quiz__input form__input" name="name-friend" id="traveler-name1" placeholder="Введите ваше имя"></div>
                   </div>
                   <div class="quiz__column-2">
                     <div class="quiz__item">
@@ -137,7 +153,7 @@
                     </div>
                     <div class="quiz__item">
                       <span class="quiz__number quiz__number-hide">1</span>
-                      <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
+                      <input type="text" class="quiz__input form__input" name="nickname-friend" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
                   </div>
                 </div>
                 <div class="quiz quiz--height">
@@ -149,7 +165,7 @@
                     </div>
                     <div class="quiz__item">
                       <span class="quiz__number">2</span>
-                      <input type="text" class="quiz__input" name="name-friend" id="traveler-name2" placeholder="Введите ваше имя"></div>
+                      <input type="text" class="quiz__input form__input" name="name-friend" id="traveler-name2" placeholder="Введите ваше имя"></div>
                   </div>
                   <div class="quiz__column-2">
                     <div class="quiz__item">
@@ -158,7 +174,7 @@
                     </div>
                     <div class="quiz__item">
                       <span class="quiz__number quiz__number-hide">2</span>
-                      <input type="text" class="quiz__input" name="nickname-friend" id="traveler-nickname2" placeholder="Ну как же без этого!"></div>
+                      <input type="text" class="quiz__input  form__input" name="nickname-friend" id="traveler-nickname2" placeholder="Ну как же без этого!"></div>
                   </div>
                 </div>
               </div>
@@ -212,7 +228,7 @@
               <div class="upload">
                 <label class="upload__label">
                   <span class="upload__btn">Загрузить фото</span>
-                  <input type="file" class="upload__input" name="file-upload"></label>
+                  <input type="file" class="upload__input" name="file-upload" multiple></label>
               </div>
               <ul class="pic-list">
                 <li class="pic-list__item">
@@ -268,7 +284,7 @@
           </div>
         </div>
         <div class="container">
-          <input type="submit" class="form__submit" value="отправить форму">
+          <input type="submit" class="form__submit" value="отправить форму" id="js-upload-photo">
           <p class="form__subtitle">
             <span>*</span>
             &mdash; обязательные
@@ -281,23 +297,36 @@
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__sum">
-          <a href="./index.html" class="page-footer__logo logo-link" target="_blank">pink</a>
+          <a href="./index.html" class="page-footer__logo logo-link" target="_blank">
+            pink
+            <i class="icon-logotype-blue-desktop" data-grunticon-embed></i>
+          </a>
           <div class="social">
-            <a href="http://twitter.com" class="social__btn icon-twitter" target="_blank">Twitter</a>
-            <a href="http://facebook.com" class="social__btn icon-facebook" target="_blank">Facebook</a>
-            <a href="http://youtube.com" class="social__btn icon-youtube" target="_blank">YouTube</a>
+            <a href="http://twitter.com" class="social__btn" target="_blank">
+              Twitter
+              <i class="icon-twitter" data-grunticon-embed></i>
+            </a>
+            <a href="http://facebook.com" class="social__btn" target="_blank">
+              Facebook
+              <i class="icon-facebook" data-grunticon-embed></i>
+            </a>
+            <a href="http://youtube.com" class="social__btn" target="_blank">
+              YouTube
+              <i class="icon-youtube" data-grunticon-embed></i>
+            </a>
           </div>
-          <p class="copyright">
-            Разработано
-            <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
-          </p>
+          <div class="copyright">
+            <span class="copyright__text">Разработано</span>
+            <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">
+              HTML Academy
+              <i class="icon-htmlacademy" data-grunticon-embed></i>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
   </div>
-  <script src="js/grunticon.loader.js" grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"]);></script>
-  <noscript>
-    <link href="css/icons.fallback.css" rel="stylesheet"></noscript>
+
   <script src="js/scripts.js"></script>
   <script src="_assets/jquery-1.11.1.min.js"></script>
   <script src="_assets/jquery.pixlayout.js"></script>
@@ -313,5 +342,6 @@
       })
     });
   </script>
+
 </body>
 </html>

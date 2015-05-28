@@ -34,17 +34,11 @@
     .huge-text(@line-height: 29px);
     text-decoration: none;
 
-    &:hover {
-      color: @color-base;
-      box-shadow: 0 3px 0 0 @color-light, 0 5px 0 0 @color-base;
-      transition: all .2s ease;
-    }
-
     &:active {
       color: @color-base;
       box-shadow: none;
       opacity: .3;
-      transition: all .2s ease;
+      .transition;
     }
   }
 }
@@ -55,6 +49,7 @@
 @media(min-width: 700px) {
   .contacts {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -65,7 +60,7 @@
 
 
     &__item {
-      width: 310px;
+      width: 50%;
       margin-bottom: 29px;
     }
   }
@@ -112,6 +107,24 @@
 
     &__title {
       margin-bottom: 20px;
+    }
+
+
+
+    &__link {
+
+    &:hover {
+      color: @color-base;
+      box-shadow: 0 3px 0 0 @color-light, 0 5px 0 0 @color-base;
+      .transition;
+    }
+
+    &:active {
+      color: @color-base;
+      box-shadow: none;
+      opacity: .3;
+      .transition;
+    }
     }
   }
 }

@@ -2,7 +2,6 @@
   background-color: @color-base;
 
 
-
   &__list {
     max-height: 0;
     margin: 0;
@@ -36,16 +35,11 @@
     color: @color-light;
     background-color: @color-base;
 
-    &:hover {
-      color: @color-decor;
-      // box-shadow: 0 5px 0 0 @color-base,
-      //             0 7px 0 0 @color-light;
-      transition: all .2s ease;
-    }
     &:active {
       opacity: .3;
-      // box-shadow: none;
-      transition: all .2s ease;
+       box-shadow: none;
+       color: @color-decor;
+      .transition;
     }
   }
 
@@ -72,27 +66,37 @@
       background: @color-light;
       .hide-text;
 
-      &::before {
-        height: 4px;
-        width: 48px;
-        background: @color-light;
-        position: absolute;
-        content: " ";
-        top: 10px;
-        left: 0;
-        transition: all 200ms ease-in-out;
+        &::before {
+          height: 4px;
+          width: 48px;
+          background: @color-light;
+          position: absolute;
+          content: " ";
+          top: 10px;
+          left: 0;
+          transition: all .2s ease-in-out;
+        }
+        &::after {
+          height: 4px;
+          width: 48px;
+          background: @color-light;
+          position: absolute;
+          content: "";
+          bottom: 10px;
+          left: 0;
+          transition: all .2s ease-in-out;
+        }
       }
-      &::after {
-        height: 4px;
-        width: 48px;
-        background: @color-light;
-        position: absolute;
-        content: "";
-        bottom: 10px;
-        left: 0;
-        transition: all 200ms ease-in-out;
+      &:active > span:before {
+        background-color: @color-decor;
       }
-    }
+      &:active > span:after {
+        background-color: @color-decor;
+      }
+      &:active > span {
+        background-color: @color-decor;
+        opacity: .3;
+      }
   }
 }
 
@@ -101,15 +105,15 @@
 
 
 .mobile-menu-opened {
-
   .headline {
     background-color: @color-base;
     border-bottom: 1px solid @color-shade;
   }
 
   .nav-menu {
+
     &__btn {
-      background-color: tansparent;
+      background-color: transparent;
 
       span {
         background-color: transparent;
@@ -136,7 +140,7 @@
       top: 66px;
       max-height: 500px;
       width: 100%;
-      transition: all 200ms ease-in-out;
+      .transition;
     }
   }
 }
@@ -151,15 +155,6 @@
       &__list {
         top: 110px;
       }
-
-
-
-
-
-      &__link {
-        height: 110px;
-        padding: 0 30px;
-      }
     }
   }
 }
@@ -169,20 +164,19 @@
 
 @media(min-width: 960px) {
   .nav-menu {
-      width: 640px;
-      float: left;
+      float: right;
       background-color: transparent;
     &__list {
-      width: 640px;
       display: table;
       display: table;
       margin: 0;
       padding: 0;
 
-      li:first-child  {
-        a {
-          text-align: left;
-        }
+     li:nth-child(2)  {
+          width: 180px;
+      }
+       li:nth-child(3)  {
+          width: 140px;
       }
     }
 
@@ -194,7 +188,9 @@
       float: left;
       width: 160px;
       height: 110px;
+      padding: 37px 0;
       vertical-align: bottom;
+      text-align: right;
       border-bottom: none;
       background-color: transparent;
     }
@@ -204,17 +200,51 @@
 
 
     &__link {
-      width: 160px;
-      height: 110px;
-      vertical-align: middle;
-      font-size: 18px;
-      line-height: 18px;
-      font-weight: 400;
-      background-color: transparent;
-      text-transform: none;
-      text-align: right;
-      padding: 40px 0;
-    }
+     position: relative;
+     display: inline;
+     font-size: 18px;
+     line-height: 18px;
+     font-weight: 400;
+     background-color: transparent;
+     text-transform: none;
+     padding-bottom: 15px;
+    transition: all .15s;
+
+
+
+       &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: " ";
+        width: 0;
+        height: 2px;
+        background-color: @color-light;
+        transition: right .3s;
+
+        // box-shadow: 0 2px 0 0 @color-light;
+        //   .transition;
+        // content: "1111";
+        // position: absolute;
+        // left: 0;
+        // height: 2px;
+        // top: 37px;
+        // background-color: @color-light;
+        // right: 100%;
+        // transition: right .3s;
+        }
+
+        // &:active {
+        //   color: @color-light;
+        //   box-shadow: none;
+        //   opacity: .3;
+        //   .transition;
+        // }
+        &::hover:after {
+          right: 100%;
+          transition: right .3s;
+        }
+      }
 
 
 

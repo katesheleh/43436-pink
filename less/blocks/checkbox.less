@@ -46,7 +46,15 @@
     border-top-style: none;
     border-right-style: none;
     transform: rotate(-45deg);
+    .transition;
   }
+
+
+
+    &__input + &__label:active:before {
+      box-shadow: 0 0 0 2px @color-decor;
+      .transition;
+    }
 }
 
 
@@ -65,5 +73,43 @@
 @media(min-width: 960px) {
   .checkbox {
       padding-left: 54px;
+
+
+
+    &__input:checked + &__label:after {
+    position: absolute;
+    content: " ";
+    top: 2px;
+    left: 9px;
+    width: 22px;
+    height: 11px;
+    border: 2px solid @color-decor;
+    background-color: @color-light;
+    border-top-style: none;
+    border-right-style: none;
+    transform: rotate(-45deg);
+    .transition;
+  }
+
+
+   //&__input:checked + &__label:hover:before {
+     // box-shadow: 0 0 0 2px @color-decor;
+   //}
+    &__input:checked + &__label:before {
+      box-shadow: 0 0 0 2px @color-decor;
+      .transition;
+    }
+
+
+  &__input + &__label:hover:before {
+      box-shadow: 0 0 0 2px @color-base;
+      .transition;
+    }
+
+
+    &__input + &__label:active:before {
+      box-shadow: 0 0 0 2px @color-decor;
+      .transition;
+    }
   }
 }

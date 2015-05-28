@@ -154,6 +154,15 @@
       line-height: 30px;
       font-weight: 400;
       color: @color-base;
+
+
+
+      &:active {
+        color: @color-decor;
+        opacity: .3;
+        border-bottom: none;
+        .transition;
+      }
     }
 
 
@@ -227,6 +236,31 @@
 
     &__number-hide {
       display: none;
+    }
+
+
+
+    &__delete-btn {
+      display: inline-block;
+      width: 65px;
+      margin-left: 46px;
+      padding: 0;
+
+
+
+
+      &:hover {
+        color: @color-decor;
+        border-bottom: 1px solid @color-decor;
+        .transition;
+      }
+
+       &:active {
+        color: @color-decor;
+        opacity: .3;
+        border-bottom: none;
+        .transition;
+      }
     }
   }
 }

@@ -31,7 +31,7 @@
 }
 
 
-
+.social__btn--facebook:before,
 .icon-facebook {
   display: inline-block;
   vertical-align: middle;
@@ -159,7 +159,7 @@
   background-image: url('../img/spng-grunticon/no.png');
   background-repeat: no-repeat;
   width: 27px;
-  height: 7317px;
+  height: 7541px;
 }
 
 
@@ -229,7 +229,7 @@
 }
 
 
-
+.social__btn--twitter:before,
 .icon-twitter {
   display: inline-block;
   vertical-align: middle;
@@ -247,11 +247,11 @@
   background-image: url('../img/spng-grunticon/yes.png');
   background-repeat: no-repeat;
   width: 30px;
-  height: 5045px;
+  height: 5269px;
 }
 
 
-
+.social__btn--youtube:before,
 .icon-youtube {
   display: inline-block;
   vertical-align: middle;
