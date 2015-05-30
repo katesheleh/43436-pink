@@ -3,76 +3,6 @@
 }
 
 
-
-// .icon-android-logo {
-//     position: absolute;
-//     top: 0;
-//     left: 29%;
-// }
-
-
-
-
-
-// .icon-apple-logo {
-//     position: absolute;
-//     top: -8px;
-//     left: 39%;
-// }
-
-
-
-
-// .icon-microsoft-logo {
-//     position: absolute;
-//     top: 3px;
-//     left: 13%;
-// }
-
-
-.icon-facebook {
-  padding-top: 14px;
-}
-
-
-
-
-.icon-twitter {
-  padding-top: 16px;
-}
-
-
-
-
-.icon-youtube {
-  padding-top: 16px;
-  padding-left: 2px;
-}
-
-
-
-
-.icon-facebook path,
-.icon-twitter path,
-.icon-youtube path {
-  fill: @color-decor;
-}
-
-
-
-
-
-.icon-htmlacademy path {
-  padding-top: 7px;
-  fill: @color-decor;
-}
-
-
-
-
-
-
-
 .ribbon {
   position: relative;
 
@@ -84,7 +14,26 @@
     display: block;
     width: 74px;
     height: 73px;
-    background: url(../img/sprites-index.png) -28px -276px no-repeat;
+    background: url(../img/ribbon.png) no-repeat;
     z-index: 2000;
+  }
+}
+
+
+@media(min-width: 700px) {
+  .ribbon {
+    &:before {
+      background-image: url(../img/ribbon-tablet.png)
+    }
+  }
+}
+
+
+
+@media(min-width: 960px) {
+  .ribbon {
+    &:before {
+      background-image: url(../img/ribbon.png)
+    }
   }
 }
