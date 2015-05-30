@@ -17,6 +17,12 @@
   &__link {
     height: 44px;
     .hide-text;
+
+
+    &:active > .icon-htmlacademy path {
+      fill: @border-color;
+      .transition;
+    }
   }
 }
 
@@ -26,20 +32,6 @@
 @media(min-width: 700px) {
   .copyright {
     width: 156px;
-
-
-
-    &__link {
-      &:hover > .icon-htmlacademy path {
-        fill: @color-base;
-        .transition;
-      }
-
-      &:active > .icon-htmlacademy path {
-        fill: @border-color;
-        .transition;
-      }
-    }
   }
 }
 
@@ -51,13 +43,25 @@
   .copyright {
     padding-top: 12px;
     width: 156px;
+
      &__text {
       height: 28px;
       font-size: 18px;
     }
+
     &__link {
       display: block;
       float: right;
+
+      &:hover > .icon-htmlacademy path {
+        fill: @color-base;
+        .transition;
+      }
+
+      &:active > .icon-htmlacademy path {
+        fill: @border-color;
+        .transition;
+      }
     }
   }
 }
