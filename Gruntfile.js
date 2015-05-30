@@ -190,7 +190,9 @@ require('load-grunt-tasks')(grunt);
           customselectors: {
                 "twitter": [".social__btn--twitter:before"],
                 "facebook": [".social__btn--facebook:before"],
-                "youtube": [".social__btn--youtube:before"]
+                "youtube": [".social__btn--youtube:before"],
+                "blog-post-icon": [".article-preview--icon:before"],
+                "quotes": [".context--quotes:before"]
           },
         }
       }
