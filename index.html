@@ -12,8 +12,18 @@
     <header class="page-header page-header--index">
       <div class="page-header__container-top">
         <div class="headline">
+        <div class="headline--wrapper-lx">
           <div class="container">
-            <a href="#" class="headline__logo">pink</a>
+             <a href="./index.html" class="headline__logo headline--logo-mobile" target="_blank">
+                pink <i class="icon-logotype-white-mobile" data-grunticon-embed></i>
+              </a>
+              <a href="./index.html" class="headline__logo headline--logo-mx" target="_blank">
+                pink <i class="icon-logotype-white-tablet" data-grunticon-embed></i>
+              </a>
+              <a href="./index.html" class="headline__logo headline--logo-lx" target="_blank">
+                pink
+                <i class="icon-logotype-white-desktop" data-grunticon-embed></i>
+              </a>
             <a class="nav-menu__btn js-menu-control" href="#">
               <span>меню</span>
             </a>
@@ -34,6 +44,7 @@
               </li>
             </ul>
           </nav>
+        </div>
         </div>
       </div>
       <div class="container">
@@ -124,7 +135,7 @@
         <div class="slider">
           <div class="slider__list">
             <div class="slider__item">
-              <blockquote class="context">
+              <blockquote class="context context--quotes">
                 <cite class="context__header">Николай Петров</cite>
                 <span class="context__subtitle">25 лет, водитель трамвая</span>
                 <p class="context__text">
@@ -338,18 +349,37 @@
   </div>
   <div class="page-footer--hide">
     <div class="container">
-      <div class="page-footer__sum">
-        <a href="./index.html" class="page-footer__logo icon-logotype-white-desktop" data-grunticon-embed target="_blank">pink</a>
-        <div class="social">
-          <a href="http://twitter.com" class="social__btn icon-twitter" data-grunticon-embed target="_blank">Twitter</a>
-          <a href="http://facebook.com" class="social__btn icon-facebook" data-grunticon-embed target="_blank">Facebook</a>
-          <a href="http://youtube.com" class="social__btn icon-youtube" data-grunticon-embed target="_blank">YouTube</a>
+          <div class="page-footer__sum">
+        <a href="./index.html" class="page-footer__logo page-footer--sm-mx" target="_blank">
+            pink
+            <i class="icon-logotype-blue-tablet" data-grunticon-embed></i>
+          </a>
+          <a href="./index.html" class="page-footer__logo page-footer--lx" target="_blank">
+            pink
+            <i class="icon-logotype-blue-desktop" data-grunticon-embed></i>
+          </a>
+          <div class="social">
+            <a href="http://twitter.com" class="social__btn social--twitter" target="_blank">
+              Twitter
+              <i class="icon-twitter" data-grunticon-embed></i>
+            </a>
+            <a href="http://facebook.com" class="social__btn social--facebook" target="_blank">
+              Facebook
+              <i class="icon-facebook" data-grunticon-embed></i>
+            </a>
+            <a href="http://youtube.com" class="social__btn social--youtube" target="_blank">
+              YouTube
+              <i class="icon-youtube" data-grunticon-embed></i>
+            </a>
+          </div>
+          <div class="copyright">
+            <span class="copyright__text">Разработано</span>
+            <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">
+              HTML Academy
+              <i class="icon-htmlacademy" data-grunticon-embed></i>
+            </a>
+          </div>
         </div>
-        <p class="copyright">
-          Разработано
-          <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">HTML Academy</a>
-        </p>
-      </div>
     </div>
   </div>
 </footer>
@@ -358,8 +388,8 @@
 <noscript>
 <link href="css/icons.fallback.css" rel="stylesheet"></noscript>
 <script src="js/scripts.js"></script>
-<!-- <script src="_assets/jquery-1.11.1.min.js"></script>
- --><script src="_assets/jquery.pixlayout.js"></script>
+<!-- <script src="_assets/jquery-1.11.1.min.js"></script> -->
+<script src="_assets/jquery.pixlayout.js"></script>
 <script>
     $(function(){
       $.pixlayout({
