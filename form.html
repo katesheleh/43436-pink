@@ -17,7 +17,7 @@
     <header class="page-header">
       <div class="page-header__container-top page-header--container-form">
         <div class="headline">
-          <div class="container headline--wrapper-lx">
+          <div class="headline--wrapper-lx">
             <div class="container">
               <a href="./index.html" class="headline__logo headline--logo-mobile" target="_blank">
                 pink <i class="icon-logotype-white-mobile" data-grunticon-embed></i>
@@ -111,9 +111,9 @@
               </div>
               <div class="form__items">
                 <div class="form-counter">
-                  <span class="form-counter__minus" id="minus-days" onclick="minus()">-</span>
-                  <input type="text" name="duration-trip" class="form-counter__field" id="duration-day" value="1 день">
-                  <span class="form-counter__plus" id="plus-days" onclick="plus()">+</span>
+                  <a href="#" class="form-counter__minus js-counter-minus" id="minus-days">-</a>
+                  <input type="text" name="duration-trip" class="form-counter__field js-counter-input" id="duration-day" value="1 день" data-single="день" data-plural="дней" data-pluralStart="дня">
+                  <a href="#" class="form-counter__plus js-counter-plus" id="plus-days">+</a>
                 </div>
                 <label for="duration-day" class="form__question">Продолжительность</label>
               </div>
@@ -130,9 +130,9 @@
               <legend class="form__title--mx-lx">Количество попутчиков *</legend>
               <p class="form__title">Количество попутчиков *</p>
               <div class="form-counter form-counter--width">
-                <span class="form-counter__minus" id="minus-friends" onclick="minusPerson()">-</span>
-                <input type="text" class="form-counter__field" name="friends-number" id="traveler-number" value="1 чел">
-                <span class="form-counter__plus" id="plus-friends" onclick="plusPerson()">+</span>
+                <a href="#" class="form-counter__minus js-counter-minus" id="minus-friends">-</a>
+                <input type="text" class="form-counter__field js-counter-input" name="friends-number" id="traveler-number" value="1 чел" data-single="чел" data-plural="чел" data-pluralStart="чел">
+                <a href="#" class="form-counter__plus js-counter-plus" id="plus-friends">+</a>
               </div>
               <div class="form__quiz">
                 <div class="quiz">
@@ -144,7 +144,7 @@
                     </div>
                     <div class="quiz__item">
                       <span class="quiz__number">1</span>
-                      <input type="text" class="quiz__input form__input" name="name-friend" id="traveler-name1" placeholder="Введите ваше имя"></div>
+                      <input type="text" class="quiz__input form__input" name="name-friend1" id="traveler-name1" placeholder="Введите ваше имя"></div>
                   </div>
                   <div class="quiz__column-2">
                     <div class="quiz__item">
@@ -153,7 +153,7 @@
                     </div>
                     <div class="quiz__item">
                       <span class="quiz__number quiz__number-hide">1</span>
-                      <input type="text" class="quiz__input form__input" name="nickname-friend" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
+                      <input type="text" class="quiz__input form__input" name="nickname-friend1" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
                   </div>
                 </div>
                 <div class="quiz quiz--height">
@@ -165,7 +165,7 @@
                     </div>
                     <div class="quiz__item">
                       <span class="quiz__number">2</span>
-                      <input type="text" class="quiz__input form__input" name="name-friend" id="traveler-name2" placeholder="Введите ваше имя"></div>
+                      <input type="text" class="quiz__input form__input" name="name-friend2" id="traveler-name2" placeholder="Введите ваше имя"></div>
                   </div>
                   <div class="quiz__column-2">
                     <div class="quiz__item">
@@ -174,7 +174,7 @@
                     </div>
                     <div class="quiz__item">
                       <span class="quiz__number quiz__number-hide">2</span>
-                      <input type="text" class="quiz__input  form__input" name="nickname-friend" id="traveler-nickname2" placeholder="Ну как же без этого!"></div>
+                      <input type="text" class="quiz__input  form__input" name="nickname-friend2" id="traveler-nickname2" placeholder="Ну как же без этого!"></div>
                   </div>
                 </div>
               </div>
@@ -228,10 +228,10 @@
               <div class="upload">
                 <label class="upload__label">
                   <span class="upload__btn">Загрузить фото</span>
-                  <input type="file" class="upload__input" name="file-upload" multiple></label>
+                  <input type="file" class="upload__input" name="file-upload" id="js-upload-photo" multiple></label>
               </div>
               <ul class="pic-list">
-                <li class="pic-list__item">
+               <!--  <li class="pic-list__item">
                   <div class="pic-list__img-wrap">
                     <img src="img/pic1-small.jpg" alt="pic-small-user1.jpg" class="pic-list__img"></div>
                   <span class="pic-list__name">pic1.jpg</span>
@@ -272,19 +272,24 @@
                     <img src="img/pic7-small.jpg" alt="pic-small-user7.jpg" class="pic-list__img"></div>
                   <span class="pic-list__name">pic7.jpg</span>
                   <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-                </li>
-                <li class="pic-list__item">
+                </li> -->
+
+                 <script id="image-template" type="text/html">
+
                   <div class="pic-list__img-wrap">
-                    <img src="img/pic8-small.jpg" alt="pic-small-user8.jpg" class="pic-list__img"></div>
-                  <span class="pic-list__name">pic8.jpg</span>
+                    <img src="{{image}}" alt="{{name}}" title="{{name}}" class="pic-list__img">
+                  </div>
+                  <span class="pic-list__name">{{name}}</span>
                   <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-                </li>
+
+                   </script>
+
               </ul>
             </fieldset>
           </div>
         </div>
         <div class="container">
-          <input type="submit" class="form__submit" value="отправить форму" id="js-upload-photo">
+          <input type="submit" class="form__submit" value="отправить форму">
           <p class="form__subtitle">
             <span>*</span>
             &mdash; обязательные
@@ -297,20 +302,24 @@
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__sum">
-          <a href="./index.html" class="page-footer__logo logo-link" target="_blank">
+          <a href="./index.html" class="page-footer__logo page-footer--sm-mx" target="_blank">
+            pink
+            <i class="icon-logotype-blue-tablet" data-grunticon-embed></i>
+          </a>
+          <a href="./index.html" class="page-footer__logo page-footer--lx" target="_blank">
             pink
             <i class="icon-logotype-blue-desktop" data-grunticon-embed></i>
           </a>
           <div class="social">
-            <a href="http://twitter.com" class="social__btn" target="_blank">
+            <a href="http://twitter.com" class="social__btn social--twitter" target="_blank">
               Twitter
               <i class="icon-twitter" data-grunticon-embed></i>
             </a>
-            <a href="http://facebook.com" class="social__btn" target="_blank">
+            <a href="http://facebook.com" class="social__btn social--facebook" target="_blank">
               Facebook
               <i class="icon-facebook" data-grunticon-embed></i>
             </a>
-            <a href="http://youtube.com" class="social__btn" target="_blank">
+            <a href="http://youtube.com" class="social__btn social--youtube" target="_blank">
               YouTube
               <i class="icon-youtube" data-grunticon-embed></i>
             </a>
@@ -326,11 +335,12 @@
       </div>
     </footer>
   </div>
-
+  <script id="image-template" type="text/html"></script>
+  <script src="js/mustache.min.js"></script>
   <script src="js/scripts.js"></script>
-  <script src="_assets/jquery-1.11.1.min.js"></script>
-  <script src="_assets/jquery.pixlayout.js"></script>
-  <script>
+  <!--<script src="_assets/jquery-1.11.1.min.js"></script>
+<script src="_assets/jquery.pixlayout.js"></script>
+<script>
     $(function(){
       $.pixlayout({
         src: "_assets/pink-form-desktop.jpg",
@@ -342,6 +352,6 @@
       })
     });
   </script>
-
+-->
 </body>
 </html>
