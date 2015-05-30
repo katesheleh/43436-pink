@@ -77,12 +77,11 @@
 
 
 
-      :before {
+      &--icon:before {
         position: absolute;
         content: "";
         top: 40px;
-        left: -56px;
-        background-color: red;
+        left: -59px;
         width: 30px;
         height: 25px;
       }
@@ -129,6 +128,13 @@
       .article-preview__text {
         padding-bottom: 32px;
       }
+    }
+  }
+  .page-content {
+    .article-preview--icon:nth-child(3):before,
+    .article-preview--icon:nth-child(4):before
+     {
+      top: 46px;
     }
   }
 }
