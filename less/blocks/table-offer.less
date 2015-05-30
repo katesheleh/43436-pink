@@ -21,8 +21,8 @@
 
     th {
       padding: 12px 0 24px 0;
-      .border;
       border-top-color:  @bg-header;
+      border-left: @bg-header;
       background-color: @bg-header;
     }
   }
@@ -98,6 +98,17 @@
 
 
 
+  .table-offer__header {
+      th {
+        .border;
+        padding: 9px 0 5px 0;
+        border-top-color:  transparent;
+      }
+    }
+
+
+
+
   .table-offer--mx-lx {
     display: table;
     width: 100%;
@@ -108,15 +119,6 @@
       background-color: transparent;
       border-left: transparent;
       border-top: transparent;
-    }
-
-
-
-
-    .table-offer__header {
-      th {
-        padding: 9px 0 5px 0;
-      }
     }
 
 
