@@ -78,5 +78,16 @@
     &__subtitle {
       .large-text(@fweight: 400)
     }
+    &--quotes {
+      position: relative;
+      &:before {
+          position: absolute;
+          content: " ";
+          top: -35px;
+          left: 313px;
+          width: 90px;
+          height: 90px;
+      }
+    }
   }
 }
