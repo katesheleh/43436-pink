@@ -97,11 +97,8 @@ require('load-grunt-tasks')(grunt);
     lintspaces: {
       test: {
         src: [
-          'index.html',
-          'form.html',
-          'blog.html',
-          'post.html',
-          'js/scripts.js',
+          '*.html',
+          'js/*.js',
           'less/*.less',
           'sass/*.sass'
         ],
