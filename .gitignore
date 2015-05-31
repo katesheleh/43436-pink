@@ -6,9 +6,3 @@ prepros.cfg
 *.sublime*
 *.map
 _assets
-icon-apple.png
-icon-android.png
-icon-microsoft.png
-icon-no.png
-icon-yes.png
-ribbon.png
