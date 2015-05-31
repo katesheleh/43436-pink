@@ -98,14 +98,15 @@ require('load-grunt-tasks')(grunt);
       test: {
         src: [
           '*.html',
-          'js/*.js',
+          'js/scripts.js',
+          'js/mustache.min.js',
           'less/*.less',
           'sass/*.sass'
         ],
         options: {
           editorconfig: '.editorconfig'
         }
-      }
+      },
     },
 
 
