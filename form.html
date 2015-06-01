@@ -135,7 +135,7 @@
                 <a href="#" class="form-counter__plus js-counter-plus" id="plus-friends">+</a>
               </div>
               <div class="form__quiz">
-                <div class="quiz">
+                <div class="quiz js-friends-name">
                   <a href="#" class="quiz__delete-btn">удалить</a>
                   <div class="quiz__column-1">
                     <div class="quiz__item">
@@ -231,111 +231,109 @@
                   <input type="file" class="upload__input" name="file-upload" id="js-upload-photo" multiple></label>
               </div>
               <ul class="pic-list">
-                <!--  <li class="pic-list__item">
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic1-small.jpg" alt="pic-small-user1.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic1.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic2-small.jpg" alt="pic-small-user2.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic2.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic3-small.jpg" alt="pic-small-user3.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic3.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic4-small.jpg" alt="pic-small-user4.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic4.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic5-small.jpg" alt="pic-small-user5.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic5.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic6-small.jpg" alt="pic-small-user6.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic6.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <li class="pic-list__item">
+                  <div class="pic-list__img-wrap">
+                    <img src="img/pic7-small.jpg" alt="pic-small-user7.jpg" class="pic-list__img"></div>
+                  <span class="pic-list__name">pic7.jpg</span>
+                  <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
+                </li>
+                <script id="image-template" type="text/html">
                 <div class="pic-list__img-wrap">
-                  <img src="img/pic1-small.jpg" alt="pic-small-user1.jpg" class="pic-list__img"></div>
-                <span class="pic-list__name">pic1.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-                <div class="pic-list__img-wrap">
-                  <img src="img/pic2-small.jpg" alt="pic-small-user2.jpg" class="pic-list__img"></div>
-                <span class="pic-list__name">pic2.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-                <div class="pic-list__img-wrap">
-                  <img src="img/pic3-small.jpg" alt="pic-small-user3.jpg" class="pic-list__img"></div>
-                <span class="pic-list__name">pic3.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-                <div class="pic-list__img-wrap">
-                  <img src="img/pic4-small.jpg" alt="pic-small-user4.jpg" class="pic-list__img"></div>
-                <span class="pic-list__name">pic4.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-                <div class="pic-list__img-wrap">
-                  <img src="img/pic5-small.jpg" alt="pic-small-user5.jpg" class="pic-list__img"></div>
-                <span class="pic-list__name">pic5.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-                <div class="pic-list__img-wrap">
-                  <img src="img/pic6-small.jpg" alt="pic-small-user6.jpg" class="pic-list__img"></div>
-                <span class="pic-list__name">pic6.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              <li class="pic-list__item">
-                <div class="pic-list__img-wrap">
-                  <img src="img/pic7-small.jpg" alt="pic-small-user7.jpg" class="pic-list__img"></div>
-                <span class="pic-list__name">pic7.jpg</span>
-                <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-              </li>
-              -->
-              <script id="image-template" type="text/html">
-                <div class="pic-list__img-wrap">
-                  <img src="{{image}}" alt="{{name}}" title="{{name}}" class="pic-list__img">
-                </div>
+                  <img src="{{image}}" alt="{{name}}" title="{{name}}" class="pic-list__img"></div>
                 <span class="pic-list__name">{{name}}</span>
                 <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
               </script>
-            </ul>
-          </fieldset>
+              </ul>
+            </fieldset>
+          </div>
         </div>
-      </div>
+        <div class="container">
+          <input type="submit" class="form__submit" value="отправить форму">
+          <p class="form__subtitle">
+            <span>*</span>
+            &mdash; обязательные
+            <span class="form--word-lx">для заполнения</span>
+            поля
+          </p>
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer">
       <div class="container">
-        <input type="submit" class="form__submit" value="отправить форму">
-        <p class="form__subtitle">
-          <span>*</span>
-          &mdash; обязательные
-          <span class="form--word-lx">для заполнения</span>
-          поля
-        </p>
-      </div>
-    </form>
-  </main>
-  <footer class="page-footer">
-    <div class="container">
-      <div class="page-footer__sum">
-        <a href="./index.html" class="page-footer__logo page-footer--sm-mx" target="_blank">
-          pink
-          <i class="icon-logotype-blue-tablet" data-grunticon-embed></i>
-        </a>
-        <a href="./index.html" class="page-footer__logo page-footer--lx" target="_blank">
-          pink
-          <i class="icon-logotype-blue-desktop" data-grunticon-embed></i>
-        </a>
-        <div class="social">
-          <a href="http://twitter.com" class="social__btn social--twitter" target="_blank">
-            Twitter
-            <i class="icon-twitter" data-grunticon-embed></i>
+        <div class="page-footer__sum">
+          <a href="./index.html" class="page-footer__logo page-footer--sm-mx" target="_blank">
+            pink
+            <i class="icon-logotype-blue-tablet" data-grunticon-embed></i>
           </a>
-          <a href="http://facebook.com" class="social__btn social--facebook" target="_blank">
-            Facebook
-            <i class="icon-facebook" data-grunticon-embed></i>
+          <a href="./index.html" class="page-footer__logo page-footer--lx" target="_blank">
+            pink
+            <i class="icon-logotype-blue-desktop" data-grunticon-embed></i>
           </a>
-          <a href="http://youtube.com" class="social__btn social--youtube" target="_blank">
-            YouTube
-            <i class="icon-youtube" data-grunticon-embed></i>
-          </a>
-        </div>
-        <div class="copyright">
-          <span class="copyright__text">Разработано</span>
-          <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">
-            HTML Academy
-            <i class="icon-htmlacademy" data-grunticon-embed></i>
-          </a>
+          <div class="social">
+            <a href="http://twitter.com" class="social__btn social--twitter" target="_blank">
+              Twitter
+              <i class="icon-twitter" data-grunticon-embed></i>
+            </a>
+            <a href="http://facebook.com" class="social__btn social--facebook" target="_blank">
+              Facebook
+              <i class="icon-facebook" data-grunticon-embed></i>
+            </a>
+            <a href="http://youtube.com" class="social__btn social--youtube" target="_blank">
+              YouTube
+              <i class="icon-youtube" data-grunticon-embed></i>
+            </a>
+          </div>
+          <div class="copyright">
+            <span class="copyright__text">Разработано</span>
+            <a href="http://htmlacademy.ru" class="copyright__link" target="_blank">
+              HTML Academy
+              <i class="icon-htmlacademy" data-grunticon-embed></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-</div>
-<script id="image-template" type="text/html"></script>
-<script src="js/mustache.min.js"></script>
-<script src="js/scripts.js"></script>
-<!--<script src="_assets/jquery-1.11.1.min.js"></script>
+    </footer>
+  </div>
+  <script id="image-template" type="text/html"></script>
+  <script src="js/mustache.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <!--<script src="_assets/jquery-1.11.1.min.js"></script>
 <script src="_assets/jquery.pixlayout.js"></script>
 <script>
     $(function(){
