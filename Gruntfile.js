@@ -99,8 +99,8 @@ require('load-grunt-tasks')(grunt);
         src: [
           '*.html',
           '!icon-preview.html',
-          '!js/grunticon.loader.js',
           'js/*.js',
+          '!js/grunticon.loader.js',
           'less/*.less',
           'sass/*.sass'
         ],
