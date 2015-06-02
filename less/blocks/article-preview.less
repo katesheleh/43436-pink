@@ -19,9 +19,15 @@
 
 
   &__link {
+    position: relative;
     text-decoration: none;
     color: @color-base;
     .large-text(@line-height: 27px);
+
+    &:active {
+      opacity: .3;
+      .transition;
+    }
   }
 
 
@@ -68,10 +74,20 @@
 @media(min-width: 700px) {
   .article-preview {
     position: relative;
-    margin-left: 60px;
+    margin-left: 55px;
+    margin-bottom: 7px;
     padding-bottom: 25px;
-    margin-bottom: 10px;
+    padding-right: 57px;
     border-bottom: 2px dotted @border-color;
+
+
+
+
+    &--indent-last {
+      margin-bottom: 57px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
 
 
 
@@ -81,9 +97,7 @@
         position: absolute;
         content: "";
         top: 40px;
-        left: -59px;
-        width: 30px;
-        height: 25px;
+        left: -57px;
       }
 
 
@@ -125,9 +139,9 @@
 
 
     &--indent {
-      .article-preview__text {
-        padding-bottom: 32px;
-      }
+      padding-top: 28px;
+      padding-bottom: 28px;
+      margin-bottom: 11px;
     }
   }
   .page-content {
@@ -145,6 +159,49 @@
 @media(min-width: 960px) {
   .article-preview {
     padding-right: 60px;
+    margin-left: 60px;
+
+
+
+
+    &__link {
+         &:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: " ";
+      height: 2px;
+      width: 0;
+      background-color: @color-super-dark;
+      .transition;
+    }
+
+
+    &:hover:before {
+      width: 100%;
+      .transition;
+    }
+
+
+    &:active:before {
+      width: 0;
+      .transition;
+    }
+
+    &:active {
+      opacity: .3;
+      .transition;
+    }
+    }
+
+
+
+
+
+    &--icon:before {
+         left: -58px;
+      }
+
 
 
 
@@ -165,12 +222,8 @@
 
 
     &--indent {
-      padding-top: 29px;
-      padding-bottom: 0;
-
-      .article-preview__text {
-        padding-bottom: 28px;
-      }
+      padding-top: 34px;
+      padding-bottom: 26px;
     }
 
 
@@ -178,7 +231,21 @@
 
 
     &--indent-last {
-      margin-bottom: 50px;
+      margin-bottom: 93px;
+    }
+  }
+
+
+
+
+  .page-content {
+    .article-preview--icon:nth-child(4):before
+     {
+      top: 44px;
+    }
+    .article-preview--icon:nth-child(3):before
+     {
+      top: 50px;
     }
   }
 }
