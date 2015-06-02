@@ -8,6 +8,7 @@
     padding-right: 10px;
     line-height: 18px;
     text-align: center;
+    padding-bottom: 26px;
   }
 
 
@@ -15,7 +16,8 @@
 
 
   &__link {
-    height: 44px;
+    display: inline-block;
+    padding-top: 10px;
     .hide-text;
 
 
@@ -31,7 +33,7 @@
 
 @media(min-width: 700px) {
   .copyright {
-    width: 156px;
+    width: 136px;
   }
 }
 
@@ -46,12 +48,14 @@
 
      &__text {
       height: 28px;
+      padding-top: 2px;
       font-size: 18px;
     }
 
     &__link {
       display: block;
       float: right;
+      padding-top: 0;
 
       &:hover > .icon-htmlacademy path {
         fill: @color-base;
