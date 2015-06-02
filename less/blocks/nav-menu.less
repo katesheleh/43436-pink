@@ -1,12 +1,17 @@
 .nav-menu {
   background-color: @color-base;
 
+
   &__list {
+    position: absolute;
+    top: 66px;
+    width: 100%;
     max-height: 0;
     margin: 0;
     padding: 0;
     list-style: none;
     overflow: hidden;
+    .transition;
   }
 
 
@@ -38,7 +43,6 @@
       opacity: .3;
       box-shadow: none;
       color: @color-decor;
-      .transition;
     }
   }
 
@@ -52,6 +56,7 @@
     float: right;
     width: 48px;
     height: 66px;
+    transition: all .2s ease;
 
     span {
       position: absolute;
@@ -64,6 +69,7 @@
       margin: 31px 0;
       background: @color-light;
       .hide-text;
+      transition: all .2s ease;
 
         &::before {
           height: 4px;
@@ -110,7 +116,7 @@
   }
 
   .nav-menu {
-      transition: all .2s ease;
+
 
     &__btn {
       background-color: transparent;
@@ -123,14 +129,12 @@
           left: 0;
           width: 40px;
           transform: rotate(45deg);
-          transition: all .2s ease;
         }
         &::after {
           top: 0;
           left: 0;
           width: 40px;
           transform: rotate(-45deg);
-          transition: all .2s ease;
         }
       }
     }
@@ -142,7 +146,6 @@
       top: 66px;
       max-height: 500px;
       width: 100%;
-      .transition;
     }
   }
 }
@@ -151,6 +154,13 @@
 
 
 @media(min-width: 700px) {
+  .nav-menu {
+    &__list {
+      position: absolute;
+      top: 110px;
+      width: 100%;
+    }
+  }
   .mobile-menu-opened {
 
     .nav-menu {
@@ -169,16 +179,19 @@
       float: right;
       background-color: transparent;
     &__list {
+      position: relative;
+      top: 0;
       display: table;
       display: table;
       margin: 0;
       padding: 0;
 
+
      li:nth-child(2)  {
-          width: 180px;
+          width: 195px;
       }
        li:nth-child(3)  {
-          width: 140px;
+          width: 135px;
       }
     }
 
