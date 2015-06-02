@@ -5,8 +5,13 @@
   <title>Pink</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/icons.data.png.css">
-  <link rel="stylesheet" href="css/icons.data.svg.css"></head>
+  <script src="js/grunticon.loader.js"></script>
+  <script>
+      grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"], grunticon.svgLoadedCallback );
+  </script>
+  <noscript>
+    <link href="css/icons.fallback.css" rel="stylesheet"></noscript>
+    </head>
 <body>
   <div class="page-wrapper">
     <header class="page-header page-header--index">
@@ -386,16 +391,13 @@
   </div>
 </footer>
 </div>
-<script src="js/grunticon.loader.js" grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"]);></script>
-<noscript>
-<link href="css/icons.fallback.css" rel="stylesheet"></noscript>
 <script src="js/scripts.js"></script>
-<!-- <script src="_assets/jquery-1.11.1.min.js"></script>
--->
+<script src="_assets/jquery-1.11.1.min.js"></script>
 <script src="_assets/jquery.pixlayout.js"></script>
 <script>
     $(function(){
-      $.pixlayout({
+      if(true) {
+        $.pixlayout({
         src: "_assets/pink-index-desktop.jpg",
         opacity: 0.4,
         top: -2,
@@ -403,6 +405,7 @@
         clip: true,
         show: true,
       })
+      }
     });
   </script>
 </body>
