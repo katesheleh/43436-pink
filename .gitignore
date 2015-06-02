@@ -6,3 +6,4 @@ prepros.cfg
 *.sublime*
 *.map
 _assets
+css/style.css
