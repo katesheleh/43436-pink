@@ -1,8 +1,6 @@
 /*============================
 =            MENU            =
 ============================*/
-
-
 // nav .js-menu
 // main link .js-menu-control
 // .js-headline
@@ -33,7 +31,6 @@ menuControl.addEventListener("click", function(ev){
 /*===============================
 =            COUNTER            =
 ===============================*/
-
 // .js-counter
 // .js-counter-minus
 // .js-counter-plus
@@ -168,6 +165,36 @@ menuControl.addEventListener("click", function(ev){
 
 
 
+/*============================
+=            TiME            =
+============================*/
+
+
+var startDay = document.getElementById('start-date');
+var finishDay = document.getElementById('back-date');
+var interval = document.getElementById('duration-day');
+
+startDay.addEventListener('change', onDateChange);
+finishDay.addEventListener('change', onDateChange);
+function onDateChange() {
+  var dateB = startDay.value;
+  var dateC = finishDay.value;
+  var diff = 0;
+    if (dateB.length && dateC.length) {
+      dateB = moment(dateB);
+      dateC = moment(dateC);
+      diff = dateC.diff(dateB, 'days');
+        if( diff <= 0) {
+          diff = "";
+        }
+        interval.value = diff;
+      }
+    }
+/*-----  End of TiME  ------*/
+
+
+
+
 
 
 
@@ -201,35 +228,37 @@ form.querySelector("#js-upload-photo").addEventListener("change", function() {
 
 
 function preview(file) {
-  var area = document.querySelector(".pic-list");
-    var reader = new FileReader();
+  if (file.type.match(/image.*/)) {
+    var area = document.querySelector(".pic-list");
+      var reader = new FileReader();
 
 
-      reader.addEventListener("load", function(event) {
-        var html = Mustache.render(template, {
-          "image": event.target.result,
-          "name": file.name
+        reader.addEventListener("load", function(event) {
+          var html = Mustache.render(template, {
+            "image": event.target.result,
+            "name": file.name
+          });
+
+
+          var li = document.createElement("li");
+          li.classList.add("pic-list__item");
+          li.innerHTML = html;
+          area.appendChild(li);
+
+
+          li.querySelector(".pic-list__close").addEventListener("click",
+            function(event) {
+            event.preventDefault();
+            removePreview(li);
         });
 
-
-        var li = document.createElement("li");
-        li.classList.add("pic-list__item");
-        li.innerHTML = html;
-        area.appendChild(li);
-
-
-        li.querySelector(".pic-list__close").addEventListener("click",
-          function(event) {
-          event.preventDefault();
-          removePreview(li);
-      });
-
-        queue.push({
-          "file": file,
-          "li": li
+          queue.push({
+            "file": file,
+            "li": li
+          });
         });
-      });
-  reader.readAsDataURL(file);
+    reader.readAsDataURL(file);
+  }
 }
 
 
