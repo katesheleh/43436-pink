@@ -1,0 +1,182 @@
+.popup {
+  display: none;
+  .popup-centered;
+  width: 320px;
+  padding:20px 0 45px 0;
+  box-shadow: 0 20px 50px -10px @color-shade;
+  background-color: @color-light;
+
+
+
+
+
+  &__title {
+    margin-bottom: 25px;
+    .large-text(@line-height: 24px);
+    color: @color-super-dark;
+  }
+
+
+
+
+
+  &__text {
+    margin-bottom: 36px;
+    padding: 0 20px 0 10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: @color-base;
+  }
+
+
+
+
+  &__btn {
+    .input();
+    width: 280px;
+    margin: 0 auto 0 auto;
+    background-color: @color-success;
+    border: none;
+    .large-text(@ttransform: uppercase);
+    color: @color-light;
+    outline: none;
+     &:active {
+      background-color: darken(@color-success, 10%);
+      color: darken(@color-light, 30%);
+      border-color: transparent;
+      .transition;
+      outline: none;
+    }
+  }
+
+
+
+
+
+  &__close {
+    padding: 48px 0 50px 0;
+  }
+
+
+
+
+  &--success {
+    display: none;
+    height: 350px;
+    .popup-centered;
+    padding: 0;
+    background-color: @color-light;
+
+
+    .popup__close {
+      background-color: @bg-decor;
+    }
+
+    .popup__text {
+      margin-bottom: 31px;;
+      padding: 0 25px 0 25px;
+    }
+  }
+}
+
+
+
+
+@media(min-width: 700px) {
+  .popup {
+      width: 460px;
+      padding-left: 66px;
+      padding-right: 66px;
+
+    &--success {
+      height: 430px;
+      padding-left: 0;
+      padding-right: 0;
+      .popup__title {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+
+      .popup__text {
+        margin-bottom: 13px;
+        padding: 0 77px 20px 77px;
+      }
+
+       .popup__close {
+        box-shadow: none;
+        width: 460px;
+      }
+    }
+
+
+
+
+
+
+    &__title {
+      margin-bottom: 23px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+
+
+
+
+    &__text {
+      .large-text(@fweight: 400; @line-height: 24px);
+    }
+
+
+
+
+
+
+    &__btn {
+      width: 300px;
+    }
+  }
+}
+
+
+
+
+
+@media(min-width: 960px) {
+  .popup {
+    &--success {
+      width: 780px;
+      height: 377px;
+      .popup__close {
+        width: 780px;
+      }
+
+      .popup__btn {
+        width: 460px;
+      }
+
+
+
+
+      .popup__text {
+        width: 385px;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 39px;
+      }
+    }
+
+
+
+
+
+    &__btn {
+      &:hover {
+        background-color: darken(@color-success, 10%);
+        border-color: transparent;
+        .transition;
+      }
+    }
+  }
+}
