@@ -1,5 +1,6 @@
 .social {
-  margin-bottom: 30px;
+  margin-bottom: 29px;
+
 
   &__btn {
     display: inline-block;
@@ -35,8 +36,20 @@
 
 
 
+
+@media(min-width: 700px) {
+  .social {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
 @media (min-width: 960px) {
   .social {
+    padding-bottom: 0;
     &__btn {
       &:hover {
         border-color: @color-base;
