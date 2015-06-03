@@ -28,6 +28,10 @@ menuControl.addEventListener("click", function(ev){
 
 
 
+
+
+
+
 /*===============================
 =            COUNTER            =
 ===============================*/
@@ -91,8 +95,6 @@ menuControl.addEventListener("click", function(ev){
     else if (isNaN(value) || value > 29) {
       value = 30;
     }
-
-
 
 
     // проверяем single
@@ -165,6 +167,10 @@ menuControl.addEventListener("click", function(ev){
 
 
 
+
+
+
+
 /*============================
 =            TiME            =
 ============================*/
@@ -191,6 +197,12 @@ function onDateChange() {
       }
     }
 /*-----  End of TiME  ------*/
+
+
+
+
+
+
 
 
 
