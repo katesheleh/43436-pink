@@ -2,7 +2,7 @@
   display: none;
   .popup-centered;
   width: 320px;
-  padding:20px 0 45px 0;
+  padding:20px 20px 45px 20px;
   box-shadow: 0 20px 50px -10px @color-shade;
   background-color: @color-light;
 
@@ -12,7 +12,9 @@
 
   &__title {
     margin-bottom: 25px;
-    .large-text(@line-height: 24px);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
     color: @color-super-dark;
   }
 
@@ -22,8 +24,6 @@
 
   &__text {
     margin-bottom: 36px;
-    padding: 0 20px 0 10px;
-    font-size: 14px;
     line-height: 24px;
     color: @color-base;
   }
@@ -32,9 +32,11 @@
 
 
   &__btn {
-    .input();
+    display: block;
+    height: 64px;
+    border-radius: 5px;
     width: 280px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     background-color: @color-success;
     border: none;
     .large-text(@ttransform: uppercase);
@@ -51,29 +53,20 @@
 
 
 
-
-
-  &__close {
-    padding: 48px 0 50px 0;
-  }
-
-
-
-
   &--success {
     display: none;
-    height: 350px;
     .popup-centered;
-    padding: 0;
+    padding: 13px 0 0 0;
     background-color: @color-light;
 
 
     .popup__close {
       background-color: @bg-decor;
+      padding: 47px 0;
     }
 
     .popup__text {
-      margin-bottom: 31px;;
+      margin-bottom: 31px;
       padding: 0 25px 0 25px;
     }
   }
@@ -87,24 +80,27 @@
       width: 460px;
       padding-left: 66px;
       padding-right: 66px;
+      padding-top: 0;
 
     &--success {
-      height: 430px;
       padding-left: 0;
       padding-right: 0;
+      padding-top: 0;
       .popup__title {
-        padding-left: 80px;
-        padding-right: 80px;
-      }
+         width: 205px;
+         margin-left: auto;
+         margin-right: auto;
+       }
 
       .popup__text {
-        margin-bottom: 13px;
-        padding: 0 77px 20px 77px;
+        margin-bottom: 31px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 360px;
       }
 
-       .popup__close {
-        box-shadow: none;
-        width: 460px;
+      .popup__close {
+        padding: 48px 0;
       }
     }
 
@@ -114,7 +110,6 @@
 
 
     &__title {
-      margin-bottom: 23px;
       font-size: 30px;
       line-height: 40px;
     }
@@ -124,7 +119,7 @@
 
 
     &__text {
-      .large-text(@fweight: 400; @line-height: 24px);
+       font-size: 18px;
     }
 
 
@@ -146,26 +141,27 @@
   .popup {
     &--success {
       width: 780px;
-      height: 377px;
-      .popup__close {
-        width: 780px;
-      }
-
-      .popup__btn {
-        width: 460px;
-      }
 
 
-
-
-      .popup__text {
-        width: 385px;
-        padding: 0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 39px;
-      }
+    .popup__title {
+      width: 100%;
     }
+
+
+    .popup__close {
+      padding: 42px 0px;
+    }
+
+    .popup__btn {
+      width: 460px;
+    }
+
+
+    .popup__text {
+      width: 445px;
+      margin-bottom: 40px;
+    }
+  }
 
 
 
