@@ -6,11 +6,11 @@
     &::after {
       position: absolute;
       top: 10px;
+      bottom: 9px;
       left: 0;
       content: " ";
       background-color: @color-decor;
       width: 2px;
-      height: 89%;
     }
 
 
@@ -37,7 +37,9 @@
   .feedback {
     padding-left: 35px;
     margin-bottom: 56px;
-
+    &::after {
+      bottom: 10px;
+    }
 
 
 
@@ -60,7 +62,7 @@
 @media(min-width: 960px) {
   .feedback {
     &::after {
-      height: 84%;
+      bottom: 0;
     }
   }
 }
