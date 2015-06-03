@@ -348,11 +348,8 @@
       </div>
     </div>
   </div>
-  <div class="map">
-    <svg width="200" height="55" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 55"  class="svg-triangle" preserveAspectRatio="none">
-      <polygon points="0,0 200,0 100,55" style="fill:white" />
-    </svg>
-    <div class="map__map-pin" id="online-map"></div>
+  <div class="map map--triangle-white-footer">
+    <div class="map__canvas" id="online-map"></div>
   </div>
   <div class="page-footer--hide">
     <div class="container">
@@ -391,12 +388,15 @@
   </div>
 </footer>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="js/map.js"></script>
 <script src="js/scripts.js"></script>
+<!--<script src="js/map&form.js"></script>-->
 <script src="_assets/jquery-1.11.1.min.js"></script>
 <script src="_assets/jquery.pixlayout.js"></script>
 <script>
     $(function(){
-      if(true) {
+      if(!true) {
         $.pixlayout({
         src: "_assets/pink-index-desktop.jpg",
         opacity: 0.4,
@@ -408,5 +408,6 @@
       }
     });
   </script>
+
 </body>
 </html>
