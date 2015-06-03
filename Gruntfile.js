@@ -193,7 +193,8 @@ require('load-grunt-tasks')(grunt);
                 "facebook": [".social__btn--facebook:before"],
                 "youtube": [".social__btn--youtube:before"],
                 "blog-post-icon": [".article-preview--icon:before"],
-                "quotes": [".context--quotes:before"]
+                "quotes": [".context--quotes:before"],
+                "triangle-white-footer": [".map--triangle-white-footer:before"]
           },
         }
       }
