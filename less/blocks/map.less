@@ -6,6 +6,26 @@
   margin: 0 auto;
   background: #fff url("../img/map-sm.jpg") no-repeat 50% 50%;
   background-size: auto 100%;
+
+  &--triangle-white-footer:before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 67px;
+    z-index: 40000;
+  }
+
+
+
+
+  &__canvas {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+  }
 }
 
 
@@ -14,18 +34,32 @@
 
 @media(min-width: 700px) {
   .map {
-    height: 360px;
+    height: 380px;
     background-image: url("../img/map-mx.jpg");
     margin-bottom: 26px;
+
+
+
+
+    &__canvas {
+      height: 380px;
+    }
   }
 }
 
 
 @media(min-width: 960px) {
   .map {
-    height: 506px;
+    height: 522px;
     margin-bottom: 58px;
     background-image: url("../img/map-lx.jpg");
     background-size: 100% auto;
+
+
+
+
+    &__canvas {
+      height: 522px;
+    }
   }
 }
