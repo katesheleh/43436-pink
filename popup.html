@@ -9,40 +9,30 @@
 .popup {
   position: relative;
   display: block;
-  margin-bottom: 100px; /*отступ только для демострации и отсутствует в оригинальном коде*/
-  /*position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);*/
   width: 320px;
-  padding: 20px 0 45px 0;
+  padding: 20px 20px 45px 20px;
   box-shadow: 0 20px 50px -10px #485461;
   background-color: #ffffff;
+  margin-bottom: 100px;
 }
 .popup__title {
   margin-bottom: 25px;
   font-size: 18px;
-  font-weight: 800;
-  font-style: normal;
-  text-transform: none;
   line-height: 24px;
+  font-weight: 800;
   color: #000000;
 }
 .popup__text {
   margin-bottom: 36px;
-  padding: 0 20px 0 10px;
-  font-size: 14px;
   line-height: 24px;
   color: #283645;
 }
 .popup__btn {
   display: block;
   height: 64px;
-  width: 100%;
-  margin: 0 auto 15px auto;
   border-radius: 5px;
   width: 280px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   background-color: #2aab6d;
   border: none;
   font-size: 18px;
@@ -60,21 +50,14 @@
   transition: all 0.2s ease-in-out;
   outline: none;
 }
-.popup__close {
-  padding: 48px 0 50px 0;
-}
 .popup--success {
   display: block;
-  height: 350px;
-  /*position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);*/
-  padding: 0;
+  padding: 13px 0 0 0;
   background-color: #ffffff;
 }
 .popup--success .popup__close {
   background-color: #f2f2f2;
+  padding: 47px 0;
 }
 .popup--success .popup__text {
   margin-bottom: 31px;
@@ -87,33 +70,29 @@
     padding-right: 66px;
   }
   .popup--success {
-    height: 430px;
     padding-left: 0;
     padding-right: 0;
   }
   .popup--success .popup__title {
-    padding-left: 80px;
-    padding-right: 80px;
+    width: 205px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .popup--success .popup__text {
-    margin-bottom: 13px;
-    padding: 0 77px 20px 77px;
+    margin-bottom: 31px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px;
   }
   .popup--success .popup__close {
-    box-shadow: none;
-    width: 460px;
+    padding: 48px 0;
   }
   .popup__title {
-    margin-bottom: 23px;
     font-size: 30px;
     line-height: 40px;
   }
   .popup__text {
     font-size: 18px;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: none;
-    line-height: 24px;
   }
   .popup__btn {
     width: 300px;
@@ -122,20 +101,19 @@
 @media (min-width: 960px) {
   .popup--success {
     width: 780px;
-    height: 377px;
+  }
+  .popup--success .popup__title {
+    width: 100%;
   }
   .popup--success .popup__close {
-    width: 780px;
+    padding: 42px 0px;
   }
   .popup--success .popup__btn {
     width: 460px;
   }
   .popup--success .popup__text {
-    width: 385px;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 39px;
+    width: 445px;
+    margin-bottom: 40px;
   }
   .popup__btn:hover {
     background-color: #208253;
@@ -143,7 +121,7 @@
     transition: all 0.2s ease-in-out;
   }
 }
-  </style>
+</style>
 </head>
 <body>
   <div class="popup popup--success">
