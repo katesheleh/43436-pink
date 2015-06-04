@@ -132,7 +132,18 @@
 
 
   &--friends {
-    padding-bottom: 17px;
+    position: relative;
+    padding-bottom: 15px;
+            &::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        top: 200px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: @border-color;
+      }
 
     .form__title {
       display: block;
@@ -146,9 +157,8 @@
 
 
   &__quiz {
-    margin-top: 48px;
-    padding-top: 23px;
-    border-top: 2px solid @border-color;
+    margin: 0;
+    padding: 0;
   }
 
 
@@ -214,7 +224,6 @@
 
 
 
-
     &__title--mx-lx {
       display: inline-block;
       padding: 0 20px 0 20px;
@@ -245,6 +254,27 @@
       padding: 0;
       margin-bottom: 36px;
     }
+
+
+
+
+
+    &--friends {
+      position: relative;
+      padding-bottom: 20px;
+         &::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        bottom: 0;
+        top: 161px;
+        left: 60px;
+        right: 60px;
+        bottom: 0;
+        background-color: @border-color;
+      }
+    }
+
 
 
 
@@ -295,8 +325,8 @@
 
 
     &__quiz {
-      margin-top: 38px;
-      padding-top: 24px;
+    margin-top: 0;
+    padding-top: 0;
     }
 
 
@@ -441,7 +471,7 @@
       width: 940px;
       padding-left: 10px;
       padding-right: 10px;
-      padding-bottom: 42px;
+      padding-bottom: 41px;
     }
 
 
