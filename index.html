@@ -5,6 +5,8 @@
   <title>Pink</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
   <script src="js/grunticon.loader.js"></script>
   <script>
       grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"], grunticon.svgLoadedCallback );
@@ -139,8 +141,8 @@
         </div>
       </div>
       <div class="container">
-        <div class="slider">
-          <div class="slider__list">
+        <div class="slider slider--responsive">
+          <div class="slider__list js-slider">
             <div class="slider__item">
               <blockquote class="context context--quotes">
                 <cite class="context__header">Николай Петров</cite>
@@ -150,24 +152,24 @@
                 </p>
               </blockquote>
             </div>
-            <!-- Временно закомментировано для удобства контроля верстки на соответствиe с макетом.
                         <div class="slider__item">
-            <blockquote class="context">
-              <cite class="context__header">Николай Петров</cite>
-              <p class="context__text">
-                "Это приложение перевернуло мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
-              </p>
-            </blockquote>
+            <blockquote class="context context--quotes">
+                <cite class="context__header">Николай Петров</cite>
+                <span class="context__subtitle">25 лет, водитель трамвая</span>
+                <p class="context__text">
+                  "Это приложение перевернуло мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+                </p>
+              </blockquote>
           </div>
           <div class="slider__item">
-            <blockquote class="context">
-              <cite class="context__header">Николай Петров</cite>
-              <p class="context__text">
-                "Это приложение перевернуло мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
-              </p>
-            </blockquote>
+            <blockquote class="context context--quotes">
+                <cite class="context__header">Николай Петров</cite>
+                <span class="context__subtitle">25 лет, водитель трамвая</span>
+                <p class="context__text">
+                  "Это приложение перевернуло мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+                </p>
+              </blockquote>
           </div>
-          -->
         </div>
       </div>
     </div>
@@ -177,7 +179,7 @@
       </svg>
       <div class="container">
         <div class="slider slider--mobile">
-          <div class="slider__list">
+          <div class="slider__list js-slider">
             <div class="slider__item">
               <table class="table-offer ribbon">
                 <tr class="table-offer__header">
@@ -206,64 +208,62 @@
                 </tr>
               </table>
             </div>
-            <!-- Временно закомментировано для удобства контроля верстки на соответствиe с макетом.
-                        <div class="slider__item">
-            <table class="table-offer ribbon">
-              <tr class="table-offer__header">
-                <th colspan="2">
-                  <span class="table-offer__title">Стандарт</span>
-                  <span class="table-offer__price">3,99 USD</span>
-                </th>
-              </tr>
-              <tr class="table-offer__body">
-                <td>Розовый фильтр</td>
-                <td class="table-offer__status">
-                  <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
-                </td>
-              </tr>
-              <tr class="table-offer__body">
-                <td>Смайлики</td>
-                <td class="table-offer__status">
-                  <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
-                </td>
-              </tr>
-              <tr class="table-offer__body">
-                <td>Комментарии</td>
-                <td class="table-offer__status">
-                  <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="slider__item">
-            <table class="table-offer ribbon">
-              <tr class="table-offer__header">
-                <th colspan="2">
-                  <span class="table-offer__title">Стандарт</span>
-                  <span class="table-offer__price">3,99 USD</span>
-                </th>
-              </tr>
-              <tr class="table-offer__body">
-                <td>Розовый фильтр</td>
-                <td class="table-offer__status">
-                  <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
-                </td>
-              </tr>
-              <tr class="table-offer__body">
-                <td>Смайлики</td>
-                <td class="table-offer__status">
-                  <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
-                </td>
-              </tr>
-              <tr class="table-offer__body">
-                <td>Комментарии</td>
-                <td class="table-offer__status">
-                  <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
-                </td>
-              </tr>
-            </table>
-          </div>
-          -->
+<div class="slider__item">
+              <table class="table-offer ribbon">
+                <tr class="table-offer__header">
+                  <th colspan="2">
+                    <span class="table-offer__title">Стандарт</span>
+                    <span class="table-offer__price">3,99 USD</span>
+                  </th>
+                </tr>
+                <tr class="table-offer__body">
+                  <td>Розовый фильтр</td>
+                  <td class="table-offer__status">
+                    <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
+                  </td>
+                </tr>
+                <tr class="table-offer__body">
+                  <td>Смайлики</td>
+                  <td class="table-offer__status">
+                    <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
+                  </td>
+                </tr>
+                <tr class="table-offer__body">
+                  <td>Комментарии</td>
+                  <td class="table-offer__status">
+                    <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="slider__item">
+              <table class="table-offer ribbon">
+                <tr class="table-offer__header">
+                  <th colspan="2">
+                    <span class="table-offer__title">Стандарт</span>
+                    <span class="table-offer__price">3,99 USD</span>
+                  </th>
+                </tr>
+                <tr class="table-offer__body">
+                  <td>Розовый фильтр</td>
+                  <td class="table-offer__status">
+                    <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
+                  </td>
+                </tr>
+                <tr class="table-offer__body">
+                  <td>Смайлики</td>
+                  <td class="table-offer__status">
+                    <span class="icon icon-yes" data-grunticon-embed>поддерживается</span>
+                  </td>
+                </tr>
+                <tr class="table-offer__body">
+                  <td>Комментарии</td>
+                  <td class="table-offer__status">
+                    <span class="icon icon-no" data-grunticon-embed>не поддерживается</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
         </div>
       </div>
     </div>
@@ -392,13 +392,48 @@
 <script src="js/map.js"></script>
 <script src="js/scripts.js"></script>
 <!--<script src="js/map&form.js"></script>-->
-<script src="_assets/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.js-slider').slick({
+          speed: 300,
+          slidesToShow: 1,
+          adaptiveHeight: true,
+          responsive: [
+        {
+        breakpoint: 960,
+        settings: {
+          dots: true,
+          infinite: false
+        }
+      },
+
+       {
+        breakpoint: 3200,
+        settings: {
+          dots: false,
+          infinite: false
+        }
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          dots: true,
+          infinite: false
+        }
+      }
+    ]
+  });
+});
+  </script>
 <script src="_assets/jquery.pixlayout.js"></script>
 <script>
     $(function(){
       if(!true) {
         $.pixlayout({
-        src: "_assets/pink-index-desktop.jpg",
+        src: "_assets/pink-index-tablet.jpg",
         opacity: 0.4,
         top: -2,
         center: true,
