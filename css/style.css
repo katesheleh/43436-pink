@@ -1214,6 +1214,7 @@ html {
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
+    padding-bottom: 28px;
   }
   .context__header {
     order: 2;
@@ -1277,7 +1278,7 @@ html {
   border-style: solid;
   border-color: #e5e5e5;
   border-collapse: collapse;
-  margin: 0 auto 41px auto;
+  margin: 30px auto 0 auto;
 }
 .table-offer__header {
   color: #ffffff;
@@ -1652,10 +1653,16 @@ html {
   }
 }
 .slider {
-  min-height: 1px;
+  padding-bottom: 37px;
+}
+.slider--responsive {
+  padding-bottom: 20px;
+}
+.slider--responsive .slider__item {
+  padding-bottom: 0;
 }
 .slider__item {
-  padding: 32px 0 57px 0;
+  padding: 32px 0 31px 0;
 }
 @media (min-width: 700px) {
   .slider--mobile {
@@ -1798,7 +1805,18 @@ html {
   margin-bottom: 8px;
 }
 .form--friends {
-  padding-bottom: 17px;
+  position: relative;
+  padding-bottom: 15px;
+}
+.form--friends::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  top: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e5e5;
 }
 .form--friends .form__title {
   display: block;
@@ -1806,9 +1824,8 @@ html {
   text-align: center;
 }
 .form__quiz {
-  margin-top: 48px;
-  padding-top: 23px;
-  border-top: 2px solid #e5e5e5;
+  margin: 0;
+  padding: 0;
 }
 .form--checkbox {
   padding-top: 15px;
@@ -1864,6 +1881,20 @@ html {
     padding: 0;
     margin-bottom: 36px;
   }
+  .form--friends {
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .form--friends::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 161px;
+    left: 60px;
+    right: 60px;
+    bottom: 0;
+    background-color: #e5e5e5;
+  }
   .form__info-dates {
     display: flex;
     flex-wrap: wrap;
@@ -1888,8 +1919,8 @@ html {
     padding-bottom: 6px;
   }
   .form__quiz {
-    margin-top: 38px;
-    padding-top: 24px;
+    margin-top: 0;
+    padding-top: 0;
   }
   .form--checkbox {
     padding-bottom: 13px;
@@ -1974,7 +2005,7 @@ html {
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 42px;
+    padding-bottom: 41px;
   }
   .form__quiz {
     margin-left: 50px;
@@ -2186,6 +2217,10 @@ html {
 .form-counter__plus:active:after {
   background-color: #ffffff;
 }
+.form-counter--width {
+  position: relative;
+  margin-bottom: 75px;
+}
 @media (min-width: 700px) {
   .form-counter {
     width: 240px;
@@ -2199,7 +2234,7 @@ html {
   }
   .form-counter--width {
     width: 252px;
-    margin-bottom: 0;
+    margin-bottom: 65px;
   }
   .form-counter--width .form-counter__field {
     border-top: transparent;
@@ -2323,8 +2358,9 @@ html {
 }
 @media (min-width: 700px) {
   .quiz {
-    margin-bottom: 24px;
+    margin-bottom: 0;
     width: 100%;
+    padding-bottom: 25px;
   }
   .quiz__item {
     width: 77%;
@@ -2355,14 +2391,11 @@ html {
     border-bottom: none;
     transition: all 0.2s ease-in-out;
   }
-  .quiz--height {
-    margin-bottom: 14px;
-  }
 }
 @media (min-width: 960px) {
   .quiz {
     display: flex;
-    margin-bottom: 7px;
+    padding-bottom: 8px;
   }
   .quiz__delete-btn {
     order: 3;
