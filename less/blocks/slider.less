@@ -1,13 +1,19 @@
 .slider {
-  min-height: 1px;
+  padding-bottom: 37px;
 
 
+&--responsive {
+  padding-bottom: 20px;
 
+  .slider__item {
+    padding-bottom: 0;
+  }
+}
 
 
 
   &__item {
-    padding: 32px 0 57px 0;
+    padding: 32px 0 31px 0;
   }
 }
 
@@ -16,7 +22,9 @@
 
 
 @media(min-width: 700px) {
-  .slider--mobile {
-    .responsive-hide;
+  .slider {
+    &--mobile {
+      .responsive-hide;
+    }
   }
 }
