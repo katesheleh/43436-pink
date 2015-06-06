@@ -118,12 +118,12 @@ var plusMinusCount = (function() {
     return value + 1;
   }
 
-  function cloneAndAppend(originalNode, container) {
-    if (originalNode) {
-      clonedField = originalNode.cloneNode(true);
-      container.appendChild(clonedField);
-    }
-  }
+  // function cloneAndAppend(originalNode, container) {
+  //   if (originalNode) {
+  //     clonedField = originalNode.cloneNode(true);
+  //     container.appendChild(clonedField);
+  //   }
+  // }
 
 
   travelersInput.addEventListener('pluralizationFinished', function(event) {
@@ -136,7 +136,14 @@ var plusMinusCount = (function() {
     }
 
     for (var i = 0; i < count; i += 1) {
-      cloneAndAppend(originalInput, inputsContainer);
+      console.log('hola');
+      // cloneAndAppend(originalInput, inputsContainer);
+      var data = {title: 'Я тебя тестирую. Работай!'}
+      var template = document.getElementById('friend-template').innerHTML;
+      var output = Mustache.to_html(template, data);
+      var box = document.getElementById('additional-inputs');
+      box.innerHTML = output;
+
     }
   });
 

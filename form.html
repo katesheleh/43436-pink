@@ -135,10 +135,10 @@
                 <a href="#" class="form-counter__plus js-counter-plus" id="plus-friends">+</a>
               </div>
               <!-- обертка для добавления шаблонов -->
-              <div id="additional-inputs"></div>
+              <ol id="additional-inputs" class="quiz__ol"></ol>
               <!-- обертка для js шаблона -->
               <div id="traveler-input-template" style="display:none">
-                <div class="form__quiz js-block-quiz">
+                <li class="form__quiz js-block-quiz quiz__li">
                   <div class="quiz" id="js-friends-name">
                     <a href="#" class="quiz__delete-btn">удалить</a>
                     <div class="quiz__column-1">
@@ -160,7 +160,22 @@
                         <input type="text" class="quiz__input form__input" name="nickname-friend1" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
                     </div>
                   </div>
-                  <!--     <div class="quiz quiz--height">
+
+
+
+
+
+                  <script id="friend-template" type="text/html">
+                    <p id="i-test-you">{{title}}</p>
+                  </script>
+
+
+
+
+
+
+
+                  <!--<div class="quiz quiz--height">
                   <a href="#" class="quiz__delete-btn">удалить</a>
                   <div class="quiz__column-1">
                     <div class="quiz__item">
@@ -182,7 +197,7 @@
                   </div>
                 </div>
                 -->
-              </div>
+              </li>
             </div>
           </fieldset>
         </div>

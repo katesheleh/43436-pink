@@ -144,7 +144,6 @@ var mapGoogle = (function() {
   return mapGoogle;
 }());
 
-
 var menuHamburger = (function() {
 
   var menuHamburger = {
@@ -153,7 +152,7 @@ var menuHamburger = (function() {
       // main link .js-menu-control
       // .js-headline
       var menuControl = document.querySelector(".js-menu-control"),
-    menu = document.querySelector(".js-menu");
+      menu = document.querySelector(".js-menu");
 
 menuControl.addEventListener("click", function(ev){
     ev.preventDefault();
@@ -286,12 +285,12 @@ var plusMinusCount = (function() {
     return value + 1;
   }
 
-  function cloneAndAppend(originalNode, container) {
-    if (originalNode) {
-      clonedField = originalNode.cloneNode(true);
-      container.appendChild(clonedField);
-    }
-  }
+  // function cloneAndAppend(originalNode, container) {
+  //   if (originalNode) {
+  //     clonedField = originalNode.cloneNode(true);
+  //     container.appendChild(clonedField);
+  //   }
+  // }
 
 
   travelersInput.addEventListener('pluralizationFinished', function(event) {
@@ -304,7 +303,14 @@ var plusMinusCount = (function() {
     }
 
     for (var i = 0; i < count; i += 1) {
-      cloneAndAppend(originalInput, inputsContainer);
+      console.log('hola');
+      // cloneAndAppend(originalInput, inputsContainer);
+      var data = {title: 'Я тебя тестирую. Работай!'}
+      var template = document.getElementById('friend-template').innerHTML;
+      var output = Mustache.to_html(template, data);
+      var box = document.getElementById('additional-inputs');
+      box.innerHTML = output;
+
     }
   });
 
