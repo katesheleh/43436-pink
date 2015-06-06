@@ -218,30 +218,25 @@
 
 
     &__title {
-      .responsive-hide
+      margin: 0 0 38px 0;
+      padding: 0 20px;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -50%);
+      background-color: @color-light;
     }
 
-
-
-
-    &__title--mx-lx {
-      display: inline-block;
-      padding: 0 20px 0 20px;
-      margin-bottom: 29px;
-      margin-left: 0;
-      margin-right: 0;
-      color: @color-decor;
-      text-transform: uppercase;
-    }
 
 
 
 
 
     &__fieldset {
-    .border;
+      .border;
+      position: relative;
       border-radius: 3px;
-      padding: 0 57px 30px 57px;
+      padding: 55px 57px 30px 57px;
       margin-bottom: 52px;
     }
 
@@ -250,6 +245,7 @@
 
 
     &--fieldset {
+      padding-top: 0;
       border: none;
       padding: 0;
       margin-bottom: 36px;
@@ -262,16 +258,20 @@
     &--friends {
       position: relative;
       padding-bottom: 20px;
+      padding-top: 40px;
          &::before {
         position: absolute;
         content: "";
         height: 2px;
         bottom: 0;
-        top: 161px;
+        top: 145px;
         left: 60px;
         right: 60px;
         bottom: 0;
         background-color: @border-color;
+      }
+      .form__title {
+        top: -33px;
       }
     }
 
@@ -318,6 +318,9 @@
     &--trip-time {
       padding-right: 0;
       padding-bottom: 6px;
+        .form__title {
+          top: -45px;
+        }
     }
 
 
@@ -334,6 +337,9 @@
 
     &--checkbox {
       padding-bottom: 13px;
+      .form__title {
+        margin-left: 0;
+      }
     }
 
 
@@ -361,6 +367,10 @@
     &--upload {
       padding-bottom: 0;
       margin-bottom: 61px;
+      padding-top: 43px;
+      .form__title {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -372,9 +382,13 @@
 @media(min-width: 960px) {
   .form {
     &__fieldset {
-      margin-bottom: 51px;
+      margin-bottom: 65px;
       padding-left: 0;
       padding-right: 0;
+    }
+
+    &__submit-wrap {
+      .cf;
     }
 
 
@@ -423,8 +437,8 @@
 
 
 
-    &__title--mx-lx {
-      margin-bottom: 28px;
+     &__title {
+
     }
 
 
@@ -432,6 +446,7 @@
 
 
     &--trip-time {
+      padding-top: 42px;
       .form__question {
         margin-bottom: 8px;
       }
@@ -490,6 +505,10 @@
     &--checkbox {
       width: 940px;
       padding-bottom: 21px;
+      padding-top: 42px;
+      .form__column-1 {
+        margin-right: 0;
+      }
     }
 
 
@@ -497,7 +516,7 @@
 
 
     &__submit {
-      margin-top: 13px;
+      margin-top: 0;
       outline: none;
       &:hover {
         background-color: darken(@color-success, 10%);
@@ -512,7 +531,7 @@
 
     &__subtitle {
       width: 350px;
-      margin-top: 31px;
+      margin-top: 17px;
     }
 
 
