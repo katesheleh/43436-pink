@@ -133,6 +133,57 @@ require('load-grunt-tasks')(grunt);
       }
     },
 
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 version', 'ie 10']
+      },
+      file: {
+        src: 'css/style.css'
+      },
+    },
+
+
+    cmq: {
+      style: {
+        files: {
+          'css/style.css': ['css/style.css']
+        }
+      }
+    },
+
+
+    cssmin: {
+      style: {
+        options: {
+          keepSpecialComments: 0,
+          report: 'gzip'
+        },
+        files: {
+          'css/style.min.css': ['css/style.css']
+        }
+      }
+    },
+
+
+    csscomb: {
+      style: {
+        expand: true,
+        src: ["less/**/*.less"]
+      }
+    },
+
+
+
+    concat: {
+      app: {
+        src: ['js/modules/*.js', 'js/scripts.js'],
+        dest: 'js/build/scripts.js'
+      }
+    },
+
+
+
     clean: {
       gosha: [
         'gosha/img/README',
@@ -181,7 +232,7 @@ require('load-grunt-tasks')(grunt);
           datasvgcss   : 'css/icons.data.svg.css',
           datapngcss   : 'css/icons.data.png.css',
           urlpngcss    : 'css/icons.fallback.css',
-          loadersnippet: 'js/grunticon.loader.js',
+          loadersnippet: 'js/lib/grunticon.loader.js',
           previewhtml  : 'icon-preview.html',
           pngfolder    : 'img/png-grunticon',
           pngpath      : '../img/spng-grunticon',
@@ -200,6 +251,15 @@ require('load-grunt-tasks')(grunt);
       }
     }
   });
+
+
+
+  grunt.registerTask('fit', [
+    'less',
+    'autoprefixer',
+    'cmq',
+    'cssmin'
+  ]);
 
 
   grunt.registerTask('svg', [
