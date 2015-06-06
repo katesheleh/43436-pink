@@ -303,13 +303,17 @@ var plusMinusCount = (function() {
     }
 
     for (var i = 0; i < count; i += 1) {
-      console.log('hola');
+      console.log('начинаем');
       // cloneAndAppend(originalInput, inputsContainer);
-      var data = {title: 'Я тебя тестирую. Работай!'}
-      var template = document.getElementById('friend-template').innerHTML;
-      var output = Mustache.to_html(template, data);
-      var box = document.getElementById('additional-inputs');
-      box.innerHTML = output;
+      function friendSection(row) {
+        var template = document.getElementById('friend-template').innerHTML;
+        var box = document.getElementById('additional-inputs');
+        var output = Mustache.render(template, {'value': event.target.result});
+        box.innerHTML = output;
+        console.log('Все! Приехали.')
+      }
+
+
 
     }
   });
