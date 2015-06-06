@@ -1,13 +1,13 @@
+var plusMinusCount = (function() {
+
+  var plusMinusCount = {
+    init: function(){
 
 
-/*===============================
-=            COUNTER            =
-===============================*/
 // .js-counter
 // .js-counter-minus
 // .js-counter-plus
 // .js-counter-input атрибуты data-single и data plural
-(function() {
   var minusBtns = document.querySelectorAll('.js-counter-minus'),
       minusBtnsLength = minusBtns.length,
       plusBtns = document.querySelectorAll('.js-counter-plus'),
@@ -17,8 +17,6 @@
       afterChangesEvent,
       inputsContainer = document.getElementById('additional-inputs');
       fieldClone = document.getElementById("js-block-quiz");
-
-if(!minusBtns.length) return;
 
 
 
@@ -143,6 +141,10 @@ if(!minusBtns.length) return;
   });
 
   fireEvent(travelersInput, afterChangesEvent);
-})();
 
-/*-----  End of COUNTER  ------*/
+
+    }
+  };
+
+  return plusMinusCount;
+}());

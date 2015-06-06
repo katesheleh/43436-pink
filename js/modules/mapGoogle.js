@@ -1,8 +1,8 @@
-/*==================================
-=            MAP ONLINE            =
-==================================*/
-(function() {
-  if(document.querySelector('.js-map')) {
+var mapGoogle = (function() {
+
+  var mapGoogle = {
+    init: function(){
+
   var map;
   var mapCoordinates = new google.maps.LatLng(59.938788, 30.323072);
   var markerPosition = mapCoordinates;
@@ -37,7 +37,9 @@
     }));
   }
   google.maps.event.addDomListener(window, 'load', initialize);
-}
 
-})();
-/*-----  End of MAP ONLINE  ------*/
+    }
+  };
+
+  return mapGoogle;
+}());

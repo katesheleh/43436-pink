@@ -1,8 +1,8 @@
+var sliderSlick = (function() {
 
-/*==============================
-=            SLIDER            =
-==============================*/
-if(document.querySelector('.js-slider')) {
+  var sliderSlick = {
+    init: function(){
+
   $(document).ready(function(){
         $('.js-slider').slick({
           speed: 300,
@@ -33,7 +33,8 @@ if(document.querySelector('.js-slider')) {
       ]
     });
   });
-}
+    }
+  };
 
-
-/*-----  End of SLIDER  ------*/
+  return sliderSlick;
+}());

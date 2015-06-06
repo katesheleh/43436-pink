@@ -1,4 +1,4 @@
-var testModules = (function() {
+var test = (function() {
 
   var test = {
     init: function(){
