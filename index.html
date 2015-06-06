@@ -5,9 +5,7 @@
   <title>Pink</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-  <script src="js/grunticon.loader.js"></script>
+  <script src="js/lib/grunticon.loader.js"></script>
   <script>
       grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"], grunticon.svgLoadedCallback );
   </script>
@@ -84,7 +82,7 @@
       <div class="container">
         <div class="page-content__text-block">
           <p class="text-label page-content__text">Устали от серости мегаполиса?</p>
-          <p class="text-label page-content__text">Нам есть, что вам предложить!</p>
+          <p class="text-label page-content__text">Нам есть, что&nbsp;вам предложить!</p>
         </div>
       </div>
       <div class="box box--gray">
@@ -118,7 +116,7 @@
               </p>
             </div>
             <div class="benefits__picture-wrap">
-              <img src="img/pic-phone-smile-cut.png" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x,png 2x" alt="smile" class="benefits__picture"></div>
+              <img src="img/iphone-screen-tablet-3@1x.png" srcset="img/iphone-screen-tablet-3@2x.png 2x" alt="smile" class="benefits__picture"></div>
           </div>
         </div>
       </div>
@@ -126,7 +124,7 @@
         <div class="container">
           <div class="news">
             <div class="news__picture-wrap">
-              <img src="img/diagram.png" srcset="img/diagram-desktop 2px" alt="watch" class="news__pic"></div>
+              <img src="img/diagram.png" srcset="img/diagram-desktop 2x" alt="watch" class="news__pic"></div>
             <div class="news__item">
               <h4 class="news__title">
                 Эффект
@@ -348,7 +346,10 @@
           </div>
         </div>
       </div>
-      <div class="map map--triangle-white-footer">
+      <div>
+      </div>
+      <div class="map js-map">
+        <img class="map--triangle-white-footer" src="img/triangle-white-footer.svg" alt="">
         <div class="map__canvas" id="online-map"></div>
       </div>
       <div class="page-footer--hide">
@@ -389,51 +390,15 @@
     </footer>
   </div>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-  <script src="js/map.js"></script>
+  <script src="js/lib/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/lib/slick.min.js"></script>
   <script src="js/scripts.js"></script>
-  <!--<script src="js/map&form.js"></script>
--->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="js/slick.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.js-slider').slick({
-          speed: 300,
-          slidesToShow: 1,
-          adaptiveHeight: true,
-          responsive: [
-        {
-        breakpoint: 960,
-        settings: {
-          dots: true,
-          infinite: false
-        }
-      },
-      {
-        breakpoint: 3200,
-        settings: {
-          dots: false,
-          infinite: false
-        }
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          dots: true,
-          infinite: false
-        }
-      }
-    ]
-  });
-});
-  </script>
-<script src="_assets/jquery.pixlayout.js"></script>
-<script>
+  <script src="_assets/jquery.pixlayout.js"></script>
+  <script>
     $(function(){
       if(!true) {
         $.pixlayout({
-        src: "_assets/pink-index-tablet.jpg",
+        src: "_assets/pink-index-desktop.jpg",
         opacity: 0.4,
         top: -2,
         center: true,
@@ -443,6 +408,5 @@
       }
     });
   </script>
-
 </body>
 </html>
