@@ -5,7 +5,7 @@
   <title>Pink Form</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/grunticon.loader.js"></script>
+  <script src="js/lib/grunticon.loader.js"></script>
   <script>
       grunticon(["css/icons.data.svg.css", "css/icons.data.png.css", "css/icons.fallback.css"], grunticon.svgLoadedCallback );
   </script>
@@ -80,12 +80,10 @@
         <div class="box box--gray">
           <div class="container">
             <fieldset class="form__fieldset">
-              <legend class="form__title--mx-lx">С каким приложением путешествовали? *</legend>
-              <p class="form__title">
-                С каким приложением
-                путешествовали? *
-              </p>
-              <div class="radio">
+              <div class="form__title-wrap">
+                <legend class="form__title">С каким приложением путешествовали? *</legend>
+              </div>
+              <div class="radio radio--padleft">
                 <input type="radio" class="radio__input" id="option1" name="user-app" value="IOS" checked>
                 <label for="option1" class="radio__label">Pink для IOS</label>
               </div>
@@ -102,8 +100,9 @@
         </div>
         <div class="container">
           <fieldset class="form__fieldset form--trip-time">
-            <legend class="form__title--mx-lx">Когда вы путешествовали? *</legend>
-            <p class="form__title">Когда вы путешествовали? *</p>
+            <div class="form__title-wrap">
+              <legend class="form__title">Когда вы путешествовали?*</legend>
+            </div>
             <div class="form__info-dates">
               <div class="form__items">
                 <input type="date" name="start-trip" class="form__input" id="start-date">
@@ -127,8 +126,9 @@
         <div class="box box--gray">
           <div class="container">
             <fieldset class="form__fieldset form--friends">
-              <legend class="form__title--mx-lx">Количество попутчиков *</legend>
-              <p class="form__title">Количество попутчиков *</p>
+              <div class="form__title-wrap">
+                <legend class="form__title">Количество попутчиков *</legend>
+              </div>
               <div class="form-counter form-counter--width">
                 <a href="#" class="form-counter__minus js-counter-minus" id="minus-friends">-</a>
                 <input type="text" class="form-counter__field js-counter-input" name="friends-number" id="traveler-number" value="1 чел" data-single="чел" data-plural="чел" data-pluralStart="чел">
@@ -189,11 +189,12 @@
       </div>
       <div class="container">
         <fieldset class="form__fieldset form--checkbox">
-          <legend class="form__title--mx-lx">Ваши безбашенные достижения в путешествии</legend>
-          <p class="form__title">
-            Ваши безбашенные
+          <div class="form__title-wrap">
+            <legend class="form__title">
+              Ваши безбашенные
               достижения в путешествии
-          </p>
+            </legend>
+          </div>
           <div class="form__column-1">
             <div class="checkbox">
               <input type="checkbox" class="checkbox__input" id="progress1" name="check-progress1" checked>
@@ -229,8 +230,9 @@
       <div class="box box--gray">
         <div class="container">
           <fieldset class="form__fieldset form--upload">
-            <legend class="form__title--mx-lx">Ваши фотографии из поездки*</legend>
-            <p class="form__title">Ваши фотографии из поездки*</p>
+            <div class="form__title-wrap">
+              <legend class="form__title">Ваши фотографии из поездки*</legend>
+            </div>
             <div class="upload">
               <label class="upload__label">
                 <span class="upload__btn">Загрузить фото</span>
@@ -290,6 +292,7 @@
         </fieldset>
       </div>
     </div>
+    <div class="form__submit-wrap">
     <div class="container">
       <input type="submit" class="form__submit" value="отправить форму">
       <p class="form__subtitle">
@@ -299,6 +302,7 @@
         поля
       </p>
     </div>
+  </div>
   </form>
   <div class="popup popup--success">
     <h4 class="popup__title">Ваша заявка отправлена</h4>
@@ -355,18 +359,16 @@
   </div>
 </footer>
 </div>
-<script src="js/moment.min.js"></script>
-<script src="js/mustache.min.js"></script>
-<script src="js/scripts.js"></script>
-<!--<script src="js/map&form.js"></script>
--->
+<script src="js/lib/moment.min.js"></script>
+<script src="js/lib/mustache.min.js"></script>
+<script src="js/build/scripts.js"></script>
 <script src="_assets/jquery-1.11.1.min.js"></script>
 <script src="_assets/jquery.pixlayout.js"></script>
 <script>
   $(function(){
     if(!true) {
       $.pixlayout({
-        src: "_assets/pink-form-mobile.jpg",
+        src: "_assets/pink-form-desktop.jpg",
         opacity: 0.4,
         top: -2,
         center: true,
