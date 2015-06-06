@@ -85,18 +85,19 @@
     height: 63px;
     display: flex;
     margin: 0 0 10px auto;
-    padding: 25px 5px 25px 19px;
+    padding: 0 5px 0 19px;
     .border;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     .placeholder;
 
-    &::-webkit-input-placeholder {
+    &::placeholder {
       .placeholder;
     }
-    &:-moz-placeholder {
-      .placeholder;
-    }
+    // &:-moz-placeholder {
+    //   .placeholder;
+    //   line-height: 30px;
+    // }
   }
   &__delete-btn {
     display: none;
