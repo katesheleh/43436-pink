@@ -198,6 +198,15 @@ var plusMinusCount = (function() {
       li.classList.add('quiz');
       li.innerHTML = rendered;
       friendList.appendChild(li);
+
+
+      li.querySelector('.js-quiz-delete').addEventListener("click",
+      function(event) {
+        event.preventDefault();
+        // removeFriend(li);
+        li.remove();
+        console.log('111');
+      });
     }
 
 
@@ -363,36 +372,12 @@ var plusMinusCount = (function() {
 
       friendsQueue = friendList.children;
       }
-
-
-
-
-
-
-
-    li.querySelector('.js-quiz-delete').addEventListener("click",
-      function(event) {
-        event.preventDefault();
-        removeFriend(li);
-        console.log('111');
-      });
-
-      friendsQueue.push({
-        'li': li
-      });
   });
 
   fireEvent(travelersInput, afterChangesEvent);
     }
   };
 
-
-    function removeFriend(li) {
-      friendsQueue = friendsQueue.filter(function(element) {
-        return element.li != li;
-      });
-      li.parentNode.removeChild(li);
-    }
 
   return plusMinusCount;
 }());
