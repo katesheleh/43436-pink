@@ -17,10 +17,7 @@ list-style: none;
       counter-increment: myCounter;
       content:counter(myCounter);
       color: @color-base;
-      background: @bg-decor;
-      // display: inline-block;
-      // text-align: center;
-      // margin: 5px 10px;
+      background: transparent;
       font-size: 18px;
       line-height: 30px;
       width: 20px;
@@ -247,6 +244,13 @@ list-style: none;
 
     &__symbol-hide {
       display: none;
+    }
+
+
+
+
+    &__number {
+      border-radius: 5px;
     }
 
 

@@ -2435,7 +2435,7 @@ li {
   counter-increment: myCounter;
   content: counter(myCounter);
   color: #283645;
-  background: #f2f2f2;
+  background: transparent;
   font-size: 18px;
   line-height: 30px;
   width: 20px;
@@ -2581,6 +2581,9 @@ li {
   }
   .quiz__symbol-hide {
     display: none;
+  }
+  .quiz__number {
+    border-radius: 5px;
   }
   .quiz__number-hide {
     display: none;
