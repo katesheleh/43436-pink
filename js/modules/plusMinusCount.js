@@ -4,10 +4,6 @@ var plusMinusCount = (function() {
     init: function(){
 
 
-// .js-counter
-// .js-counter-minus
-// .js-counter-plus
-// .js-counter-input атрибуты data-single и data plural
   var minusBtns = document.querySelectorAll('.js-counter-minus'),
       minusBtnsLength = minusBtns.length,
       plusBtns = document.querySelectorAll('.js-counter-plus'),
@@ -15,8 +11,32 @@ var plusMinusCount = (function() {
       inputs = document.querySelectorAll('.js-counter-input'),
       travelersInput = document.getElementById('traveler-number'),
       afterChangesEvent,
-      inputsContainer = document.getElementById('additional-inputs');
-      fieldClone = document.getElementById("js-block-quiz");
+      friendList = document.getElementById('friend-list'),
+      friendsTemplate = document.getElementById('friend-template').innerHTML,
+      friendsQueue = [];
+
+
+
+
+
+
+
+
+
+    Mustache.parse(friendsTemplate);
+
+    function insertFriend(name) {
+      var rendered = Mustache.render(friendsTemplate, { id: (new Date()).getTime()});
+      var li = document.createElement("li");
+      li.classList.add('quiz');
+      li.innerHTML = rendered;
+      friendList.appendChild(li);
+    }
+
+
+
+
+
 
 
 
@@ -31,6 +51,8 @@ var plusMinusCount = (function() {
 
   afterChangesEvent.eventName = "pluralizationFinished";
 
+
+
     // Polyfill triggering of event [for different browsers, especially IE]
   function fireEvent(element, event) {
     if (document.createEvent) {
@@ -39,6 +61,16 @@ var plusMinusCount = (function() {
       element.fireEvent("on" + event.eventType, event);
     }
   }
+
+
+
+
+
+
+
+
+
+
 
   for (var i = 0; i < minusBtnsLength; i++) {
     minusBtns[i].addEventListener('click', onMinusClicked);
@@ -51,6 +83,12 @@ var plusMinusCount = (function() {
   for (var i = inputs.length - 1; i >= 0; i--) {
     inputs[i].addEventListener('change', onInputChange);
   };
+
+
+
+
+
+
 
   function onInputChange(e) {
     var input = this,
@@ -82,6 +120,12 @@ var plusMinusCount = (function() {
     else return value + ' ' + plural;
   }
 
+
+
+
+
+
+
   function onMinusClicked(e) {
     e.preventDefault();
 
@@ -99,6 +143,12 @@ var plusMinusCount = (function() {
     if (isNaN(value) || value <= 1) return 0;
     return value - 1;
   }
+
+
+
+
+
+
 
   function onPlusClicked(event) {
     event.preventDefault();
@@ -118,41 +168,64 @@ var plusMinusCount = (function() {
     return value + 1;
   }
 
-  // function cloneAndAppend(originalNode, container) {
-  //   if (originalNode) {
-  //     clonedField = originalNode.cloneNode(true);
-  //     container.appendChild(clonedField);
-  //   }
-  // }
+
+
+
+
+
 
 
   travelersInput.addEventListener('pluralizationFinished', function(event) {
     var count = parseInt(event.target.value);
-    var originalInput = document.querySelector(".js-block-quiz");
+    var len = friendsQueue.length;
 
-    // Clear previosly created inputs
-    while (inputsContainer.firstChild) {
-      inputsContainer.removeChild(inputsContainer.firstChild);
-    }
 
-    for (var i = 0; i < count; i += 1) {
-      console.log('начинаем');
-      // cloneAndAppend(originalInput, inputsContainer);
-      function friendSection(row) {
-        var template = document.getElementById('friend-template').innerHTML;
-        var box = document.getElementById('additional-inputs');
-        var output = Mustache.render(template, {'value': event.target.result});
-        box.innerHTML = output;
-        console.log('Все! Приехали.')
+    if (count > len) {
+
+      for (var i = len; i < count; i++) {
+        insertFriend(i+1)
+      };
+      friendsQueue = friendList.children;
+
+    } else if (count < len) {
+
+      for(var i = len-1; i>=count; i--) {
+        var last = friendsQueue[i];
+        friendList.removeChild(last);
+      };
+
+      friendsQueue = friendList.children;
       }
-    }
+
+
+
+
+
+
+
+    li.querySelector('.js-quiz-delete').addEventListener("click",
+      function(event) {
+        event.preventDefault();
+        removeFriend(li);
+        console.log('111');
+      });
+
+      friendsQueue.push({
+        'li': li
+      });
   });
 
   fireEvent(travelersInput, afterChangesEvent);
-
-
     }
   };
+
+
+    function removeFriend(li) {
+      friendsQueue = friendsQueue.filter(function(element) {
+        return element.li != li;
+      });
+      li.parentNode.removeChild(li);
+    }
 
   return plusMinusCount;
 }());

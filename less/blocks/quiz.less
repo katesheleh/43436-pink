@@ -1,7 +1,16 @@
 .quiz {
   min-height: 1px;
   margin-bottom: 21px;
+  position: relative;
   .cf;
+    &:before {
+        content: counters(item,".") ". ";
+        counter-increment: item;
+        color: green;
+        position: absolute;
+        top: 0;
+        left: 15px;
+      }
 
 
 

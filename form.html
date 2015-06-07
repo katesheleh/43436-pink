@@ -131,78 +131,33 @@
               </div>
               <div class="form-counter form-counter--width">
                 <a href="#" class="form-counter__minus js-counter-minus" id="minus-friends">-</a>
-                <input type="text" class="form-counter__field js-counter-input" name="friends-number" id="traveler-number" value="1 чел" data-single="чел" data-plural="чел" data-pluralStart="чел">
+                <input type="text" class="form-counter__field js-counter-input" name="friends-number" id="traveler-number" value="0 чел" data-single="чел" data-plural="чел" data-pluralStart="чел">
                 <a href="#" class="form-counter__plus js-counter-plus" id="plus-friends">+</a>
               </div>
-              <!-- обертка для добавления шаблонов -->
-              <ol id="additional-inputs" class="quiz__ol"></ol>
-              <!-- обертка для js шаблона -->
-              <div id="traveler-input-template" style="display:none">
-                <li class="form__quiz js-block-quiz quiz__li">
-                  <div class="quiz" id="js-friends-name">
-                    <a href="#" class="quiz__delete-btn">удалить</a>
-                    <div class="quiz__column-1">
-                      <div class="quiz__item">
-                        <span class="quiz__symbol">&#8470;</span>
-                        <label for="traveler-name1" class="quiz__question">Имя *</label>
-                      </div>
-                      <div class="quiz__item">
-                        <span class="quiz__number">1</span>
-                        <input type="text" class="quiz__input form__input" name="name-friend1" id="traveler-name1" placeholder="Введите ваше имя"></div>
-                    </div>
-                    <div class="quiz__column-2">
-                      <div class="quiz__item">
-                        <span class="quiz__symbol quiz__symbol-hide">&#8470;</span>
-                        <label for="traveler-nickname1" class="quiz__question">Прозвище:</label>
-                      </div>
-                      <div class="quiz__item">
-                        <span class="quiz__number quiz__number-hide">1</span>
-                        <input type="text" class="quiz__input form__input" name="nickname-friend1" id="traveler-nickname1" placeholder="Ну как же без этого!"></div>
-                    </div>
-                  </div>
+            <ol id="friend-list" class="form__quiz quiz__ol">
+              <script id="friend-template" type="text/html">
 
-
-
-
-
-                  <script id="friend-template" type="text/html">
-                    <div class="i-test-you">
-                    <p>Усложняем работу. Шаг второй.</p>
-                    <input value={{value}}>
-                    <a href="#"></a>
-                    </div>
-                  </script>
-
-
-
-
-
-
-
-                  <!--<div class="quiz quiz--height">
-                  <a href="#" class="quiz__delete-btn">удалить</a>
+                  <a href="#" class="quiz__delete-btn js-quiz-delete">удалить</a>
                   <div class="quiz__column-1">
                     <div class="quiz__item">
                       <span class="quiz__symbol">&#8470;</span>
-                      <label for="traveler-name2" class="quiz__question">Имя *</label>
+                      <label for="traveler-name-{{id}}" class="quiz__question">Имя *</label>
                     </div>
                     <div class="quiz__item">
-                      <span class="quiz__number">2</span>
-                      <input type="text" class="quiz__input form__input" name="name-friend2" id="traveler-name2" placeholder="Введите ваше имя"></div>
+                      <span class="quiz__number"></span>
+                      <input type="text" class="quiz__input form__input" name="name-friend2" id="traveler-name-{{id}}" placeholder="Введите ваше имя"></div>
                   </div>
                   <div class="quiz__column-2">
                     <div class="quiz__item">
                       <span class="quiz__symbol quiz__symbol-hide">&#8470;</span>
-                      <label for="traveler-nickname2" class="quiz__question">Прозвище:</label>
+                      <label for="traveler-nickname-{{id}}" class="quiz__question">Прозвище:</label>
                     </div>
                     <div class="quiz__item">
                       <span class="quiz__number quiz__number-hide">2</span>
-                      <input type="text" class="quiz__input  form__input" name="nickname-friend2" id="traveler-nickname2" placeholder="Ну как же без этого!"></div>
+                      <input type="text" class="quiz__input  form__input" name="nickname-friend2" id="traveler-nickname-{{id}}" placeholder="Ну как же без этого!"></div>
                   </div>
-                </div>
-                -->
-              </li>
-            </div>
+            </script>
+          </ol>
           </fieldset>
         </div>
       </div>
@@ -258,50 +213,7 @@
                 <input type="file" class="upload__input" name="file-upload" id="js-upload-photo" multiple></label>
             </div>
             <ul class="pic-list">
-              <!-- <li class="pic-list__item">
-              <div class="pic-list__img-wrap">
-                <img src="img/pic1-small.jpg" alt="pic-small-user1.jpg" class="pic-list__img"></div>
-              <span class="pic-list__name">pic1.jpg</span>
-              <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-            </li>
-            <li class="pic-list__item">
-              <div class="pic-list__img-wrap">
-                <img src="img/pic2-small.jpg" alt="pic-small-user2.jpg" class="pic-list__img"></div>
-              <span class="pic-list__name">pic2.jpg</span>
-              <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-            </li>
-            <li class="pic-list__item">
-              <div class="pic-list__img-wrap">
-                <img src="img/pic3-small.jpg" alt="pic-small-user3.jpg" class="pic-list__img"></div>
-              <span class="pic-list__name">pic3.jpg</span>
-              <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-            </li>
-            <li class="pic-list__item">
-              <div class="pic-list__img-wrap">
-                <img src="img/pic4-small.jpg" alt="pic-small-user4.jpg" class="pic-list__img"></div>
-              <span class="pic-list__name">pic4.jpg</span>
-              <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-            </li>
-            <li class="pic-list__item">
-              <div class="pic-list__img-wrap">
-                <img src="img/pic5-small.jpg" alt="pic-small-user5.jpg" class="pic-list__img"></div>
-              <span class="pic-list__name">pic5.jpg</span>
-              <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-            </li>
-            <li class="pic-list__item">
-              <div class="pic-list__img-wrap">
-                <img src="img/pic6-small.jpg" alt="pic-small-user6.jpg" class="pic-list__img"></div>
-              <span class="pic-list__name">pic6.jpg</span>
-              <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-            </li>
-            <li class="pic-list__item">
-              <div class="pic-list__img-wrap">
-                <img src="img/pic7-small.jpg" alt="pic-small-user7.jpg" class="pic-list__img"></div>
-              <span class="pic-list__name">pic7.jpg</span>
-              <a href="#" class="pic-list__close" title="Закрыть">Закрыть</a>
-            </li>
-            -->
-            <script id="image-template" type="text/html">
+              <script id="image-template" type="text/html">
                 <div class="pic-list__img-wrap">
                   <img src="{{image}}" alt="{{name}}" title="{{name}}" class="pic-list__img"></div>
                 <span class="pic-list__name">{{name}}</span>
