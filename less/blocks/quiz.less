@@ -1,17 +1,31 @@
+li{
+list-style: none;
+}
+
+
+
+
 .quiz {
   min-height: 1px;
   margin-bottom: 21px;
   position: relative;
   .cf;
-    &:before {
-        content: counters(item,".") ". ";
-        counter-increment: item;
-        color: green;
-        position: absolute;
-        top: 0;
-        left: 15px;
-      }
-
+   &:before {
+      position: absolute;
+      top: 56px;
+      left: 22px;
+      counter-increment: myCounter;
+      content:counter(myCounter);
+      color: @color-base;
+      background: @bg-decor;
+      // display: inline-block;
+      // text-align: center;
+      // margin: 5px 10px;
+      font-size: 18px;
+      line-height: 30px;
+      width: 20px;
+      height: 20px;
+}
 
 
   input[name="nickname-friend"] {
@@ -146,6 +160,7 @@
     &__number {
       margin-right: 20px;
       border-right: 2px solid @border-color;
+      background-color: @bg-decor;
     }
 
 
@@ -233,7 +248,6 @@
     &__symbol-hide {
       display: none;
     }
-
 
 
 

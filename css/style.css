@@ -1947,8 +1947,8 @@ html {
   text-align: center;
 }
 .form__quiz {
-  margin: 0;
-  padding: 0;
+  counter-reset: myCounter;
+  padding-left: 0;
 }
 .form--checkbox {
   padding-top: 15px;
@@ -2046,10 +2046,6 @@ html {
   }
   .form--trip-time .form__title {
     top: -45px;
-  }
-  .form__quiz {
-    margin-top: 0;
-    padding-top: 0;
   }
   .form--checkbox {
     padding-bottom: 13px;
@@ -2411,10 +2407,17 @@ html {
     border-color: #283645;
     transition: all 0.2s ease-in-out;
   }
+  .form-counter__ol {
+    counter-reset: item;
+  }
+}
+li {
+  list-style: none;
 }
 .quiz {
   min-height: 1px;
   margin-bottom: 21px;
+  position: relative;
 }
 .quiz::before {
   content: " ";
@@ -2424,6 +2427,19 @@ html {
   content: " ";
   display: table;
   clear: both;
+}
+.quiz:before {
+  position: absolute;
+  top: 56px;
+  left: 22px;
+  counter-increment: myCounter;
+  content: counter(myCounter);
+  color: #283645;
+  background: #f2f2f2;
+  font-size: 18px;
+  line-height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .quiz input[name="nickname-friend"] {
   border-bottom-left-radius: 5px;
@@ -2519,6 +2535,7 @@ html {
   .quiz__number {
     margin-right: 20px;
     border-right: 2px solid #e5e5e5;
+    background-color: #f2f2f2;
   }
   .quiz__delete-btn {
     display: block;
