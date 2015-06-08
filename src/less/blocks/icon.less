@@ -1,0 +1,105 @@
+.icon {
+  .hide-text;
+}
+
+
+
+.ribbon {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+    display: block;
+    width: 74px;
+    height: 73px;
+    background: url(../img/ribbon.png) no-repeat;
+    z-index: 2000;
+  }
+}
+
+@media(min-width: 700px) {
+  .ribbon {
+    &:before {
+      background-image: url(../img/ribbon-tablet.png)
+    }
+  }
+
+
+
+  .icon-timer {
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 85px;
+      left: 23px;
+      content: "";
+      width: 215px;
+      height: 215px;
+      border: 11px solid @color-decor;
+      border-radius: 50%;
+    }
+      &:after {
+      position: absolute;
+      top: 171px;
+      left: 68px;
+      content: "24";
+      font-size: 105px;
+      font-weight: 800;
+      font-style: normal;
+      color: @color-decor;
+    }
+  }
+  .icon-timer svg{
+    display: block;
+    width: 262px;
+  }
+  .icon-timer path{
+   fill: #eeeeee;
+  }
+}
+
+
+
+@media(min-width: 960px) {
+  .ribbon {
+    &:before {
+      background-image: url(../img/ribbon.png)
+    }
+  }
+
+
+
+  .icon-timer {
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 74px;
+      left: 28px;
+      content: "";
+      width: 243px;
+      height: 243px;
+      border: 11px solid @color-decor;
+      border-radius: 50%;
+    }
+      &:after {
+      position: absolute;
+      top: 173px;
+      left: 79px;
+      content: "24";
+      font-size: 120px;
+      font-weight: 800;
+      font-style: normal;
+      color: @color-decor;
+    }
+  }
+  .icon-timer svg{
+    display: block;
+    width: 300px;
+  }
+  .icon-timer path{
+   fill: #dedede;
+  }
+}
