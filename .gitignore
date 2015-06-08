@@ -9,4 +9,3 @@ _assets
 css/*.css
 .csscomb.json
 less/_components-library/*.less
-dist
