@@ -37,7 +37,10 @@
     "grunt-combine-media-queries": "^1.0.19",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-htmlmin": "^0.4.0",
+    "grunt-contrib-imagemin": "^0.9.4",
     "grunt-csscomb": "^3.0.1",
-    "grunt-grunticon": "^2.1.6"
+    "grunt-grunticon": "^2.1.6",
+    "grunt-prettify": "^0.4.0"
   }
 }
