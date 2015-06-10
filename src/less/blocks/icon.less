@@ -2,6 +2,21 @@
   .hide-text;
 }
 
+.icon-logotype-white-desktop {
+  svg {
+    position: absolute;
+    top: 4px;
+    left: -62px;
+  }
+  .group-2,
+  .group-3,
+  .group-4,
+  .group-5,
+  .path-4 {
+    display: none;
+  }
+}
+
 
 
 .ribbon {
@@ -26,6 +41,27 @@
       background-image: url(../img/ribbon-tablet.png)
     }
   }
+
+
+
+
+  .icon-logotype-white-desktop {
+  svg {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .group-2 {
+    display: inline-block;
+  }
+  .path-5,
+  .path-6 {
+    display: none;
+  }
+}
+
+
+
 
 
 
@@ -69,6 +105,45 @@
       background-image: url(../img/ribbon.png)
     }
   }
+
+
+
+
+.icon-logotype-white-desktop {
+  svg {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .group-1,
+  .group-2,
+  .group-3,
+  .group-4,
+  .group-5,
+  .path-4,
+  .path-5,
+  .path-6 {
+    display: inline-block;
+  }
+  .path-10 {
+    display: none;
+  }
+  .path-4,
+  .path-7,
+  .path-8,
+  .path-9 {
+   animation: blink 1s infinite;
+  }
+}
+
+@keyframes blink {
+  0% { fill: #c61352; }
+  50% { fill: #f4f4f4; }
+  100% { fill: #283645; }
+}
+
+
+
 
 
 
