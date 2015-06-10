@@ -717,6 +717,7 @@ html {
   height: 66px;
   background-color: rgba(0, 0, 0, 0.3);
   transition: all .4s ease;
+  position: relative;
 }
 .headline__logo {
   position: relative;
@@ -724,40 +725,21 @@ html {
   display: block;
   width: 83px;
   height: 66px;
-  padding: 21px 0;
+  padding: 6px 0;
   font: 0/0 serif;
   text-shadow: none;
   color: transparent;
 }
-.headline__logo:active > .icon-logotype-white-mobile path {
+.headline__logo:active > .icon-logotype-white-desktop path {
   opacity: .3;
   transition: all 0.2s ease-in-out;
-}
-.headline--logo-mx {
-  display: none;
-}
-.headline--logo-lx {
-  display: none;
 }
 @media (min-width: 700px) {
   .headline {
     height: 110px;
     padding: 25px 0;
   }
-  .headline--logo-mobile {
-    display: none;
-  }
-  .headline--logo-mx {
-    display: inline-block;
-    width: 145px;
-    float: left;
-    padding: 0;
-  }
-  .headline__logo:hover > .icon-logotype-white-tablet path {
-    fill: #d22856;
-    transition: all 0.2s ease-in-out;
-  }
-  .headline__logo:active > .icon-logotype-white-tablet path {
+  .headline__logo:active > .icon-logotype-white-desktop path {
     fill: #ffffff;
     opacity: .3;
     transition: all 0.2s ease-in-out;
@@ -773,16 +755,13 @@ html {
     padding: 0 10px 0 0;
     margin: 0 auto;
   }
-  .headline--logo-lx {
+  .headline__logo {
     display: block;
     width: 150px;
     height: 110px;
     float: left;
     padding: 25px 0 25px 0;
     text-align: left;
-  }
-  .headline--logo-mx {
-    display: none;
   }
   .headline__logo:hover > .icon-logotype-white-desktop path {
     fill: #d22856;
@@ -1721,6 +1700,18 @@ html {
   text-shadow: none;
   color: transparent;
 }
+.icon-logotype-white-desktop svg {
+  position: absolute;
+  top: 4px;
+  left: -62px;
+}
+.icon-logotype-white-desktop .group-2,
+.icon-logotype-white-desktop .group-3,
+.icon-logotype-white-desktop .group-4,
+.icon-logotype-white-desktop .group-5,
+.icon-logotype-white-desktop .path-4 {
+  display: none;
+}
 .ribbon {
   position: relative;
 }
@@ -1738,6 +1729,18 @@ html {
 @media (min-width: 700px) {
   .ribbon:before {
     background-image: url(../img/ribbon-tablet.png);
+  }
+  .icon-logotype-white-desktop svg {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .icon-logotype-white-desktop .group-2 {
+    display: inline-block;
+  }
+  .icon-logotype-white-desktop .path-5,
+  .icon-logotype-white-desktop .path-6 {
+    display: none;
   }
   .icon-timer {
     position: relative;
@@ -1773,6 +1776,41 @@ html {
 @media (min-width: 960px) {
   .ribbon:before {
     background-image: url(../img/ribbon.png);
+  }
+  .icon-logotype-white-desktop svg {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .icon-logotype-white-desktop .group-1,
+  .icon-logotype-white-desktop .group-2,
+  .icon-logotype-white-desktop .group-3,
+  .icon-logotype-white-desktop .group-4,
+  .icon-logotype-white-desktop .group-5,
+  .icon-logotype-white-desktop .path-4,
+  .icon-logotype-white-desktop .path-5,
+  .icon-logotype-white-desktop .path-6 {
+    display: inline-block;
+  }
+  .icon-logotype-white-desktop .path-10 {
+    display: none;
+  }
+  .icon-logotype-white-desktop .path-4,
+  .icon-logotype-white-desktop .path-7,
+  .icon-logotype-white-desktop .path-8,
+  .icon-logotype-white-desktop .path-9 {
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0% {
+      fill: #c61352;
+    }
+    50% {
+      fill: #f4f4f4;
+    }
+    100% {
+      fill: #283645;
+    }
   }
   .icon-timer {
     position: relative;
