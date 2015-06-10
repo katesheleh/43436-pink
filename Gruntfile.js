@@ -90,14 +90,14 @@ require('load-grunt-tasks')(grunt);
           title: 'SVG',  // optional
           message: 'Все ок!', //required
         }
-      },
-
-      concat: {
-        options: {
-          title: 'Ты крут!',  // optional
-          message: 'работаешь с JS', //required
-        }
       }
+
+      // concat: {
+      //   options: {
+      //     title: 'Ты крут!',  // optional
+      //     message: 'работаешь с JS', //required
+      //   }
+      // }
     },
 
 
@@ -313,18 +313,18 @@ require('load-grunt-tasks')(grunt);
     mysvg: {
         files: [{
             expand: true,
-            cwd: 'src/_svg/svgmin',
-            src: ['*.svg', '*.png'],
+            cwd: 'src/_svg',
+            src: ['svgmin/*.svg', '*.png'],
             dest: "src"
         }],
         options: {
           enhanceSVG   : true,
-          datasvgcss   : 'src/css/icons.data.svg.css',
-          datapngcss   : 'src/css/icons.data.png.css',
-          urlpngcss    : 'src/css/icons.fallback.css',
-          loadersnippet: 'src/js/lib/grunticon.loader.js',
-          previewhtml  : 'src/icon-preview.html',
-          pngfolder    : 'src/img/png-grunticon',
+          datasvgcss   : 'css/icons.data.svg.css',
+          datapngcss   : 'css/icons.data.png.css',
+          urlpngcss    : 'css/icons.fallback.css',
+          loadersnippet: 'js/lib/grunticon.loader.js',
+          previewhtml  : 'icon-preview.html',
+          pngfolder    : 'img/png-grunticon',
           pngpath      : '../img/spng-grunticon',
           template     : 'src/_svg/template.hbs',
           defaultWidth : '200px',
