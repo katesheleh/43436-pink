@@ -19,6 +19,19 @@
 
 
 
+
+.icon-logotype-blue-desktop {
+  .path-7,
+  .small-star,
+  .path-8,
+  .path-9,
+  .path-10 {
+    display: none;
+  }
+}
+
+
+
 .ribbon {
   position: relative;
 
@@ -115,6 +128,7 @@
     top: 0;
     left: 0;
   }
+
   .group-1,
   .group-2,
   .group-3,
@@ -125,22 +139,63 @@
   .path-6 {
     display: inline-block;
   }
+
   .path-10 {
     display: none;
   }
+
   .path-4,
   .path-7,
   .path-8,
   .path-9 {
-   animation: blink 1s infinite;
+    animation: rotate 1s infinite;
+   -moz-animation: rotate 1s infinite;
+   -webkit-animation: rotate 1s infinite;
   }
 }
 
-@keyframes blink {
-  0% { fill: #c61352; }
-  50% { fill: #f4f4f4; }
-  100% { fill: #283645; }
+@-moz-keyframes rotate {
+  from {
+    opacity: 0;
+   // -moz-transform:  scale(1.3) translate(-30px, 0);
+  }
+  to {
+    opacity: .5;
+    // -moz-transform: scale(3.3)  translate(0, 0);
+  }
 }
+
+@-webkit-keyframes rotate {
+  from {
+    opacity: 1;
+    // -webkit-transform:  scale(1.3)  translate(-30px, 0);
+  }
+  to {
+
+    // -webkit-transform: scale(3.3)  translate(0, 0);
+  }
+}
+
+
+
+
+.icon-logotype-blue-desktop {
+  .path-7,
+  .small-star,
+  .path-8,
+  .path-9,
+  .path-10 {
+    display: inline-block;
+  }
+
+
+  .path-11 {
+    display: none;
+
+  }
+}
+
+
 
 
 
@@ -159,6 +214,7 @@
       border: 11px solid @color-decor;
       border-radius: 50%;
     }
+
       &:after {
       position: absolute;
       top: 173px;
@@ -169,12 +225,12 @@
       font-style: normal;
       color: @color-decor;
     }
-  }
-  .icon-timer svg{
-    display: block;
-    width: 300px;
-  }
-  .icon-timer path{
-   fill: #dedede;
+    svg {
+      display: block;
+      width: 300px;
+    }
+    path {
+      fill: #dedede;
+    }
   }
 }
