@@ -3604,6 +3604,13 @@ li {
 	margin: 0 auto;
 }
 
+.headline__logo + .icon-logotype-white-desktop .path-4,
+.headline__logo + .icon-logotype-white-desktop .path-7,
+.headline__logo + .icon-logotype-white-desktop .path-8,
+.headline__logo + .icon-logotype-white-desktop .path-9 {
+	transition: all 0.2s ease-in-out;
+}
+
 .headline__logo:hover > .icon-logotype-white-desktop path {
 	fill: #d22856;
 	transition: all 0.2s ease-in-out;
@@ -4018,6 +4025,15 @@ li {
 .icon-logotype-blue-desktop .path-9,
 .icon-logotype-blue-desktop .path-10 {
 	display: inline-block;
+}
+
+.icon-logotype-blue-desktop .path-5,
+.icon-logotype-blue-desktop .group-8.path-6,
+.icon-logotype-blue-desktop .group-9.path-7,
+.icon-logotype-blue-desktop .group-10.path-8 {
+	animation: rotate 1s infinite;
+	-moz-animation: rotate 1s infinite;
+	-webkit-animation: rotate 1s infinite;
 }
 
 .icon-logotype-blue-desktop .path-11 {
@@ -4741,6 +4757,18 @@ li {
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
+}
+
+}
+
+@-webkit-keyframes rotate {
+
+from {
+	opacity: 0.5;
+}
+
+to {
+	opacity: 1;
 }
 
 }
