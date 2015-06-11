@@ -611,12 +611,24 @@ html {
 .page-header__title {
   color: #ffffff;
   margin-top: 18px;
-  margin-bottom: 31px;
   font-size: 24px;
   font-weight: 300;
   font-style: normal;
   text-transform: none;
   line-height: 28px;
+}
+.page-header--title-index {
+  width: 320px;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18px;
+  padding-bottom: 320px;
+  margin-bottom: 0;
+  background: url(../img/iphone-hand-1.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 260px 286px;
 }
 .page-header__title-form {
   margin-top: 29px;
@@ -654,6 +666,7 @@ html {
     font-size: 40px;
     line-height: 48px;
     font-weight: 300;
+    background-image: none;
   }
   .page-header__pic {
     display: none;
@@ -717,6 +730,7 @@ html {
   height: 66px;
   background-color: rgba(0, 0, 0, 0.3);
   transition: all .4s ease;
+  position: relative;
 }
 .headline__logo {
   position: relative;
@@ -724,56 +738,21 @@ html {
   display: block;
   width: 83px;
   height: 66px;
-  padding: 21px 0;
+  padding: 6px 0;
   font: 0/0 serif;
   text-shadow: none;
   color: transparent;
 }
-.headline__logo:active > .icon-logotype-white-mobile path {
+.headline__logo:active > .icon-logotype-white-desktop path {
   opacity: .3;
   transition: all 0.2s ease-in-out;
-}
-.headline--logo-mx {
-  display: none;
-}
-.headline--logo-lx {
-  display: none;
 }
 @media (min-width: 700px) {
   .headline {
     height: 110px;
-    padding: 25px 0;
-  }
-  .headline--logo-mobile {
-    display: none;
-  }
-  .headline--logo-mx {
-    display: inline-block;
-    width: 145px;
-    float: left;
     padding: 0;
   }
-  .headline__logo:hover > .icon-logotype-white-tablet path {
-    fill: #d22856;
-    transition: all 0.2s ease-in-out;
-  }
-  .headline__logo:active > .icon-logotype-white-tablet path {
-    fill: #ffffff;
-    opacity: .3;
-    transition: all 0.2s ease-in-out;
-  }
-}
-@media (min-width: 960px) {
-  .headline {
-    padding: 0;
-    min-height: 110px;
-  }
-  .headline--wrapper-lx {
-    width: 960px;
-    padding: 0 10px 0 0;
-    margin: 0 auto;
-  }
-  .headline--logo-lx {
+  .headline__logo {
     display: block;
     width: 150px;
     height: 110px;
@@ -781,8 +760,17 @@ html {
     padding: 25px 0 25px 0;
     text-align: left;
   }
-  .headline--logo-mx {
-    display: none;
+  .headline__logo:active > .icon-logotype-white-desktop path {
+    fill: #ffffff;
+    opacity: .3;
+    transition: all 0.2s ease-in-out;
+  }
+}
+@media (min-width: 960px) {
+  .headline--wrapper-lx {
+    width: 960px;
+    padding: 0 10px 0 0;
+    margin: 0 auto;
   }
   .headline__logo:hover > .icon-logotype-white-desktop path {
     fill: #d22856;
@@ -839,6 +827,7 @@ html {
   float: right;
   width: 48px;
   height: 66px;
+  margin-top: 0;
   transition: all .2s ease;
 }
 .nav-menu__btn span {
@@ -919,6 +908,9 @@ html {
     position: absolute;
     top: 110px;
     width: 100%;
+  }
+  .nav-menu__btn {
+    margin-top: 21px;
   }
   .mobile-menu-opened .nav-menu__list {
     top: 110px;
@@ -1553,7 +1545,7 @@ html {
   text-shadow: none;
   color: transparent;
 }
-.page-footer__logo:active > .icon-logotype-blue-tablet path {
+.page-footer__logo:active > .icon-logotype-blue-desktop path {
   opacity: .3;
 }
 .page-footer__sum {
@@ -1563,10 +1555,7 @@ html {
   flex-direction: column;
   justify-content: center;
 }
-.page-footer--hide {
-  display: none;
-}
-.page-footer--lx {
+.page-footer--index {
   display: none;
 }
 @media (min-width: 700px) {
@@ -1589,6 +1578,9 @@ html {
     margin: 0;
     text-align: left;
   }
+  .page-footer--index {
+    display: flex;
+  }
 }
 @media (min-width: 960px) {
   .page-footer {
@@ -1608,12 +1600,6 @@ html {
   }
   .page-footer__sum {
     padding-top: 15px;
-  }
-  .page-footer--sm-mx {
-    display: none;
-  }
-  .page-footer--lx {
-    display: inline-block;
   }
   .page-footer__text {
     margin-top: 64px;
@@ -1721,6 +1707,26 @@ html {
   text-shadow: none;
   color: transparent;
 }
+.icon-logotype-white-desktop svg {
+  position: absolute;
+  top: 4px;
+  left: -62px;
+}
+.icon-logotype-white-desktop .group-2,
+.icon-logotype-white-desktop .group-3,
+.icon-logotype-white-desktop .group-4,
+.icon-logotype-white-desktop .group-5,
+.icon-logotype-white-desktop .path-4 {
+  display: none;
+}
+.icon-logotype-blue-desktop .path-7,
+.icon-logotype-blue-desktop .path-5,
+.icon-logotype-blue-desktop .path-6,
+.icon-logotype-blue-desktop .path-8,
+.icon-logotype-blue-desktop .path-9,
+.icon-logotype-blue-desktop .path-10 {
+  display: none;
+}
 .ribbon {
   position: relative;
 }
@@ -1738,6 +1744,18 @@ html {
 @media (min-width: 700px) {
   .ribbon:before {
     background-image: url(../img/ribbon-tablet.png);
+  }
+  .icon-logotype-white-desktop svg {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .icon-logotype-white-desktop .group-2 {
+    display: inline-block;
+  }
+  .icon-logotype-white-desktop .path-5,
+  .icon-logotype-white-desktop .path-6 {
+    display: none;
   }
   .icon-timer {
     position: relative;
@@ -1773,6 +1791,56 @@ html {
 @media (min-width: 960px) {
   .ribbon:before {
     background-image: url(../img/ribbon.png);
+  }
+  .icon-logotype-white-desktop svg {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .icon-logotype-white-desktop .group-1,
+  .icon-logotype-white-desktop .group-2,
+  .icon-logotype-white-desktop .group-3,
+  .icon-logotype-white-desktop .group-4,
+  .icon-logotype-white-desktop .group-5,
+  .icon-logotype-white-desktop .path-4,
+  .icon-logotype-white-desktop .path-5,
+  .icon-logotype-white-desktop .path-6 {
+    display: inline-block;
+  }
+  .icon-logotype-white-desktop .path-10 {
+    display: none;
+  }
+  .icon-logotype-white-desktop .path-4,
+  .icon-logotype-white-desktop .path-7,
+  .icon-logotype-white-desktop .path-8,
+  .icon-logotype-white-desktop .path-9 {
+    animation: rotate 1s infinite;
+    -moz-animation: rotate 1s infinite;
+    -webkit-animation: rotate 1s infinite;
+  }
+  @-moz-keyframes rotate {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: .5;
+    }
+  }
+  @-webkit-keyframes rotate {
+    from {
+      opacity: 1;
+    }
+  }
+  .icon-logotype-blue-desktop .path-7,
+  .icon-logotype-blue-desktop .path-5,
+  .icon-logotype-blue-desktop .path-6,
+  .icon-logotype-blue-desktop .path-8,
+  .icon-logotype-blue-desktop .path-9,
+  .icon-logotype-blue-desktop .path-10 {
+    display: inline-block;
+  }
+  .icon-logotype-blue-desktop .path-11 {
+    display: none;
   }
   .icon-timer {
     position: relative;
