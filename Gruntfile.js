@@ -1,18 +1,7 @@
 module.exports = function(grunt) {
 
-   //grunt.loadNpmTasks('grunt-contrib-copy');
-   //grunt.loadNpmTasks('grunt-contrib-clean');
-   //grunt.loadNpmTasks('grunt-contrib-less');
-   //grunt.loadNpmTasks('grunt-sass');
-   //grunt.loadNpmTasks('grunt-githooks');
-   //grunt.loadNpmTasks('grunt-lintspaces');
-   //grunt.loadNpmTasks('grunt-notify');
-   //grunt.loadNpmTasks('grunt-contrib-watch');
-   //grunt.loadNpmTasks('grunt-grunticon');
-   //grunt.loadNpmTasks( 'grunt-svgmin' );
-
 require('load-grunt-tasks')(grunt);
-//require('load-grunt-tasks')(grunt, {scope: ['devDependencies', 'dependencies']});
+
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
