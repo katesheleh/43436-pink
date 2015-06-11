@@ -31,21 +31,15 @@
 @media(min-width: 700px) {
   .headline {
     height: 110px;
-    padding: 25px 0;
-
-    // &--logo-mobile {
-    //   display: none;
-    // }
-
-
-    // &--logo-mx {
-    // display: inline-block;
-    // width: 145px;
-    // float: left;
-    // padding: 0;
-    // }
+    padding: 0;
 
     &__logo {
+      display: block;
+      width: 150px;
+      height: 110px;
+      float: left;
+      padding: 25px 0 25px 0;
+      text-align: left;
        &:active > .icon-logotype-white-desktop path {
         fill: @color-light;
         opacity: .3;
@@ -59,8 +53,6 @@
 
 @media(min-width: 960px) {
   .headline {
-    padding: 0;
-    min-height: 110px;
 
     &--wrapper-lx {
       width: 960px;
@@ -70,23 +62,18 @@
 
 
     &__logo {
-       display: block;
-      width: 150px;
-      height: 110px;
-      float: left;
-      padding: 25px 0 25px 0;
-      text-align: left;
-      &:hover > .icon-logotype-white-desktop path {
-        fill: @color-decor;
-        .transition;
-      }
+
+     &:hover > .icon-logotype-white-desktop path {
+       fill: @color-decor;
+       .transition;
+     }
 
 
-       &:active > .icon-logotype-white-desktop path {
-        fill: @color-light;
-        opacity: .3;
-        .transition;
-      }
+      &:active > .icon-logotype-white-desktop path {
+       fill: @color-light;
+       opacity: .3;
+       .transition;
+     }
     }
   }
 }
