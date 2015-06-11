@@ -1,3 +1,4 @@
+
 .page-footer {
   margin-top: 45px;
 
@@ -20,7 +21,7 @@
 
 
 
-    &:active > .icon-logotype-blue-tablet path {
+    &:active > .icon-logotype-blue-desktop path {
       opacity: .3;
     }
   }
@@ -37,16 +38,7 @@
   }
 
 
-
-
-
-  &--hide {
-    display: none;
-  }
-
-
-
-  &--lx {
+  &--index {
     display: none;
   }
 }
@@ -68,7 +60,6 @@
 
 
     &__sum {
-
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -86,6 +77,11 @@
       width: 139px;
       margin: 0;
       text-align: left;
+    }
+
+
+    &--index {
+      display: flex;
     }
   }
 }
@@ -105,6 +101,8 @@
       height: 60px;
       vertical-align: bottom;
 
+
+
       &:hover > .icon-logotype-blue-desktop path {
         fill: @color-decor;
       }
@@ -118,18 +116,6 @@
 
     &__sum {
       padding-top: 15px;
-    }
-
-
-
-    &--sm-mx {
-      display: none;
-    }
-
-
-
-    &--lx {
-      display: inline-block;
     }
 
 
