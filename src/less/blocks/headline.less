@@ -3,6 +3,7 @@
   height: 66px;
   background-color: rgba(0, 0, 0, .3);
   transition: all .4s ease;
+  position: relative;
 
 
 
@@ -14,22 +15,12 @@
     display: block;
     width: 83px;
     height: 66px;
-    padding: 21px 0;
+    padding: 6px 0;
     .hide-text;
-    &:active > .icon-logotype-white-mobile path {
+    &:active > .icon-logotype-white-desktop path {
       opacity: .3;
       .transition;
     }
-  }
-
-
-
-  &--logo-mx {
-    display: none;
-  }
-
-  &--logo-lx {
-    display: none;
   }
 }
 
@@ -40,26 +31,16 @@
 @media(min-width: 700px) {
   .headline {
     height: 110px;
-    padding: 25px 0;
-
-    &--logo-mobile {
-      display: none;
-    }
-
-
-    &--logo-mx {
-    display: inline-block;
-    width: 145px;
-    float: left;
     padding: 0;
-    }
 
     &__logo {
-       &:hover > .icon-logotype-white-tablet path {
-        fill: @color-decor;
-        .transition;
-      }
-       &:active > .icon-logotype-white-tablet path {
+      display: block;
+      width: 150px;
+      height: 110px;
+      float: left;
+      padding: 25px 0 25px 0;
+      text-align: left;
+       &:active > .icon-logotype-white-desktop path {
         fill: @color-light;
         opacity: .3;
         .transition;
@@ -72,8 +53,6 @@
 
 @media(min-width: 960px) {
   .headline {
-    padding: 0;
-    min-height: 110px;
 
     &--wrapper-lx {
       width: 960px;
@@ -81,33 +60,20 @@
       margin: 0 auto;
     }
 
-    &--logo-lx {
-      display: block;
-      width: 150px;
-      height: 110px;
-      float: left;
-      padding: 25px 0 25px 0;
-      text-align: left;
-
-    }
-    &--logo-mx {
-      display: none;
-    }
-
-
 
     &__logo {
-      &:hover > .icon-logotype-white-desktop path {
-        fill: @color-decor;
-        .transition;
-      }
+
+     &:hover > .icon-logotype-white-desktop path {
+       fill: @color-decor;
+       .transition;
+     }
 
 
-       &:active > .icon-logotype-white-desktop path {
-        fill: @color-light;
-        opacity: .3;
-        .transition;
-      }
+      &:active > .icon-logotype-white-desktop path {
+       fill: @color-light;
+       opacity: .3;
+       .transition;
+     }
     }
   }
 }
