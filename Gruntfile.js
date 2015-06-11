@@ -1,7 +1,18 @@
 module.exports = function(grunt) {
 
-require('load-grunt-tasks')(grunt);
+   //grunt.loadNpmTasks('grunt-contrib-copy');
+   //grunt.loadNpmTasks('grunt-contrib-clean');
+   //grunt.loadNpmTasks('grunt-contrib-less');
+   //grunt.loadNpmTasks('grunt-sass');
+   //grunt.loadNpmTasks('grunt-githooks');
+   //grunt.loadNpmTasks('grunt-lintspaces');
+   //grunt.loadNpmTasks('grunt-notify');
+   //grunt.loadNpmTasks('grunt-contrib-watch');
+   //grunt.loadNpmTasks('grunt-grunticon');
+   //grunt.loadNpmTasks( 'grunt-svgmin' );
 
+require('load-grunt-tasks')(grunt);
+//require('load-grunt-tasks')(grunt, {scope: ['devDependencies', 'dependencies']});
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -79,14 +90,14 @@ require('load-grunt-tasks')(grunt);
           title: 'SVG',  // optional
           message: 'Все ок!', //required
         }
-      },
-
-      concat: {
-        options: {
-          title: 'Ты крут!',  // optional
-          message: 'работаешь с JS', //required
-        }
       }
+
+      // concat: {
+      //   options: {
+      //     title: 'Ты крут!',  // optional
+      //     message: 'работаешь с JS', //required
+      //   }
+      // }
     },
 
 
@@ -302,18 +313,18 @@ require('load-grunt-tasks')(grunt);
     mysvg: {
         files: [{
             expand: true,
-            cwd: 'src/_svg/svgmin',
-            src: ['*.svg', '*.png'],
+            cwd: 'src/_svg',
+            src: ['svgmin/*.svg', '*.png'],
             dest: "src"
         }],
         options: {
           enhanceSVG   : true,
-          datasvgcss   : 'src/css/icons.data.svg.css',
-          datapngcss   : 'src/css/icons.data.png.css',
-          urlpngcss    : 'src/css/icons.fallback.css',
-          loadersnippet: 'src/js/lib/grunticon.loader.js',
-          previewhtml  : 'src/icon-preview.html',
-          pngfolder    : 'src/img/png-grunticon',
+          datasvgcss   : 'css/icons.data.svg.css',
+          datapngcss   : 'css/icons.data.png.css',
+          urlpngcss    : 'css/icons.fallback.css',
+          loadersnippet: 'js/lib/grunticon.loader.js',
+          previewhtml  : 'icon-preview.html',
+          pngfolder    : 'img/png-grunticon',
           pngpath      : '../img/spng-grunticon',
           template     : 'src/_svg/template.hbs',
           defaultWidth : '200px',
