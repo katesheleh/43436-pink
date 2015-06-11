@@ -623,6 +623,22 @@ html {
     -webkit-transform: scale(2.5);
   }
 }
+@-moz-keyframes time-24 {
+  from {
+    -moz-transform: scale(0.9);
+  }
+  to {
+    -moz-transform: scale(1);
+  }
+}
+@-webkit-keyframes time-24 {
+  from {
+    -webkit-transform: scale(0.9);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
 .screen-mx-lx {
   display: none;
 }
@@ -1805,6 +1821,9 @@ html {
   }
   .icon-timer {
     position: relative;
+    animation: time-24 2s infinite;
+    -moz-animation: time-24 2s infinite;
+    -webkit-animation: time-24 2s infinite;
   }
   .icon-timer:before {
     position: absolute;
