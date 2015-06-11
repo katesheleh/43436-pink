@@ -3497,6 +3497,12 @@ li {
 	color: #d22856;
 }
 
+.news__details:active {
+	text-decoration: none;
+	opacity: .3;
+	transition: all 0.2s ease-in-out;
+}
+
 .social {
 	margin-bottom: 0;
 }
@@ -4646,6 +4652,19 @@ li {
 	padding-top: 11px;
 	font-size: 18px;
 	line-height: 24px;
+}
+
+.news__details:hover {
+	font-size: 20px;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+}
+
+.news__details:active {
+	font-size: 18px;
+	text-decoration: none;
+	opacity: .3;
+	transition: all 0.2s ease-in-out;
 }
 
 .social {
