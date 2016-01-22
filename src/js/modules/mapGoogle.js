@@ -9,15 +9,9 @@ var mapGoogle = (function() {
 
   function initialize() {
     var mapOptions = {
-      zoom: 14,
-      minZoom: 5,
-      maxZoom: 24,
-      scrollwheel: false,
-      zoomControl: true,
-      zoomControlOptions: {
-        style: google.maps.ZoomControlStyle.LARGE,
-        position: google.maps.ControlPosition.LEFT_BOTTOM
-    },
+      zoom: 18,
+      minZoom: 18,
+      maxZoom: 18,
       disableDefaultUI: true,
       center: mapCoordinates
     };

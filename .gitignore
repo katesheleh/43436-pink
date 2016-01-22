@@ -6,6 +6,7 @@ prepros.cfg
 *.sublime*
 *.map
 _assets
-crc/css/style.css
+css/*.css
 .csscomb.json
 less/_components-library/*.less
+dist
