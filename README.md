@@ -1,20 +1,7 @@
 # Проект «pink»
 
-* Студент: [Katsiaryna Sheleh](https://htmlacademy.ru/profile/id43436).
-* Наставник: `Андрей Алексеев`.
+http://katesheleh.github.io/43436-pink/src/form.html
 
-### Немного о себе
+http://katesheleh.github.io/43436-pink/src/blog.html
 
-* Пройден ли базовый интенсив: `да, успешно`.
-* Предпочитаемая методология: `БЭМ`.
-* Предпочитаемый препроцессор: `LESS`.
-
---
-
-Не удаляйте и не обращайте внимание на файлы: `.editorconfig`, `.gitignore`, `.travis.yml`, `Gruntfile.js`, `package.json`.
-
---
-
-<a href="https://htmlacademy.ru/advanced_intensive"><img align="left" width="50" height="50" title="HTML Academy" src="https://htmlacademy.ru/static/img/logo-github.svg"></a>
-
-Репозиторий создан для обучения на продвинутом онлайн-интенсиве «[Создание веб-интерфейсов с помощью HTML и CSS](https://htmlacademy.ru/advanced_intensive)» от [HTML Academy](https://htmlacademy.ru).
+http://katesheleh.github.io/43436-pink/src/post.html
